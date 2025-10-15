@@ -15,7 +15,6 @@ content:
       - { name: section, label: seccion, type: string }
       - { name: coverImage, label: Cover image, type: image }
       - { name: body, label: Body, type: rich-text }
-content:
   - name: posts
     label: Articulo
     type: collection
