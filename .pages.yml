@@ -6,7 +6,7 @@ content:
   - name: home
     label: Portada
     type: file
-    path: index.md
+    path: index
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Descripcion, type: string }
