@@ -3,6 +3,16 @@ media:
   output: /assets
   categories: [ "image" ]
 content:
+  - name: home
+    label: Portada
+    type: file
+    path: index.md
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: excerpt, label: Descripcion, type: string }
+      - { name: section, label: seccion, type: string }
+      - { name: coverImage, label: Cover image, type: image }
+      - { name: body, label: Body, type: rich-text }
   - name: section
     label: Secciones
     type: collection
