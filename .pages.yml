@@ -69,7 +69,8 @@ content:
       - { name: body, label: Body, type: rich-text }
   - name: posts
     label: Articulo
-    type: collectio path: _posts
+    type: collection
+    path: _posts
     view:
       fields: [ coverImage, title]
     fields:
