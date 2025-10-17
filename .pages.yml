@@ -30,9 +30,12 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "" 
+                summary: "{fields.title}" 
             fields:
               - { name: title, label: Título, type: string }
+              - { name: description, label: Descripción, type: text }
+              - { name: image, label: Imagen, type: image }
+              - { name: param, label: Link, type: string }
   - name: section
     label: Secciones
     type: collection
