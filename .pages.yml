@@ -50,7 +50,7 @@ content:
     type: file
     path: index
     fields:
-      - { name: block, label: Hero, component: blocks }
+      - { name: block, component: blocks }
       - { name: title, label: Title, type: string}
       - { name: excerpt, label: Descripcion, type: string }
       - { name: coverImage, label: Cover, type: image }
@@ -78,4 +78,5 @@ content:
       - { name: excerpt, label: Descripcion, type: string }
       - { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
       - { name: coverImage, label: Cover, type: image }
+      - { name: block, component: blocks }
       - { name: body, label: Body, type: rich-text }
