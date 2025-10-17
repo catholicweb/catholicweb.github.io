@@ -4,7 +4,25 @@ excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Praesent elementum
   facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan
   sit amet nulla facilities morbi tempus.
+section: Sacerdocio
 coverImage: /assets/blog/dynamic-routing/cover.jpg
+block:
+  - type: Galeria
+    title: Libros recomendados
+    elems:
+      - title: Harry potter
+      - title: Señor anillos
+  - type: Galeria horizontal
+    title: Videos!
+    elems:
+      - title: Testi patxi
+  - type: ...
+    title: Hazte cura!
+    elems:
+      - title: Cover
+        image: /assets/blog/dynamic-routing/cover.jpg
+      - title: Hello
+        image: /assets/blog/hello-world/cover.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
