@@ -20,12 +20,19 @@ content:
             collapsed: true
             summary: "{fields.type} - {fields.title}" 
         fields:
-          - { name: title, label: Izenburua, type: string }
-          - { name: notes, label: Notes, type: text }
-          - { name: image, label: Image, type: image }
+          - { name: title, label: Título, type: string }
           - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','...']} }
           - { name: image, label: Imagen, type: image }
           - { name: body, label: Texto, type: rich-text }
+          - name: elems
+            label: Bloques
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "" 
+            fields:
+              - { name: title, label: Título, type: string }
   - name: section
     label: Secciones
     type: collection
