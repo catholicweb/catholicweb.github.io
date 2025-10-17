@@ -4,11 +4,12 @@ components:
     type: object
     fields:
       - { name: title, label: Title, type: string }
-      - { name: excerpt, label: Descripcion, type: string }
+      - { name: excerpt, label: Descripcion corta, type: text }
       - { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
       - { name: coverImage, label: Cover, type: image }
+      - { name: content, label: Texto mucho largo, type: rich-text}
   blocks:
-        label: Bloques
+        label: Bloques pros
         type: object
         list:
           collapsible:
