@@ -8,10 +8,6 @@ content:
     type: file
     path: index
     fields:
-      - { name: title, label: Title, type: string}
-      - { name: excerpt, label: Descripcion, type: string }
-      - { name: coverImage, label: Cover, type: image }
-      - { name: body, label: Body, type: rich-text }
       - name: blocks
         label: Bloques
         type: object
