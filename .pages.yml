@@ -1,21 +1,14 @@
 components:
-  hero: # 'hero' is the component name/key
-    label: Hero Section
+  meta:
+    label: Metadatos
     type: object
     fields:
-      - name: headline
-        label: Headline
-        type: text
-        required: true
-      - name: cover
-        label: Cover Image
-        type: image
-  email: # 'email' is the component name/key
-    label: Email Address
-    type: string
-    pattern:
-      regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-      message: 'This must be a valid email address (e.g. hello@example.com).'
+      - { name: title, label: Title, type: string }
+      - { name: excerpt, label: Descripcion, type: string }
+      - { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
+      - { name: coverImage, label: Cover, type: image }
+      - { name: block, component: blocks }
+      - { name: body, label: Body, type: rich-text }
   blocks:
         label: Bloques
         type: object
@@ -50,11 +43,8 @@ content:
     type: file
     path: index
     fields:
+      - { name: meta, component: meta }
       - { name: block, component: blocks }
-      - { name: title, label: Title, type: string}
-      - { name: excerpt, label: Descripcion, type: string }
-      - { name: coverImage, label: Cover, type: image }
-      - { name: body, label: Body, type: rich-text }
   - name: section
     label: Secciones
     type: collection
@@ -74,9 +64,5 @@ content:
     view:
       fields: [ coverImage, title]
     fields:
-      - { name: title, label: Title, type: string }
-      - { name: excerpt, label: Descripcion, type: string }
-      - { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
-      - { name: coverImage, label: Cover, type: image }
+      - { name: meta, component: meta }
       - { name: block, component: blocks }
-      - { name: body, label: Body, type: rich-text }
