@@ -26,7 +26,7 @@ content:
     type: file
     path: index
     fields:
-      - { name: hero, label: Hero, type: hero }
+      - { name: hero, label: Hero, component: hero }
       - { name: title, label: Title, type: string}
       - { name: excerpt, label: Descripcion, type: string }
       - { name: coverImage, label: Cover, type: image }
