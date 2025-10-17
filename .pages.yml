@@ -20,12 +20,12 @@ content:
             collapsed: true
             summary: "{fields.type} - {fields.title}" 
         fields:
-          - { name: title, label: Título, type: string }
           - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','...']} }
+          - { name: title, label: Título, type: string }
           - { name: image, label: Imagen, type: image }
           - { name: body, label: Texto, type: rich-text }
           - name: elems
-            label: Bloques
+            label: Elementos
             type: object
             list:
               collapsible:
