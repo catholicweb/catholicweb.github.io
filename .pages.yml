@@ -12,6 +12,20 @@ content:
       - { name: excerpt, label: Descripcion, type: string }
       - { name: coverImage, label: Cover, type: image }
       - { name: body, label: Body, type: rich-text }
+      - name: blocks
+        label: Bloques
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.type} - {fields.title}" 
+        fields:
+          - { name: title, label: Izenburua, type: string }
+          - { name: notes, label: Notes, type: text }
+          - { name: image, label: Image, type: image }
+          - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','...']} }
+          - { name: image, label: Imagen, type: image }
+          - { name: body, label: Texto, type: rich-text }
   - name: section
     label: Secciones
     type: collection
