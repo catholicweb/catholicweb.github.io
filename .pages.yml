@@ -8,6 +8,10 @@ content:
     type: file
     path: index
     fields:
+      - { name: title, label: Title, type: string}
+      - { name: excerpt, label: Descripcion, type: string }
+      - { name: coverImage, label: Cover, type: image }
+      - { name: body, label: Body, type: rich-text }
       - name: blocks
         label: Bloques
         type: object
@@ -18,8 +22,8 @@ content:
         fields:
           - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','...']} }
           - { name: title, label: Título, type: string }
-          - { name: image, label: Imagen, type: image }
-          - { name: body, label: Texto, type: rich-text }
+          #- { name: image, label: Imagen, type: image }
+          #- { name: body, label: Texto, type: rich-text }
           - name: elems
             label: Elementos
             type: object
@@ -29,7 +33,7 @@ content:
                 summary: "{fields.title}" 
             fields:
               - { name: title, label: Título, type: string }
-              - { name: description, label: Descripción, type: text }
+              - { name: description, label: Texto, type: rich-text }
               - { name: image, label: Imagen, type: image }
               - { name: param, label: Link, type: string }
   - name: section
