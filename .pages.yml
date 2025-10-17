@@ -16,22 +16,7 @@ components:
     pattern:
       regex: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
       message: 'This must be a valid email address (e.g. hello@example.com).'
-media:
-  input: public/assets
-  output: /assets
-  categories: [ "image" ]
-content:
-  - name: home
-    label: Portada
-    type: file
-    path: index
-    fields:
-      - { name: hero, label: Hero, component: hero }
-      - { name: title, label: Title, type: string}
-      - { name: excerpt, label: Descripcion, type: string }
-      - { name: coverImage, label: Cover, type: image }
-      - { name: body, label: Body, type: rich-text }
-      - name: blocks
+  blocks:
         label: Bloques
         type: object
         list:
@@ -55,6 +40,21 @@ content:
               - { name: description, label: Texto, type: rich-text }
               - { name: image, label: Imagen, type: image }
               - { name: param, label: Link, type: string }
+media:
+  input: public/assets
+  output: /assets
+  categories: [ "image" ]
+content:
+  - name: home
+    label: Portada
+    type: file
+    path: index
+    fields:
+      - { name: block, label: Hero, component: blocks }
+      - { name: title, label: Title, type: string}
+      - { name: excerpt, label: Descripcion, type: string }
+      - { name: coverImage, label: Cover, type: image }
+      - { name: body, label: Body, type: rich-text }
   - name: section
     label: Secciones
     type: collection
@@ -69,8 +69,7 @@ content:
       - { name: body, label: Body, type: rich-text }
   - name: posts
     label: Articulo
-    type: collection
-    path: _posts
+    type: collectio path: _posts
     view:
       fields: [ coverImage, title]
     fields:
