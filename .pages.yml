@@ -49,6 +49,7 @@ content:
     type: collection
     path: _sections
     view:
+      primary: meta.title
       fields: [ meta.coverImage, meta.title]
     fields:
       - { name: meta, component: meta }
@@ -60,6 +61,7 @@ content:
     path: _posts
     view:
       fields: [ meta.coverImage, meta.title]
+      primary: meta.title
     fields:
       - { name: meta, component: meta }
       - { name: block, component: blocks }
