@@ -12,12 +12,12 @@ block:
         description: Tío, metete a cura que es lo mejor!
         image: /assets/blog/preview/cover.jpg
       - title: Segunda Imagen de cabecera
-  - type: Texto largo
-    title: Chapa
-    elems:
-      - title: Chapa 1
-        description: Te voy a dar mil motivos para........
   - type: Galeria
+    title: Libros recomendados
+    elems:
+      - title: "Señor anillos "
+      - title: "Harry Potter "
+  - type: Galeria horizontal
     title: Videos
     elems:
       - title: "Testi guay "
