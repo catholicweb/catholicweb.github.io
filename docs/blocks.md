@@ -1,11 +1,11 @@
 ---
-title: Home
+title: Ejemplo bloques
 blocks:
   - type: hero
     elements:
       - image: https://nypriest.com/wp-content/uploads/2025/03/Bishop-Elevation-1.jpg
         description: Es lo mejor que te puede pasar!.....
-        title: Metete a cura!
+        title: Metete a curaa!
 
   - type: features
     title: Our Features

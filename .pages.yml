@@ -9,8 +9,7 @@ components:
     fields:
       - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','Texto largo','Otros bloques....']} }
       - { name: title, label: Título, type: string }
-      #- { name: image, label: Imagen, type: image }
-      #- { name: body, label: Texto, type: rich-text }
+      - { name: description, label: Texto, type: rich-text }
       - name: elements
         label: Elementos
         type: object
@@ -20,7 +19,7 @@ components:
             summary: "{fields.title}" 
         fields:
           - { name: title, label: Título, type: string }
-          - { name: description, label: Texto, type: rich-text }
+          - { name: description, label: Texto, type: text }
           - { name: image, label: Imagen, type: image }
           - { name: param, label: Link, type: string }
 #- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }

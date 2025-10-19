@@ -9,15 +9,11 @@
       <!-- If page has blocks, render them -->
       <div v-if="page.frontmatter.blocks && page.frontmatter.blocks.length > 0">
         <div v-for="(block, index) in page.frontmatter.blocks">
-          <!--<h1 v-if="block.title" class="mb-5 text-5xl font-bold">{{ block.title }}</h1>
-          <div v-if="block.description">{{ block.description }}</div>-->
-          <div v-if="block.elements">
             <component 
               :key="index"
               :is="getBlockComponent(block.type)"
               :block="block"
             />
-          </div>
         </div>
       </div>
       
@@ -40,6 +36,7 @@ import HeroBlock from './HeroBlock.vue'
 import GalleryBlock from './GalleryBlock.vue'
 import FeaturesBlock from './FeaturesBlock.vue'
 import CtaBlock from './CtaBlock.vue'
+import Carousel from './Carousel.vue'
 
 const { page } = useData()
 
@@ -49,6 +46,7 @@ const blockComponents = {
   gallery: GalleryBlock,
   features: FeaturesBlock,
   cta: CtaBlock,
+  carousel: Carousel,
 }
 
 const getBlockComponent = (type) => {
