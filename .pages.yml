@@ -34,9 +34,10 @@ content:
     type: collection
     path: docs
     view:
-      fields: [ meta.coverImage, meta.title]
+      fields: [ image, title]
     fields:
       - { name: title, label: Title, type: string }
+      - { name: sortTitle, label: Short Title, type: string }
       - { name: description, label: Descripcion corta, type: text }
       - { name: image, label: Cover, type: image }
       - { name: blocks, component: blocks }
