@@ -10,7 +10,7 @@
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li v-for="item in posts" :key="item.link">
-            <a :href="item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
+            <a :href="site.base + item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
               {{ item.frontmatter.title }}
             </a>
           </li>
@@ -22,7 +22,7 @@
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
         <li v-for="item in posts" :key="item.link">
-          <a :href="item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
+          <a :href="site.base + item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
             {{ item.frontmatter.title }}
           </a>
         </li>
