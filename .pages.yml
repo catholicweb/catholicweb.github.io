@@ -1,67 +1,42 @@
 components:
-  meta:
-    label: Metadatos
-    type: object
-    fields:
-      - { name: title, label: Title, type: string }
-      - { name: excerpt, label: Descripcion corta, type: text }
-      - { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
-      - { name: coverImage, label: Cover, type: image }
-      - { name: content, label: Texto mucho largo, type: rich-text}
   blocks:
-        label: Bloques pros
+    label: Bloques pros
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{fields.type} - {fields.title}" 
+    fields:
+      - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','Texto largo','Otros bloques....']} }
+      - { name: title, label: Título, type: string }
+      #- { name: image, label: Imagen, type: image }
+      #- { name: body, label: Texto, type: rich-text }
+      - name: elements
+        label: Elementos
         type: object
         list:
           collapsible:
             collapsed: true
-            summary: "{fields.type} - {fields.title}" 
+            summary: "{fields.title}" 
         fields:
-          - { name: type, label: Tipo, type: select, options: { values: ['Hero','Galeria','Galeria horizontal','Galeria con buscador','Texto largo','Otros bloques....']} }
           - { name: title, label: Título, type: string }
-          #- { name: image, label: Imagen, type: image }
-          #- { name: body, label: Texto, type: rich-text }
-          - name: elems
-            label: Elementos
-            type: object
-            list:
-              collapsible:
-                collapsed: true
-                summary: "{fields.title}" 
-            fields:
-              - { name: title, label: Título, type: string }
-              - { name: description, label: Texto, type: rich-text }
-              - { name: image, label: Imagen, type: image }
-              - { name: param, label: Link, type: string }
+          - { name: description, label: Texto, type: rich-text }
+          - { name: image, label: Imagen, type: image }
+          - { name: param, label: Link, type: string }
+#- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
 media:
-  input: public/assets
-  output: /assets
+  input: media
+  output: media
   categories: [ "image" ]
 content:
-  - name: home
-    label: Portada
-    type: file
-    path: index
-    fields:
-      - { name: meta, component: meta }
-      - { name: block, component: blocks }
-  - name: section
-    label: Secciones
+  - name: pages
+    label: Paginas
     type: collection
-    path: _sections
-    view:
-      primary: meta.title
-      fields: [ meta.coverImage, meta.title]
-    fields:
-      - { name: meta, component: meta }
-      - { name: block, component: blocks }
-      - { name: body, label: Body, type: rich-text }
-  - name: posts
-    label: Articulo
-    type: collection
-    path: _posts
+    path: docs
     view:
       fields: [ meta.coverImage, meta.title]
-      primary: meta.title
     fields:
-      - { name: meta, component: meta }
-      - { name: block, component: blocks }
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Descripcion corta, type: text }
+      - { name: image, label: Cover, type: image }
+      - { name: blocks, component: blocks }

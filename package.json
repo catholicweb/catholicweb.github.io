@@ -1,27 +1,17 @@
 {
-  "private": true,
+  "name": "vitepress-tailwind-daisyui",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "classnames": "^2.5.1",
-    "date-fns": "^3.3.1",
-    "gray-matter": "^4.0.3",
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.14",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vitepress": "^1.5.0"
   }
 }
