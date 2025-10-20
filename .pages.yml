@@ -36,8 +36,8 @@ content:
       fields: [ image, title]
     exclude: [.vitepress]
     fields:
-      - { name: title, label: Title, type: string }
-      - { name: sortTitle, label: Short Title, type: string }
+      - { name: title, label: Título, type: string }
+      - { name: sortTitle, label: Título corto (menus), type: string }
       - { name: description, label: Descripcion corta, type: text }
-      - { name: image, label: Cover, type: image }
+      - { name: image, label: Imagen, type: image }
       - { name: blocks, component: blocks }
