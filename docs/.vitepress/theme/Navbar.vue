@@ -9,10 +9,25 @@
           </svg>
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li v-for="item in posts" :key="item.link">
-            <a :href="site.base + item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
+          <!-- Root level posts -->
+          <li v-for="item in data.rootPosts" :key="item.url">
+            <a :href="site.base.slice(0, -1) + item.url.replace('.html','')" :class="{ 'active': isActive(item.url) }">
               {{ item.frontmatter.title }}
             </a>
+          </li>
+          
+          <!-- Sections with subdirectories -->
+          <li v-for="section in data.sections" :key="section.key">
+            <details>
+              <summary class="capitalize">{{ section.title }}</summary>
+              <ul>
+                <li v-for="post in section.posts" :key="post.url">
+                  <a :href="site.base.slice(0, -1) + post.url.replace('.html','')" :class="{ 'active': isActive(post.url) }">
+                    {{ post.frontmatter.title }}
+                  </a>
+                </li>
+              </ul>
+            </details>
           </li>
         </ul>
       </div>
@@ -21,10 +36,25 @@
     
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li v-for="item in posts" :key="item.link">
-          <a :href="site.base + item.url.replace('.html','')" :class="{ 'active': page.relativePath.includes(item.url.slice(1)) }">
+        <!-- Root level posts -->
+        <li v-for="item in data.rootPosts" :key="item.url">
+          <a :href="site.base.slice(0, -1) + item.url.replace('.html','')" :class="{ 'active': isActive(item.url) }">
             {{ item.frontmatter.title }}
           </a>
+        </li>
+        
+        <!-- Sections with subdirectories -->
+        <li v-for="section in data.sections" :key="section.key">
+          <details>
+            <summary class="capitalize">{{ section.title }}</summary>
+            <ul class="bg-base-100 rounded-box p-2">
+              <li v-for="post in section.posts" :key="post.url">
+                <a :href="site.base.slice(0, -1) + post.url.replace('.html','')" :class="{ 'active': isActive(post.url) }">
+                  {{ post.frontmatter.title }}
+                </a>
+              </li>
+            </ul>
+          </details>
         </li>
       </ul>
     </div>
@@ -45,10 +75,17 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useData } from 'vitepress'
-import { data as posts } from './../posts.data.js'
+import { data } from './../posts.data.js'
 
-const { site, page, theme } = useData()
+const { site, page } = useData()
 const isDark = ref(false)
+
+const isActive = (url) => {
+  // Remove .html and normalize paths for comparison
+  const currentPath = '/' + page.value.relativePath.replace(/\.md$/, '')
+  const linkPath = url.replace(/\.html$/, '')
+  return currentPath === linkPath
+}
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -64,8 +101,8 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/*.menu a.active {
+.menu a.active {
   background-color: hsl(var(--p) / 0.2);
   color: hsl(var(--p));
-}*/
+}
 </style>

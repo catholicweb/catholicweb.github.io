@@ -6,27 +6,31 @@
       <p v-if="block.description" class="text-center text-lg mb-12 max-w-2xl mx-auto">{{ block.description }}</p>
       
       <!-- Masonry Grid Gallery -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div 
           v-for="(element, idx) in block.elements" 
           :key="idx"
-          class="card bg-base-200 image-full hover:shadow-2xl transition-shadow cursor-pointer"
+          class="card bg-base-300 hover:shadow-2xl transition-shadow cursor-pointer" :class="options.includes('full')? 'image-full' : ''"
           @click="openModal(element)"
         >
           <figure>
-            <img 
+            <img class="aspect-[16/9] object-cover" 
               :src="element.image" 
               :alt="element.title || element.description || `Gallery item ${idx + 1}`"
-              class="w-full h-64 object-cover"
             />
           </figure>
-          <div v-if="element.title || element.description" class="card-body">
+          <div v-if="element.title || element.description" class="card-body" :class="options == 'full'? '':'items-center text-center'">
             <h3 v-if="element.title" class="card-title">{{ element.title }}</h3>
             <p v-if="element.description">{{ element.description }}</p>
+            <div v-if="element.action" class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+              </div>
           </div>
         </div>
       </div>
+
+
+
       
       <!-- Modal for enlarged image -->
       <dialog ref="modal" class="modal">
@@ -63,4 +67,23 @@ const openModal = (element) => {
   selectedImage.value = element
   modal.value?.showModal()
 }
+
+let options = 'full'
 </script>
+
+<style>
+.hero-overlay {
+   background: radial-gradient(closest-side, rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%) !important;
+}
+.image-full:before {
+  background: linear-gradient(to bottom, rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%) !important;
+}
+.image-full, .hero {
+    
+    text-shadow: 5px 5px 10px rgba(0,0,0,1);
+    font-weight: bolder;
+}
+
+
+  
+</style>
