@@ -38,6 +38,7 @@ const { page } = useData()
 const blockComponents = {
   hero: Hero,
   gallery: Gallery,
+  features: Gallery,
   accordion: Accordion,
   cta: Cta,
   carousel: Carousel,

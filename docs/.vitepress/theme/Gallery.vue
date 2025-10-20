@@ -1,6 +1,6 @@
 <!-- .vitepress/theme/blocks/GalleryBlock.vue -->
 <template>
-  <section class="py-16 bg-base-100">
+  <section class="py-16">
     <div class="container mx-auto px-4">
       <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">{{ block.title }}</h2>
       <p v-if="block.description" class="text-center text-lg mb-12 max-w-2xl mx-auto">{{ block.description }}</p>
@@ -10,16 +10,17 @@
         <div 
           v-for="(element, idx) in block.elements" 
           :key="idx"
-          class="card bg-base-300 hover:shadow-2xl transition-shadow cursor-pointer" :class="options.includes('full')? 'image-full' : ''"
+          no="cursor-pointer hover:shadow-2xl"
+          class="card" :class="block.type != 'features'? 'image-full ' : ''"
           @click="openModal(element)"
         >
           <figure>
-            <img class="aspect-[16/9] object-cover" 
+            <img class="object-cover" :class="block.type == 'features'?'aspect-[1/1] mt-6 w-1/2 rounded-full':'aspect-[16/9]'" 
               :src="element.image" 
               :alt="element.title || element.description || `Gallery item ${idx + 1}`"
             />
           </figure>
-          <div v-if="element.title || element.description" class="card-body" :class="options == 'full'? '':'items-center text-center'">
+          <div v-if="element.title || element.description" class="card-body" :class="block.type != 'features'? '':'items-center text-center'">
             <h3 v-if="element.title" class="card-title">{{ element.title }}</h3>
             <p v-if="element.description">{{ element.description }}</p>
             <div v-if="element.action" class="card-actions">
@@ -79,9 +80,12 @@ let options = 'full'
   background: linear-gradient(to bottom, rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%) !important;
 }
 .image-full, .hero {
-    
-    text-shadow: 5px 5px 10px rgba(0,0,0,1);
+    text-shadow: 0px 0px 2px rgba(0,0,0,1);
     font-weight: bolder;
+}
+
+.image-full * {
+  color: white;
 }
 
 
