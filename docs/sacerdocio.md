@@ -1,7 +1,7 @@
 ---
 title: Metete a cura!
 description: "Que se cobra bien "
-image: /assets/blog/file_0000000008a0620d9e13cb8c97300606.png
+image: media/IMG-20250928-WA0001.jpg
 blocks:
   - type: hero
     title: Mola mucho
