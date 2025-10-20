@@ -7,7 +7,7 @@ components:
         collapsed: true
         summary: "{fields.type} - {fields.title}" 
     fields:
-      - { name: type, label: Tipo, type: select, options: { values: ['hero','galery','Galeria horizontal','Galeria con buscador','cta','Otros bloques....']} }
+      - { name: type, label: Tipo, type: select, options: { values: ['hero','gallery','features','Galeria con buscador','cta','Otros bloques....']} }
       - { name: title, label: Título, type: string }
       - { name: description, label: Texto, type: rich-text }
       - name: elements
