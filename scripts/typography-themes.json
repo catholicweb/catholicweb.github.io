@@ -1,0 +1,768 @@
+{
+  "wordpress-2016": {
+    "default": {
+      "title": "Wordpress Theme 2016",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.75,
+      "scaleRatio": 2.5,
+      "googleFonts": [
+        {
+          "name": "Montserrat",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Merriweather",
+          "styles": [
+            "400",
+            "400i",
+            "700",
+            "700i",
+            "900",
+            "900i"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Merriweather",
+        "Georgia",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Merriweather",
+        "Georgia",
+        "serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.9)",
+      "headerWeight": 900,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "wordpress-2015": {
+    "default": {
+      "title": "Wordpress Theme 2015",
+      "baseFontSize": "19px",
+      "baseLineHeight": 1.68,
+      "googleFonts": [
+        {
+          "name": "Noto Serif",
+          "styles": [
+            "400",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Noto Serif",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Noto Serif",
+        "serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": "700",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "wordpress-2014": {
+    "default": {
+      "title": "Wordpress Theme 2014",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.5,
+      "googleFonts": [
+        {
+          "name": "Lato",
+          "styles": [
+            "300",
+            "300i",
+            "400",
+            "400i",
+            "600"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Lato",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Lato",
+        "serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.83)",
+      "headerWeight": 600,
+      "bodyWeight": 400,
+      "boldWeight": 600
+    }
+  },
+  "wordpress-2013": {
+    "default": {
+      "title": "Wordpress Theme 2013",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.5,
+      "googleFonts": [
+        {
+          "name": "Bitter",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Source Sans Pro",
+          "styles": [
+            "300i",
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Bitter",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Source Sans Pro",
+        "sans-serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.93)",
+      "headerWeight": "700",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "wordpress-kubrick": {
+    "default": {
+      "title": "Wordpress Kubrick",
+      "baseFontSize": "12px",
+      "baseLineHeight": 1.4,
+      "headerFontFamily": [
+        "Lucida Grande",
+        "Verdana",
+        "Arial",
+        "Sans-Serif"
+      ],
+      "bodyFontFamily": [
+        "Lucida Grande",
+        "Verdana",
+        "Arial",
+        "Sans-Serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": "bold",
+      "bodyWeight": "normal",
+      "boldWeight": "bold"
+    }
+  },
+  "github": {
+    "default": {
+      "title": "GitHub",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.625,
+      "headerFontFamily": [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol"
+      ],
+      "bodyFontFamily": [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica",
+        "Arial",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol"
+      ],
+      "scaleRatio": 2,
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 600,
+      "bodyWeight": "normal",
+      "boldWeight": 600,
+      "blockMarginBottom": 0.5
+    }
+  },
+  "bootstrap": {
+    "default": {
+      "title": "Bootstrap",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.5,
+      "bodyFontFamily": [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "sans-serif"
+      ],
+      "scaleRatio": 2.25,
+      "bodyWeight": 400,
+      "headerWeight": 500,
+      "boldWeight": "bold"
+    }
+  },
+  "funston": {
+    "default": {
+      "title": "Funston",
+      "baseFontSize": "20px",
+      "baseLineHeight": 1.4,
+      "googleFonts": [
+        {
+          "name": "Patua One",
+          "styles": [
+            "400"
+          ]
+        },
+        {
+          "name": "Cabin Condensed",
+          "styles": [
+            "400",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Patua One",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Cabin Condensed",
+        "georgia",
+        "sans-serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.87)",
+      "headerWeight": "400",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "kirkham": {
+    "default": {
+      "title": "Kirkham",
+      "baseFontSize": "18px",
+      "baseLineHeight": 1.44,
+      "scaleRatio": 2.15,
+      "blockMarginBottom": 0.75,
+      "googleFonts": [
+        {
+          "name": "Playfair Display",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Fira Sans",
+          "styles": [
+            "400",
+            "400i",
+            "700",
+            "700i"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Playfair Display",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Fira Sans",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,1)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 700,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "lawton": {
+    "default": {
+      "title": "Lawton",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.5,
+      "googleFonts": [
+        {
+          "name": "Raleway",
+          "styles": [
+            "800"
+          ]
+        },
+        {
+          "name": "Libre Baskerville",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Raleway",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Libre Baskerville",
+        "serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,1)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 800,
+      "bodyWeight": 400,
+      "boldWeight": 700,
+      "blockMarginBottom": 0.6666666666666666
+    }
+  },
+  "lincoln": {
+    "default": {
+      "title": "Lincoln",
+      "baseFontSize": "19px",
+      "baseLineHeight": 1.58,
+      "googleFonts": [
+        {
+          "name": "Varela Round",
+          "styles": [
+            "400"
+          ]
+        },
+        {
+          "name": "Lora",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Varela Round",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Lora",
+        "serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.73)",
+      "headerWeight": "400",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "moraga": {
+    "default": {
+      "title": "Moraga",
+      "baseFontSize": "18px",
+      "baseLineHeight": 1.56,
+      "googleFonts": [
+        {
+          "name": "Source Sans Pro",
+          "styles": [
+            "200",
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "scaleRatio": 2.5,
+      "headerFontFamily": [
+        "Source Sans Pro",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Source Sans Pro",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.85)",
+      "bodyColor": "hsla(0,0%,0%,0.7)",
+      "headerWeight": "200",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "noriega": {
+    "default": {
+      "title": "Noriega",
+      "baseFontSize": "18px",
+      "baseLineHeight": 1.61,
+      "headerFontFamily": [
+        "Lato",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Lato",
+        "sans-serif"
+      ],
+      "bodyWeight": 400,
+      "headerWeight": 700,
+      "boldWeight": 700,
+      "googleFonts": [
+        {
+          "name": "Lato",
+          "styles": [
+            "400",
+            "700"
+          ]
+        }
+      ],
+      "scaleRatio": 1.618
+    }
+  },
+  "ocean-beach": {
+    "default": {
+      "title": "Ocean Beach",
+      "baseFontSize": "19px",
+      "baseLineHeight": 1.58,
+      "googleFonts": [
+        {
+          "name": "Roboto Slab",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Roboto",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Roboto Slab",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Roboto",
+        "serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.73)",
+      "headerWeight": 700,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "parnassus": {
+    "default": {
+      "title": "Parnassus",
+      "baseFontSize": "17px",
+      "baseLineHeight": 1.82,
+      "scaleRatio": 2.25,
+      "googleFonts": [
+        {
+          "name": "Merriweather Sans",
+          "styles": [
+            "800"
+          ]
+        },
+        {
+          "name": "Merriweather",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Merriweather Sans",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Merriweather",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 800,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "st-annes": {
+    "default": {
+      "title": "St. Annes",
+      "baseFontSize": "16px",
+      "baseLineHeight": 1.5625,
+      "googleFonts": [
+        {
+          "name": "Source Serif Pro",
+          "styles": [
+            "600"
+          ]
+        },
+        {
+          "name": "Source Sans Pro",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Source Serif Pro",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Source Sans Pro",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,1)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 600,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "stern-grove": {
+    "default": {
+      "title": "Stern Grove",
+      "baseFontSize": "18px",
+      "baseLineHeight": 1.6666666666666667,
+      "googleFonts": [
+        {
+          "name": "Montserrat",
+          "styles": [
+            "400"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Montserrat",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Georgia",
+        "Cambria",
+        "serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.5)",
+      "bodyColor": "hsla(0,0%,0%,0.87)",
+      "headerWeight": 400,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "sutro": {
+    "default": {
+      "title": "Sutro",
+      "baseFontSize": "18px",
+      "baseLineHeight": 1.78,
+      "googleFonts": [
+        {
+          "name": "Open Sans",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Merriweather",
+          "styles": [
+            "300",
+            "300i",
+            "700",
+            "700i"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Open Sans",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Merriweather",
+        "Georgia",
+        "serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.9)",
+      "headerWeight": 700,
+      "bodyWeight": 300,
+      "boldWeight": 700
+    }
+  },
+  "twin-peaks": {
+    "default": {
+      "title": "Twin Peaks",
+      "baseFontSize": "21px",
+      "baseLineHeight": 1.5,
+      "googleFonts": [
+        {
+          "name": "Rosario",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Crimson Text",
+          "styles": [
+            "400",
+            "400i",
+            "600"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Rosario",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Crimson Text",
+        "serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.73)",
+      "headerWeight": "700",
+      "bodyWeight": 400,
+      "boldWeight": 600
+    }
+  },
+  "us-web-design-standards": {
+    "default": {
+      "title": "US Web Design Standards",
+      "baseFontSize": "17px",
+      "baseLineHeight": 1.53,
+      "scale": 2.35,
+      "googleFonts": [
+        {
+          "name": "Merriweather",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "Source Sans Pro",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Merriweather",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "Source Sans Pro",
+        "sans-serif"
+      ],
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": 700,
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "wikipedia": {
+    "default": {
+      "title": "Wikipedia",
+      "baseFontSize": "14px",
+      "baseLineHeight": 1.57,
+      "headerFontFamily": [
+        "Linux Libertine",
+        "Georgia",
+        "serif"
+      ],
+      "bodyFontFamily": [
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,1)",
+      "bodyColor": "hsla(0,0%,0%,0.85)",
+      "headerWeight": "normal",
+      "bodyWeight": "normal",
+      "boldWeight": "bold"
+    }
+  },
+  "fairy-gates": {
+    "default": {
+      "title": "Fairy Gates",
+      "baseFontSize": "20px",
+      "baseLineHeight": 1.45,
+      "googleFonts": [
+        {
+          "name": "Work Sans",
+          "styles": [
+            "600"
+          ]
+        },
+        {
+          "name": "Quattrocento Sans",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Work Sans",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "Quattrocento Sans",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": "600",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  },
+  "elk-glen": {
+    "default": {
+      "title": "Elk Glen",
+      "baseFontSize": "20px",
+      "baseLineHeight": 1.5,
+      "googleFonts": [
+        {
+          "name": "Oswald",
+          "styles": [
+            "700"
+          ]
+        },
+        {
+          "name": "PT Sans",
+          "styles": [
+            "400",
+            "400i",
+            "700"
+          ]
+        }
+      ],
+      "headerFontFamily": [
+        "Oswald",
+        "sans-serif"
+      ],
+      "bodyFontFamily": [
+        "PT Sans",
+        "sans-serif"
+      ],
+      "headerColor": "hsla(0,0%,0%,0.9)",
+      "bodyColor": "hsla(0,0%,0%,0.8)",
+      "headerWeight": "700",
+      "bodyWeight": 400,
+      "boldWeight": 700
+    }
+  }
+}

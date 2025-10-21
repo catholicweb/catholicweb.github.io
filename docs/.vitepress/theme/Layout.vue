@@ -15,8 +15,6 @@
         </section>
     </main>
 
-    <Content />
-
     <!-- Footer Component -->
     <Footer />
   </div>
@@ -26,6 +24,7 @@
 import { useData } from 'vitepress'
 import Navbar from './Navbar.vue'
 import Footer from './Footer.vue'
+import Text from './Text.vue'
 import Hero from './Hero.vue'
 import Gallery from './Gallery.vue'
 import Accordion from './Accordion.vue'
@@ -37,6 +36,7 @@ const { page } = useData()
 // Map block types to components
 const blockComponents = {
   hero: Hero,
+  text: Text,
   gallery: Gallery,
   features: Gallery,
   accordion: Accordion,
