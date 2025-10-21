@@ -1,7 +1,10 @@
 ---
 title: Metete a cura!
-description: "Que se cobra bien "
-image: media/IMG-20250928-WA0001.jpg
+description: >
+  Cada vocación comienza con una pregunta, crece en una comunidad que ora y se
+  fortalece en una vida entregada. ¿Ya he encontrado mi vocación? ¿Pido por las
+  vocaciones en mi comunidad? ¿Vivo fiel a lo que me ha llamado Dios?
+image: media/YES.jpg
 blocks:
   - type: hero
     title: Mola mucho
