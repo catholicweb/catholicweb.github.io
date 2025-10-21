@@ -18,15 +18,13 @@ blocks:
       fortalezas y debilidades, tus inclinaciones, tu espiritualidad, tus
       capacidades mentales e incluso tu salud física.
           
-      *   **Un conocimiento sólido y un amor sincero por nuestra fe católica.  
-            
-          **
+      *   \*\*Un conocimiento sólido y un amor sincero por nuestra fe católica.
+          
+          \*\*
 
           
       *   **Familiaridad con las diferentes vocaciones**, lo que implican y la
-      forma de vida que moldean en quienes las abrazan.  
-            
-
+      forma de vida que moldean en quienes las abrazan.
           
 
       Naturalmente, este proceso no sucede de la noche a la mañana. El
@@ -43,6 +41,8 @@ blocks:
       necesites un acompañamiento más profundo—, **¡estamos aquí para
       ayudarte!**
   - type: text
+    title: "Qué es la vocación y sus tipos "
+  - type: text
     title: "Los 7 pasos del discernimiento "
     description: >-
       ## **Cada vocación es un misterio: cada hombre pasa por estas etapas de
@@ -53,7 +53,7 @@ blocks:
       laical u otros para encontrar su vocación sacerdotal. 
 
 
-      ## **1\. El Llamado inicial** 
+      ## **1\. El Llamado inicial**
 
 
       Si estás en la etapa 1 has experimentado recientemente una llamada a
@@ -106,7 +106,7 @@ blocks:
       experimentas felicidad mientras sirves. 
 
 
-      ## **4\. Confirmación** 
+      ## **4\. Confirmación**
 
 
       Vas avanzando hacia la entrega a la voluntad de Dios. Tras rezar,
@@ -120,7 +120,7 @@ blocks:
       círculos.
 
 
-      ## **5\. Viviendo la llamada.** 
+      ## **5\. Viviendo la llamada.**
 
 
       Entras al seminario o al noviciado y vives rodeado de otros que también
@@ -136,7 +136,7 @@ blocks:
       Es el momento de consolidar tu camino espiritual y vocacional.
 
 
-      ## **6\. Paz constante** 
+      ## **6\. Paz constante**
 
 
       Llevas tiempo en el seminario y has crecido mucho en fe, oración y
@@ -154,4 +154,41 @@ blocks:
       esta misión y sabes que, con su ayuda, puedes ordenar toda la vida social
       desde dentro y transformar el mundo a través del amor y la entrega de tu
       familia.
+  - type: text
+    title: "Los 5 pasos del discernimiento "
+    description: >-
+      **¿Cómo conocer el plan de Dios para tu vida?**  
+
+      ¡Sigue estas recomendaciones y Dios te ayudará a comprender a qué te está
+      llamando en tu vida!
+
+
+      1.  **Oración**  
+          La oración es una conversación con Dios, no solo recitar oraciones, sino hablar con el Señor desde el corazón. Todos los días lee la Biblia y habla con Jesús como si fuera tu mejor amigo. Pídele que te revele Su plan: “Jesús, quiero querer lo que Tú quieres. Aquí estoy, Señor; vengo a hacer Tu voluntad.” Confía plenamente en que Dios tiene un plan para ti.
+
+          
+      2.  **Sacramentos**  
+          El alma es la ventana por la que podemos ver a Dios y escuchar Su voz. Si la ventana está sucia por el pecado, debe limpiarse mediante la Confesión para poder estar en unión con Dios. Cuando recibas la Comunión, pídele a Jesús que te muestre tu vocación.
+
+          
+      3.  **Buena información**  
+          Es imposible descubrir tu vocación sin buena información. ¿Qué significa tener un matrimonio cristiano y santo? ¿Qué hacen los sacerdotes? ¿Cómo es la vida de una hermana o un hermano religioso? Busca información confiable y luego lleva lo aprendido de vuelta a la oración.
+
+          
+      4.  **La Santísima Virgen**  
+          María es el ejemplo máximo de apertura a la voluntad de Dios. ¿Estás abierto a la voluntad de Dios para ti? Reza tres Avemarías cada día, específicamente para conocer tu vocación y tener el valor de seguirla.
+
+          
+      5.  **Ir de retiro**  
+          ¡Los milagros ocurren en los retiros! Una de las maneras más seguras de descubrir el plan de Dios para ti es entrar en el silencio y la oración durante un tiempo prolongado. Pide a personas de confianza que te ayuden a encontrar un buen retiro.
+
+          
+      6.  **Pide consejo**  
+          No trates de discernir tu vocación solo, sin la ayuda de la Iglesia. Habla con una hermana, un sacerdote o un diácono en quien confíes.
+
+          
+
+      Cuando llegue el momento, ¡debes actuar! Muévete en la dirección que te
+      indique tu corazón, con la confianza de que Dios nunca te enviará a un
+      lugar donde Su gracia no pueda sostenerte.
 ---
