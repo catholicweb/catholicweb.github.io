@@ -1,3 +1,3 @@
 ---
-title: "Como escoger una buena pareja "
+title: "Cómo elegir bien: amar con los ojos de Dios"
 ---
