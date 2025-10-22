@@ -1,7 +1,6 @@
 ---
 title: "Discierne "
 shortTitle: "Discierne "
-image: test
 description: asdfasdf
 blocks:
   - type: text
@@ -21,7 +20,6 @@ blocks:
       capacidades mentales e incluso tu salud física.
           
       *   **Un conocimiento sólido y un amor sincero por nuestra fe católica.**
-
           
       *   **Familiaridad con las diferentes vocaciones**, lo que implican y la
       forma de vida que moldean en quienes las abrazan.
@@ -40,8 +38,6 @@ blocks:
       *   Si buscas orientación —ya sea que tengas preguntas sencillas o
       necesites un acompañamiento más profundo—, **¡estamos aquí para
       ayudarte!**
-  - type: text
-    title: "Qué es la vocación y sus tipos "
   - type: text
     title: "Los 7 pasos del discernimiento "
     description: >-
@@ -191,4 +187,20 @@ blocks:
       Cuando llegue el momento, ¡debes actuar! Muévete en la dirección que te
       indique tu corazón, con la confianza de que Dios nunca te enviará a un
       lugar donde Su gracia no pueda sostenerte.
+  - title: ¡Conoce cada vocación!
+    description: >-
+      Muchas personas son llamadas a la vocación del matrimonio, pero es un
+      error asumir automáticamente que esa es tu vocación.  
+
+      También puedes ser llamado al sacerdocio, a la vida religiosa como hermano
+      o hermana, o al diaconado.
+    elements:
+      - title: "Sacerdocio "
+        description: >-
+          que lleve a sacerodcio, y las otras dos tb 
+
+          se pueden presentar como tarjetas guays aqui tb despues de este
+          texto. 
+      - title: "Vida laical y familiar "
+      - title: "Vida religiosa y misión "
 ---
