@@ -2,10 +2,19 @@
 title: Portada
 blocks:
   - type: hero
-    title: Metete a curaa!
-    description: Es lo mejor que te puede pasar!.....
-    image: /vocaciones/media/eucharist-1591663.jpg
-  - type: gallery-feature
+    title: "Llamados a la santidad "
+    description: >-
+      Cada vocación comienza con una pregunta, crece en una comunidad que ora y
+      se fortalece en una vida entregada.
+
+
+      ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi comunidad?
+      ¿Vivo fiel a lo que me ha llamado Dios?
+    elements:
+      - title: DISCIERNE
+      - title: PIDE
+      - title: VIVIE
+  - type: gallery
     elements:
       - title: Fast Performance
         description: Lightning fast load times
@@ -28,15 +37,12 @@ blocks:
   - type: hero
     title: Metete a cura!
     description: Es lo mejor que te puede pasar!.....
-    image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-4.jpg
   - type: gallery
     title: Our Gallery
     description: Check out some of our work
     elements:
       - title: Project Alpha
         description: An amazing project we completed
-        #image: https://nypriest.com/wp-content/uploads/2025/03/Bishop-Elevation-1.jpg
-        link: https://www.youtube.com/watch?v=v56eE5kDRf4
       - title: Project Beta
         description: Another successful delivery
       - title: Project Gamma
@@ -48,7 +54,6 @@ blocks:
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
   - type: hero
     title: Ready to Get Started?
-    image: gray
     description: Join thousands of satisfied customers
     elements:
       - title: Start Free Trial
