@@ -15,7 +15,7 @@ blocks:
     elements:
       - title: "Sacerdocio "
         description: Llevar a Cristo a los hombres
-        image: vocaciones/media/eucharist-1591663.jpg
+        image: media/eucharist-1591663.jpg
       - title: "Vida laical y familiar "
         description: Llevar a Cristo a la sociedad
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
