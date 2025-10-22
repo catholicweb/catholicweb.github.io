@@ -22,7 +22,7 @@ description: >-
 
 
   * * *
-image: /vocaciones/media/IMG-20250928-WA0001.jpg
+image: /vocaciones/media/IMG-20250928-WA0001-480.webp
 blocks:
   - type: gallery
     title: Etapa de noviazgo para conocerse y crecer en el amor a Cristo

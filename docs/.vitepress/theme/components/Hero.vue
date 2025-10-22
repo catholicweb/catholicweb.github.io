@@ -3,7 +3,7 @@
   <div
     v-if="block.image"
     class="hero min-h-[50vh]"
-    :style="{ backgroundImage: `url(${block.image})` }"
+    :style="heroBgStyle(block.image)"
   >
     <div class="hero-overlay"></div>
     <div class="hero-content text-white text-center">
@@ -35,6 +35,22 @@
 </template>
 
 <script setup>
+function heroBgStyle(imageUrl) {
+  console.log(imageUrl)
+  const src720 = imageUrl.replace('480', '720');
+  const src1080 = imageUrl.replace('480', '1080');
+
+  return {
+    backgroundImage: `image-set(
+      url('${imageUrl}') 1x,
+      url('${src720}') 2x,
+      url('${src1080}') 3x
+    )`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+}
+
 defineProps({
   block: {
     type: Object,
