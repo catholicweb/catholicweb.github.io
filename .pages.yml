@@ -18,14 +18,13 @@ components:
                   "hero",
                   "gallery",
                   "gallery-feature",
-                  "accordion",
-                  "text",
-                  "Otros bloques....",
+                  "text"
                 ],
             },
         }
       - { name: title, label: Título, type: string }
       - { name: description, label: Texto, type: rich-text }
+      - { name: image, label: Imagen, type: image }
       - name: elements
         label: Elementos
         type: object
@@ -48,6 +47,7 @@ content:
     label: Paginas
     type: collection
     path: docs
+    filename: '{primary}.md'
     view:
       fields: [image, title]
     exclude: [.vitepress, public]
