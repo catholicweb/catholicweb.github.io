@@ -102,7 +102,8 @@ blocks:
       _(Foto de ellos)_
     elements:
       - {}
-  - title: ¿Como funciona el seminario?
+  - type: text
+    title: ¿Como funciona el seminario?
     description: >-
       **Requisitos para ser sacerdote**
 
