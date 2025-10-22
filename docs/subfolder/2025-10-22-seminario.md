@@ -182,4 +182,6 @@ blocks:
   - type: text
     title: "Testimonios "
     description: AQUI PUEDES PONER LOS VIDEOS ESOS EN EL SCROOLL Y YA
+  - type: text
+    title: ¡Colabora, reza por nosotros!
 ---
