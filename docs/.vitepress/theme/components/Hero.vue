@@ -11,7 +11,7 @@
         <h1 v-if="block.title" class="mb-5 text-5xl font-bold">
           {{ block.title }}
         </h1>
-        <p v-if="block.description" class="mb-5">{{ block.description }}</p>
+        <p v-if="block.subtitle" class="mb-5">{{ block.subtitle }}</p>
         <div class="flex flex-wrap gap-4 justify-center">
           <a
             v-for="(elem, idx) in block.elements"
