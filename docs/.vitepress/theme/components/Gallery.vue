@@ -111,13 +111,13 @@ function getImage(elem, play) {
     if (match && match[1]) {
       let videoId = match[1];
       if (play) return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      if (elem.image) return elem.image;
       return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     }
   } catch (e) {}
+
   // Not a valid YouTube video URL
-  if( !elem || !elem.image) return ''
-  if( elem.image.includes('//')) return elem.image
-  return '/'+elem.image
+  return elem?.image || "";
 }
 </script>
 
