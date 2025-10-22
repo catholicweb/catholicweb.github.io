@@ -1,5 +1,5 @@
 ---
-title: Portada
+title: "Llamados a la santidad "
 blocks:
   - type: hero
     title: "Llamados a la santidad "
@@ -34,9 +34,6 @@ blocks:
       - title: Great Support
         description: We're here to help
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-6.jpg
-  - type: hero
-    title: Metete a cura!
-    description: Es lo mejor que te puede pasar!.....
   - type: gallery
     title: Our Gallery
     description: Check out some of our work
