@@ -1,5 +1,5 @@
 ---
-title: Ejemplo bloques
+title: Portada
 blocks:
   - type: hero
     title: Metete a curaa!
