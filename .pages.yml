@@ -17,7 +17,7 @@ components:
                 [
                   "hero",
                   "gallery",
-                  "gallery-features",
+                  "gallery-feature",
                   "accordion",
                   "text",
                   "Otros bloques....",
