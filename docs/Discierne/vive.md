@@ -1,4 +1,0 @@
----
-title: Vive
-shortTitle: Vive
----
