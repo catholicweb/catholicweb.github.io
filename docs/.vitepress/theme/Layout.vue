@@ -4,6 +4,10 @@
     <!-- Navbar Component -->
     <Navbar />
 
+
+    <!--<Hero :block="page.frontmatter"/>-->
+
+
     <!-- Main Content - Block System -->
     <main class="flex-1">
         <section v-for="(block, index) in page.frontmatter.blocks">

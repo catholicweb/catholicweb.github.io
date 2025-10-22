@@ -1,4 +1,4 @@
 ---
 title: Pide
-sortTitle: Pide
+shortTitle: Pide
 ---

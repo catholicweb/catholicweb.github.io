@@ -25,7 +25,7 @@ components:
 #- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
 media:
   input: media
-  output: media
+  output: vocaciones/media
   categories: [ "image" ]
 content:
   - name: pages
@@ -34,10 +34,10 @@ content:
     path: docs
     view:
       fields: [ image, title]
-    exclude: [.vitepress]
+    exclude: [.vitepress,media]
     fields:
       - { name: title, label: Título, type: string }
-      - { name: sortTitle, label: Título corto (menus), type: string }
+      - { name: shortTitle, label: Título corto (menus), type: string }
       - { name: description, label: Descripcion corta, type: text }
       - { name: image, label: Imagen, type: image }
       - { name: blocks, component: blocks }

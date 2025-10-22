@@ -18,7 +18,8 @@ function renderMarkdownFields(obj) {
 
 export default defineConfig({
   base: '/vocaciones/', // Set the base to /vocaciones/
-  title: 'Vocaciones',
+  title: '¿Quién soy?',
+  cleanUrls: true,
   description: 'Vocaciones Navarra',
   transformPageData(pageData) {
     const fm = pageData.frontmatter

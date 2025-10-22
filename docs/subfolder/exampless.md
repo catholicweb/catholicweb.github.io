@@ -1,6 +1,8 @@
 ---
 title: "Discierne "
-sortTitle: "Discierne "
+shortTitle: "Discierne "
+image: test
+description: asdfasdf
 blocks:
   - type: text
     title: ¿Qué es el discernimiento?
@@ -18,9 +20,7 @@ blocks:
       fortalezas y debilidades, tus inclinaciones, tu espiritualidad, tus
       capacidades mentales e incluso tu salud física.
           
-      *   \*\*Un conocimiento sólido y un amor sincero por nuestra fe católica.
-          
-          \*\*
+      *   **Un conocimiento sólido y un amor sincero por nuestra fe católica.**
 
           
       *   **Familiaridad con las diferentes vocaciones**, lo que implican y la
@@ -50,7 +50,7 @@ blocks:
 
 
       Algunos solo pasarán por las etapas para descubrir el sentido de su vida
-      laical u otros para encontrar su vocación sacerdotal. 
+      laical u otros para encontrar su vocación sacerdotal.
 
 
       ## **1\. El Llamado inicial**
@@ -96,14 +96,14 @@ blocks:
       descubres una paz distinta, una que nace al profundizar en tu vida
       interior y al llevar a Cristo a cada aspecto de tu vida. Aquí aprendes a
       vencer miedos: el temor de perderte cosas, de no ser suficiente o de que
-      te tachen de “santo”. 
+      te tachen de “santo”.
 
 
       Igual no encuentras todavía paz y confirmación, descubres que tus miedos
       son al sacerdocio o a la vida religiosa: celibato, soledad, hablar en
       público, ser un buen sacerdote… los afrontas y sientes la alegría de
       servir a Dios y a los demás. Tu deseo de servir a los demás crece y
-      experimentas felicidad mientras sirves. 
+      experimentas felicidad mientras sirves.
 
 
       ## **4\. Confirmación**
@@ -111,7 +111,7 @@ blocks:
 
       Vas avanzando hacia la entrega a la voluntad de Dios. Tras rezar,
       informarte y participar en retiros, sientes paz y confirmas la llamada de
-      Dios a dejarlo todo. 
+      Dios a dejarlo todo.
 
 
       Tu director espiritual te dice que tiene las señales y cualificaciones. El
@@ -130,7 +130,7 @@ blocks:
 
       Habías descubierto la llamada de Dios a vivir como laico y empiezas a
       fijarte en quién podría ser tu pareja confiando en Dios. Empezáis a salir
-      y vivir el noviazgo como discernimiento: conocimiento mutuo prudente y 
+      y vivir el noviazgo como discernimiento: conocimiento mutuo prudente y
 
 
       Es el momento de consolidar tu camino espiritual y vocacional.

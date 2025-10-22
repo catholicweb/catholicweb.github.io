@@ -2,10 +2,9 @@
 title: Ejemplo bloques
 blocks:
   - type: hero
-    elements:
-      - title: Metete a curaa!
-        description: Es lo mejor que te puede pasar!.....
-        image: https://nypriest.com/wp-content/uploads/2025/03/Bishop-Elevation-1.jpg
+    title: Metete a curaa!
+    description: Es lo mejor que te puede pasar!.....
+    image: /vocaciones/media/eucharist-1591663.jpg
   - type: features
     elements:
       - title: Fast Performance
@@ -27,10 +26,9 @@ blocks:
         description: We're here to help
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-6.jpg
   - type: hero
-    elements:
-      - title: Metete a cura!
-        description: Es lo mejor que te puede pasar!.....
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-4.jpg
+    title: Metete a cura!
+    description: Es lo mejor que te puede pasar!.....
+    image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-4.jpg
   - type: gallery
     title: Our Gallery
     description: Check out some of our work
@@ -48,8 +46,9 @@ blocks:
       - title: Project Delta
         description: Innovative solution
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
-  - type: cta
+  - type: hero
     title: Ready to Get Started?
+    image: gray
     description: Join thousands of satisfied customers
     elements:
       - title: Start Free Trial

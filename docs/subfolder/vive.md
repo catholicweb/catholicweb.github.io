@@ -1,4 +1,4 @@
 ---
 title: Vive
-sortTitle: Vive
+shortTitle: Vive
 ---
