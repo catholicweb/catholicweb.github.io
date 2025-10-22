@@ -141,4 +141,10 @@ blocks:
       mundo**, cumpliendo su misión de evangelización desde su propia realidad y
       ejerciendo su triple función **sacerdotal, profética y real**, tal como
       enseña Lumen Gentium.
+  - type: text
+    title: "Ministerios laicales "
+  - type: text
+    title: "Laicos consagrados "
+  - type: text
+    title: "Familia "
 ---
