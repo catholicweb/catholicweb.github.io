@@ -30,7 +30,6 @@ import Text from "./Text.vue";
 import Hero from "./Hero.vue";
 import Gallery from "./Gallery.vue";
 import Accordion from "./Accordion.vue";
-import Cta from "./Cta.vue";
 import Carousel from "./Carousel.vue";
 
 const { page } = useData();
@@ -42,7 +41,7 @@ const blockComponents = {
   gallery: Gallery,
   features: Gallery,
   accordion: Accordion,
-  cta: Cta,
+  cta: Hero,
   carousel: Carousel,
 };
 

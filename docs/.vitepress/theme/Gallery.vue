@@ -66,6 +66,9 @@
           class="w-100 h-100 rounded-lg object-cover"
         />
       </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
     </dialog>
   </section>
 </template>
