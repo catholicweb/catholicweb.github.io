@@ -35,10 +35,10 @@ blocks:
     elements:
       - title: Project Alpha
         description: An amazing project we completed
-        image: https://nypriest.com/wp-content/uploads/2025/03/Bishop-Elevation-1.jpg
+        #image: https://nypriest.com/wp-content/uploads/2025/03/Bishop-Elevation-1.jpg
+        link: https://www.youtube.com/watch?v=v56eE5kDRf4
       - title: Project Beta
         description: Another successful delivery
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-4.jpg
       - title: Project Gamma
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
       - description: Beautiful work

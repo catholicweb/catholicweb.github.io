@@ -1,93 +1,143 @@
 <!-- .vitepress/theme/blocks/GalleryBlock.vue -->
 <template>
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">{{ block.title }}</h2>
-      <p v-if="block.description" class="text-center text-lg mb-12 max-w-2xl mx-auto">{{ block.description }}</p>
-      
-      <!-- Masonry Grid Gallery -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div 
-          v-for="(element, idx) in block.elements" 
-          :key="idx"
-          no="cursor-pointer hover:shadow-2xl"
-          class="card" :class="block.type != 'features'? 'image-full ' : ''"
-          @click="openModal(element)"
+  <section class="py-16 container mx-auto px-4">
+    <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">
+      {{ block.title }}
+    </h2>
+    <p
+      v-if="block.description"
+      class="text-center text-lg mb-12 max-w-2xl mx-auto"
+    >
+      {{ block.description }}
+    </p>
+
+    <!-- Masonry Grid Gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        v-for="(elem, idx) in block.elements"
+        :key="idx"
+        no="cursor-pointer hover:shadow-2xl"
+        :class="block.type != 'features' ? 'image-full card' : 'card'"
+        @click="openModal(elem)"
+      >
+        <figure v-if="getImage(elem)">
+          <img
+            class="object-cover"
+            :class="{
+              'aspect-[1/1] mt-6 w-1/2 rounded-full': block.type === 'features',
+              'aspect-[16/9]': block.type !== 'features',
+            }"
+            :src="getImage(elem)"
+            :alt="alt(elem, idx)"
+          />
+        </figure>
+        <div
+          v-if="elem.title || elem.description"
+          :class="{
+            'card-body': block.type !== 'features',
+            'items-center text-center card-body': block.type === 'features',
+          }"
         >
-          <figure>
-            <img class="object-cover" :class="block.type == 'features'?'aspect-[1/1] mt-6 w-1/2 rounded-full':'aspect-[16/9]'" 
-              :src="element.image" 
-              :alt="element.title || element.description || `Gallery item ${idx + 1}`"
-            />
-          </figure>
-          <div v-if="element.title || element.description" class="card-body" :class="block.type != 'features'? '':'items-center text-center'">
-            <h3 v-if="element.title" class="card-title">{{ element.title }}</h3>
-            <p v-if="element.description">{{ element.description }}</p>
-            <div v-if="element.action" class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
-              </div>
+          <h3 v-if="elem.title" class="card-title">{{ elem.title }}</h3>
+          <p v-if="elem.description">{{ elem.description }}</p>
+          <div v-if="elem.action" class="card-actions">
+            <button class="btn btn-primary">Buy Now</button>
           </div>
         </div>
       </div>
-
-
-
-      
-      <!-- Modal for enlarged image -->
-      <dialog ref="modal" class="modal">
-        <div class="modal-box max-w-4xl">
-          <form method="dialog">
-            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-          </form>
-          <img v-if="selectedImage" :src="selectedImage.image" :alt="selectedImage.title" class="w-full rounded-lg" />
-          <h3 v-if="selectedImage?.title" class="font-bold text-lg mt-4">{{ selectedImage.title }}</h3>
-          <p v-if="selectedImage?.description" class="py-4">{{ selectedImage.description }}</p>
-        </div>
-        <form method="dialog" class="modal-backdrop">
-          <button>close</button>
-        </form>
-      </dialog>
     </div>
+
+    <!-- Modal for enlarged image -->
+    <dialog ref="modal" class="modal">
+      <div class="modal-box max-w-4xl p-0 aspect-[16/9]">
+        <iframe
+          allowfullscreen="true"
+          allowtransparency="true"
+          frameborder="0"
+          allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          class="w-full aspect-[16/9]"
+          v-if="getImage(selectedImage).includes('youtube')"
+          :src="getImage(selectedImage, true)"
+        ></iframe>
+        <img
+          v-else
+          :src="selectedImage.image"
+          :alt="selectedImage.title"
+          class="w-100 h-100 rounded-lg object-cover"
+        />
+      </div>
+    </dialog>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineProps({
   block: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
-const modal = ref(null)
-const selectedImage = ref(null)
+const modal = ref(null);
+const selectedImage = ref("");
 
-const openModal = (element) => {
-  selectedImage.value = element
-  modal.value?.showModal()
+const openModal = (elem) => {
+  selectedImage.value = elem;
+  modal.value?.showModal();
+};
+
+function alt(elem, idx) {
+  return elem.title || elem.description || `Gallery item ${idx + 1}`;
 }
 
-let options = 'full'
+function getImage(elem, play) {
+  try {
+    const regex =
+      /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+
+    const match = elem.link.match(regex);
+    if (match && match[1]) {
+      let videoId = match[1];
+      if (play) return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      if (elem.image) return elem.image;
+      return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    }
+  } catch (e) {}
+
+  // Not a valid YouTube video URL
+  return elem?.image || "";
+}
 </script>
 
 <style>
 .hero-overlay {
-   background: radial-gradient(closest-side, rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%) !important;
+  background: radial-gradient(
+    closest-side,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
 .image-full:before {
-  background: linear-gradient(to bottom, rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
-.image-full, .hero {
-    text-shadow: 0px 0px 2px rgba(0,0,0,1);
-    font-weight: bolder;
+.image-full,
+.hero {
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  font-weight: bolder;
 }
 
 .image-full * {
   color: white;
 }
 
-
-  
+.facade.youtube button {
+  background-image: url("data:image/svg+xml,%3Csvg width='159' height='110' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z' fill='%23f00'/%3E%3Cpath d='m105 55-40.8-23.4v46.8z' fill='%23fff'/%3E%3C/svg%3E%0A");
+  background-size: 22%;
+}
 </style>
