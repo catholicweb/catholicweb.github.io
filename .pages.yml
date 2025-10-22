@@ -40,7 +40,7 @@ components:
 #- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
 media:
   input: docs/public/media
-  output: media
+  output: /vocaciones/media
   categories: ["image"]
 content:
   - name: pages
