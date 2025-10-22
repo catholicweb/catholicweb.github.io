@@ -2,7 +2,7 @@
 title: "Seminario "
 shortTitle: "Conoce nuestros seminaristas "
 blocks:
-  - type: features
+  - type: gallery-feature
     title: "Conoce nuestros seminaristas "
     description: >-
       El camino hacia el sacerdocio es una verdadera aventura de gracia: un

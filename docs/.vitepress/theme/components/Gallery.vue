@@ -17,15 +17,18 @@
         v-for="(elem, idx) in block.elements"
         :key="idx"
         no="cursor-pointer hover:shadow-2xl"
-        :class="block.type != 'features' ? 'image-full card' : 'card'"
+        :class="{
+          'image-full card': !is('feature'),
+          card: is('feature'),
+        }"
         @click="openModal(elem)"
       >
         <figure v-if="getImage(elem)">
           <img
             class="object-cover"
             :class="{
-              'aspect-[1/1] mt-6 w-1/2 rounded-full': block.type === 'features',
-              'aspect-[16/9]': block.type !== 'features',
+              'aspect-[1/1] mt-6 w-1/2 rounded-full': is('feature'),
+              'aspect-[16/9]': !is('feature'),
             }"
             :src="getImage(elem)"
             :alt="alt(elem, idx)"
@@ -34,8 +37,8 @@
         <div
           v-if="elem.title || elem.description"
           :class="{
-            'card-body': block.type !== 'features',
-            'items-center text-center card-body': block.type === 'features',
+            'card-body': !is('feature'),
+            'items-center text-center card-body': is('feature'),
           }"
         >
           <h3 v-if="elem.title" class="card-title">{{ elem.title }}</h3>
@@ -76,7 +79,7 @@
 <script setup>
 import { ref } from "vue";
 
-defineProps({
+const props = defineProps({
   block: {
     type: Object,
     required: true,
@@ -85,6 +88,11 @@ defineProps({
 
 const modal = ref(null);
 const selectedImage = ref("");
+
+function is(prop) {
+  console.log(prop, props.block.type);
+  return props.block.type.includes(prop);
+}
 
 const openModal = (elem) => {
   selectedImage.value = elem;

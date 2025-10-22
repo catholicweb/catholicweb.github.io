@@ -2,7 +2,7 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <!-- Navbar Component -->
-    <Navbar />
+    <component :is="components.Navbar" />
 
     <!--<Hero :block="page.frontmatter"/>-->
 
@@ -18,34 +18,19 @@
     </main>
 
     <!-- Footer Component -->
-    <Footer />
+    <component :is="components.Footer" />
   </div>
 </template>
 
 <script setup>
 import { useData } from "vitepress";
-import Navbar from "./Navbar.vue";
-import Footer from "./Footer.vue";
-import Text from "./Text.vue";
-import Hero from "./Hero.vue";
-import Gallery from "./Gallery.vue";
-import Accordion from "./Accordion.vue";
-import Carousel from "./Carousel.vue";
-
+import components from "./components";
 const { page } = useData();
 
-// Map block types to components
-const blockComponents = {
-  hero: Hero,
-  text: Text,
-  gallery: Gallery,
-  features: Gallery,
-  accordion: Accordion,
-  cta: Hero,
-  carousel: Carousel,
-};
-
-const getBlockComponent = (type) => {
-  return blockComponents[type] || Text;
-};
+// Get the component matching the block type
+function getBlockComponent(type) {
+  // Convert "hero-options" → "Hero"
+  const name = type.split("-")[0].replace(/(^\w)/g, (s) => s.toUpperCase());
+  return components[name] || components["Text"];
+}
 </script>

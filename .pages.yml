@@ -5,9 +5,25 @@ components:
     list:
       collapsible:
         collapsed: true
-        summary: "{fields.type} - {fields.title}" 
+        summary: "{fields.type} - {fields.title}"
     fields:
-      - { name: type, label: Tipo, type: select, options: { values: ['hero','gallery','features','accordion','cta','text','Otros bloques....']} }
+      - {
+          name: type,
+          label: Tipo,
+          type: select,
+          options:
+            {
+              values:
+                [
+                  "hero",
+                  "gallery",
+                  "gallery-features",
+                  "accordion",
+                  "text",
+                  "Otros bloques....",
+                ],
+            },
+        }
       - { name: title, label: Título, type: string }
       - { name: description, label: Texto, type: rich-text }
       - name: elements
@@ -16,7 +32,7 @@ components:
         list:
           collapsible:
             collapsed: true
-            summary: "{fields.title}" 
+            summary: "{fields.title}"
         fields:
           - { name: title, label: Título, type: string }
           - { name: description, label: Texto, type: text }
@@ -26,15 +42,15 @@ components:
 media:
   input: media
   output: vocaciones/media
-  categories: [ "image" ]
+  categories: ["image"]
 content:
   - name: pages
     label: Paginas
     type: collection
     path: docs
     view:
-      fields: [ image, title]
-    exclude: [.vitepress,media]
+      fields: [image, title]
+    exclude: [.vitepress, media]
     fields:
       - { name: title, label: Título, type: string }
       - { name: shortTitle, label: Título corto (menus), type: string }

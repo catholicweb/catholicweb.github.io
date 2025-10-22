@@ -5,7 +5,7 @@ blocks:
     title: Metete a curaa!
     description: Es lo mejor que te puede pasar!.....
     image: /vocaciones/media/eucharist-1591663.jpg
-  - type: features
+  - type: gallery-feature
     elements:
       - title: Fast Performance
         description: Lightning fast load times
