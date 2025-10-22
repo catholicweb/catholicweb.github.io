@@ -4,7 +4,7 @@ subtitle: Cada vocación comienza con una pregunta, crece en una comunidad que
   ora y se fortalece en una vida santa.
 description: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi
   comunidad? ¿Vivo fiel a lo que me ha llamado Dios?
-image: media/YES.jpg
+image: vocaciones/media/YES.jpg
 blocks:
   - type: hero
     elements:
@@ -15,7 +15,7 @@ blocks:
     elements:
       - title: "Sacerdocio "
         description: Llevar a Cristo a los hombres
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-1.jpg
+        image: vocaciones/media/eucharist-1591663.jpg
       - title: "Vida laical y familiar "
         description: Llevar a Cristo a la sociedad
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
