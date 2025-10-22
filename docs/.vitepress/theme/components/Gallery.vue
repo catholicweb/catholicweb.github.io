@@ -30,6 +30,7 @@
               'aspect-[1/1] mt-6 w-1/2 rounded-full': is('feature'),
               'aspect-[16/9]': !is('feature'),
             }"
+            loading="lazy"
             :src="getImage(elem)"
             :alt="alt(elem, idx)"
           />
@@ -65,8 +66,8 @@
         <img
           v-else
           :src="selectedImage.image"
-          :alt="selectedImage.title"
-          class="w-100 h-100 rounded-lg object-cover"
+          :alt="alt(selectedImage, ' modal')"
+          class="w-full h-full object-cover object-center rounded-lg"
         />
       </div>
       <form method="dialog" class="modal-backdrop">
