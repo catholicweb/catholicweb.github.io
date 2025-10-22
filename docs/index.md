@@ -4,7 +4,7 @@ subtitle: Cada vocación comienza con una pregunta, crece en una comunidad que
   ora y se fortalece en una vida santa.
 description: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi
   comunidad? ¿Vivo fiel a lo que me ha llamado Dios?
-image: vocaciones/media/YES.jpg
+image: media/YES.jpg
 blocks:
   - type: hero
     elements:
