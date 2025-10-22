@@ -29,7 +29,7 @@
               :href="site.base.slice(0, -1) + item.url.replace('.html', '')"
               :class="{ active: isActive(item.url) }"
             >
-              {{ item.frontmatter.shortTitle || item.frontmatter.title }}
+              {{ item.frontmatter.title }}
             </a>
           </li>
 
@@ -45,7 +45,7 @@
                     "
                     :class="{ active: isActive(post.url) }"
                   >
-                    {{ post.frontmatter.shortTitle || post.frontmatter.title }}
+                    {{ post.frontmatter.title }}
                   </a>
                 </li>
               </ul>
@@ -64,7 +64,7 @@
             :href="site.base.slice(0, -1) + item.url.replace('.html', '')"
             :class="{ active: isActive(item.url) }"
           >
-            {{ item.frontmatter.shortTitle || item.frontmatter.title }}
+            {{ item.frontmatter.title }}
           </a>
         </li>
 
@@ -78,7 +78,7 @@
                   :href="site.base.slice(0, -1) + post.url.replace('.html', '')"
                   :class="{ active: isActive(post.url) }"
                 >
-                  {{ post.frontmatter.shortTitle || post.frontmatter.title }}
+                  {{ post.frontmatter.title }}
                 </a>
               </li>
             </ul>
