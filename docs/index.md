@@ -14,7 +14,7 @@ blocks:
       - title: DISCIERNE
       - title: PIDE
       - title: VIVIE
-  - type: gallery
+  - type: gallery-feature
     elements:
       - title: Fast Performance
         description: Lightning fast load times
