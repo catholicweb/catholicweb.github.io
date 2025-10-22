@@ -40,7 +40,7 @@ components:
           - { name: param, label: Link, type: string }
 #- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
 media:
-  input: media
+  input: docs/public/media
   output: vocaciones/media
   categories: ["image"]
 content:
@@ -50,7 +50,7 @@ content:
     path: docs
     view:
       fields: [image, title]
-    exclude: [.vitepress, media]
+    exclude: [.vitepress, public]
     fields:
       - { name: title, label: Título, type: string }
       - { name: subtitle, label: Subtitulo, type: text }
