@@ -7,7 +7,7 @@
     <!--<Hero :block="page.frontmatter"/>-->
 
     <!-- Main Content - Block System -->
-    <main class="flex-1">
+    <main class="flex-1" v-if="page.frontmatter.blocks">
       <section v-for="(block, index) in page.frontmatter.blocks">
         <component
           :key="index"
@@ -16,8 +16,6 @@
         />
       </section>
     </main>
-
-    <Content />
 
     <!-- Footer Component -->
     <Footer />
@@ -49,6 +47,6 @@ const blockComponents = {
 };
 
 const getBlockComponent = (type) => {
-  return blockComponents[type] || ContentBlock;
+  return blockComponents[type] || Text;
 };
 </script>
