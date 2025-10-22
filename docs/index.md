@@ -18,18 +18,9 @@ blocks:
       - title: "Vida laical y familiar "
         description: Llevar a Cristo a la sociedad
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
-      - title: "Vida "
-        description: Simple and intuitive interface
+      - title: "Vida religiosa y misión "
+        description: "Llevar todo a Cristo "
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
-      - title: Fully Responsive
-        description: Works on all devices
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-4.jpg
-      - title: Customizable
-        description: Tailor it to your needs
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-5.jpg
-      - title: Great Support
-        description: We're here to help
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-6.jpg
   - type: gallery
     title: Our Gallery
     description: Check out some of our work
