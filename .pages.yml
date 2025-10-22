@@ -54,7 +54,7 @@ content:
     exclude: [.vitepress, public]
     fields:
       - { name: title, label: Título, type: string }
-      - { name: subtitle, label: Subtitulo, type: text }
+      - { name: subtitle, label: Subtitulo, type: string }
       - { name: description, label: Texto largo, type: rich-text }
       - { name: image, label: Imagen, type: image }
       - { name: blocks, component: blocks }
