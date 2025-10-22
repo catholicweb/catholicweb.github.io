@@ -9,7 +9,9 @@ blocks:
   - type: hero
     title: Mola mucho
     description: Tío, metete a cura que es lo mejor!
-    image: /vocaciones/media/cover.jpg
+    image: /vocaciones/media/YES.jpg
+    elements:
+      - title: Apuntarme!
   - type: gallery
     title: Libros recomendados
     elements:
