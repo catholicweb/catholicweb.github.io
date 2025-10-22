@@ -1,14 +1,10 @@
 ---
 title: "Llamados a la santidad "
+subtitle: Cada vocación comienza con una pregunta, crece en una comunidad que
+  ora y se fortalece en una vida santa.
 blocks:
   - type: hero
-    title: "Llamados a la santidad "
-    description: >-
-      Cada vocación comienza con una pregunta, crece en una comunidad que ora y
-      se fortalece en una vida entregada.
-
-
-      ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi comunidad?
+    title: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi comunidad?
       ¿Vivo fiel a lo que me ha llamado Dios?
     elements:
       - title: DISCIERNE
@@ -16,13 +12,13 @@ blocks:
       - title: VIVIE
   - type: gallery-feature
     elements:
-      - title: Fast Performance
-        description: Lightning fast load times
+      - title: "Sacerdocio "
+        description: Llevar a Cristo a los hombres
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-1.jpg
-      - title: Beautiful Design
-        description: Stunning visuals out of the box
+      - title: "Vida laical y familiar "
+        description: Llevar a Cristo a la sociedad
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
-      - title: Easy to Use
+      - title: "Vida "
         description: Simple and intuitive interface
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
       - title: Fully Responsive
