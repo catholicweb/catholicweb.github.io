@@ -3,7 +3,7 @@
   <div
     v-if="block.image"
     class="hero min-h-[60vh]"
-    :style="{ backgroundImage: `url('${block.image}')` }"
+    :style="{ backgroundImage: `url(${block.image})` }"
   >
     <div class="hero-overlay"></div>
     <div class="hero-content text-white text-center">
