@@ -1,5 +1,5 @@
 ---
-title: "Colabora, el semianrio es de todos. "
+title: "Colabora, el seminario es de todos. "
 description: >-
   ### **Los seminaristas necesitan nuestra colaboración**
 
