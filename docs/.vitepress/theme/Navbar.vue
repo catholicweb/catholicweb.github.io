@@ -12,7 +12,7 @@
           <!-- Root level posts -->
           <li v-for="item in data.rootPosts" :key="item.url">
             <a :href="site.base.slice(0, -1) + item.url.replace('.html','')" :class="{ 'active': isActive(item.url) }">
-              {{ item.frontmatter.title }}
+              {{ item.frontmatter.shortTitle || item.frontmatter.title }}
             </a>
           </li>
           
@@ -23,7 +23,7 @@
               <ul>
                 <li v-for="post in section.posts" :key="post.url">
                   <a :href="site.base.slice(0, -1) + post.url.replace('.html','')" :class="{ 'active': isActive(post.url) }">
-                    {{ post.frontmatter.title }}
+                    {{ post.frontmatter.shortTitle || post.frontmatter.title }}
                   </a>
                 </li>
               </ul>
@@ -39,7 +39,7 @@
         <!-- Root level posts -->
         <li v-for="item in data.rootPosts" :key="item.url">
           <a :href="site.base.slice(0, -1) + item.url.replace('.html','')" :class="{ 'active': isActive(item.url) }">
-            {{ item.frontmatter.title }}
+            {{ item.frontmatter.shortTitle || item.frontmatter.title }}
           </a>
         </li>
         
@@ -50,7 +50,7 @@
             <ul class="bg-base-100 rounded-box p-2">
               <li v-for="post in section.posts" :key="post.url">
                 <a :href="site.base.slice(0, -1) + post.url.replace('.html','')" :class="{ 'active': isActive(post.url) }">
-                  {{ post.frontmatter.title }}
+                  {{ post.frontmatter.shortTitle || post.frontmatter.title }}
                 </a>
               </li>
             </ul>
