@@ -47,9 +47,10 @@ content:
     label: Paginas
     type: collection
     path: docs
-    filename: '{primary}.md'
     view:
       fields: [image, title]
+      primary: title
+    filename: '{primary}.md'
     exclude: [.vitepress, public]
     fields:
       - { name: title, label: Título, type: string }
