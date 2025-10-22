@@ -4,9 +4,11 @@
     <!-- Navbar Component -->
     <component :is="components.Navbar" />
 
+    <component :is="components.Hero" :block="page.frontmatter" />
+
     <component :is="components.Text" :block="page.frontmatter" />
 
-    <!--<Hero :block="page.frontmatter"/>-->
+    
 
     <!-- Main Content - Block System -->
     <main class="flex-1" v-if="page.frontmatter.blocks">

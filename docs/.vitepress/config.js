@@ -68,7 +68,7 @@ export default defineConfig({
   base: "/vocaciones/", // Set the base to /vocaciones/
   title: "¿Quién soy?",
   cleanUrls: true,
-  rewrites: generateRewrites("./docs"),
+  //rewrites: generateRewrites("./docs"),
   description: "Vocaciones Navarra",
   transformHead: ({ pageData }) => {
     return [
