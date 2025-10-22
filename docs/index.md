@@ -22,20 +22,10 @@ blocks:
         description: "Llevar todo a Cristo "
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
   - type: gallery
-    title: Our Gallery
-    description: Check out some of our work
+    title: "Seminario de Pamplona "
     elements:
-      - title: Project Alpha
-        description: An amazing project we completed
-      - title: Project Beta
-        description: Another successful delivery
-      - title: Project Gamma
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
-      - description: Beautiful work
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-1.jpg
-      - title: Project Delta
-        description: Innovative solution
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
+      - title: Etapa de noviazgo para conocerse y crecer en el amor a Cristo
+        description: antes de dar el paso definitivo.
   - type: hero
     title: Ready to Get Started?
     description: Join thousands of satisfied customers
