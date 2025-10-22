@@ -2,7 +2,7 @@
 <template>
   <div
     v-if="block.image"
-    class="hero min-h-[60vh]"
+    class="hero min-h-[50vh]"
     :style="{ backgroundImage: `url(${block.image})` }"
   >
     <div class="hero-overlay"></div>
@@ -25,6 +25,13 @@
       </div>
     </div>
   </div>
+  <div v-else class="container mx-auto px-4 pt-16">
+      <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">{{ block.title }}</h2>
+    </div>
+    <div class="container mx-auto px-4 py-16">
+    <div v-if="block.description" class="prose text-lg mb-12 max-w-2xl mx-auto" v-html="block.descriptionHtml"></div>
+    </div>
+  
 </template>
 
 <script setup>
