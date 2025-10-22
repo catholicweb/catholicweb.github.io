@@ -1,4 +1,0 @@
----
-title: Pide
-shortTitle: Pide
----
