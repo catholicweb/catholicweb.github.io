@@ -1,5 +1,5 @@
 ---
-title: "Ministerios laicales "
+title: Catequistas, lectores... ¡Santos!
 description: >-
   # **Ministerios laicales: La Iglesia cuenta contigo**
 
@@ -48,11 +48,11 @@ description: >-
   cuidado pastoral, siempre bajo la guía de los pastores.
 
 
-  *   Leer la Palabra de Dios en misa
+  *   Dar catequesis
       
   *   Presidir oraciones litúrgicas
       
-  *   Administrar el bautismo
+  *   Proclamar la Palabra de Dios en la eucaristía
       
   *   Dar la Sagrada Comunión cuando los ministros no pueden
       
@@ -66,48 +66,32 @@ description: >-
   activamente.
 
 
-  * * *
+  ## **Ministerios laicales: santos en lo cotidiano**
 
 
-  ## **Vocación y discernimiento**
+  Cada lector, administrador de la Comunión, catequista o participante en
+  cualquier ministerio laical **no sólo cumple una función**, sino que está
+  llamado a **ser santo en su servicio**. La verdadera eficacia de su labor no
+  depende únicamente de la técnica o del cumplimiento formal, sino de la **vida
+  entregada y coherente con la fe**. Ser lector o catequista implica preparar el
+  corazón, cultivar la oración y vivir el Evangelio para que cada palabra, cada
+  gesto y cada encuentro **transmita la presencia de Cristo**.
 
 
-  Los ministerios laicales requieren:
+  El ministerio laical se convierte así en un **camino de santificación
+  personal**: no es suficiente transmitir conocimientos, repartir la Eucaristía
+  o guiar en la catequesis si antes no se vive la propia fe con autenticidad. La
+  santidad del laico transforma su ministerio, convirtiéndolo en luz para los
+  demás y apoyo verdadero para los sacerdotes. Cada acto de servicio, por
+  pequeño que parezca, **es un testimonio vivo del amor de Dios** y un ejemplo
+  que inspira a toda la comunidad.
 
 
-  *   **Discernimiento**: comprender la raíz bautismal de la vocación
-      
-  *   **Preparación**: instruirse en la fe y la liturgia
-      
-  *   **Responsabilidad**: no sustituir al clero sin necesidad real
-      
-
-  La Iglesia cuida que **cada servicio refleje la misión de Cristo** y que los
-  laicos actúen con conciencia, evitando confundir **sacerdocio ministerial y
-  común**.
+  > Ser laico que sirve es ser santo en lo ordinario, reflejando el Evangelio no
+  solo en la función, sino en toda la vida.
 
 
-  _Imagen sugerida_: reunión de formación, joven leyendo la Biblia o recibiendo
-  instrucción litúrgica.
-
-
-  * * *
-
-
-  ## **Compromiso laical: vivirlo y planteárselo**
-
-
-  Al final, la llamada del laico no se queda en la teoría: **hay que vivirla y
-  planteársela cada día**. Implica comprometerse a ser luz en la propia vida y
-  en la de los demás, **ayudando a nuestros sacerdotes**, apoyando sus
-  esfuerzos, colaborando en la comunidad y llevando la fe al mundo. Cada uno de
-  nosotros está llamado a reflexionar, a responder con generosidad y a **hacer
-  de nuestra vida un servicio concreto** a Cristo y a la Iglesia.
-
-
-  > La fe no se guarda; se da. No se espera; se actúa. No se improvisa; se vive.
-
-
-  _Imagen sugerida_: laicos en grupo apoyando al sacerdote, oración comunitaria,
-  jóvenes en acción apostólica.
+  _Imagen sugerida_: catequista con niños, lector entregando la Palabra en misa,
+  acólito en oración profunda; imágenes que muestren concentración, entrega y
+  alegría de servir.
 ---
