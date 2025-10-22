@@ -2,10 +2,11 @@
 title: "Llamados a la santidad "
 subtitle: Cada vocación comienza con una pregunta, crece en una comunidad que
   ora y se fortalece en una vida santa.
+description: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi
+  comunidad? ¿Vivo fiel a lo que me ha llamado Dios?
+image: vocaciones/media/YES.jpg
 blocks:
   - type: hero
-    title: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi comunidad?
-      ¿Vivo fiel a lo que me ha llamado Dios?
     elements:
       - title: DISCIERNE
       - title: PIDE
