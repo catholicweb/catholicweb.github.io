@@ -36,7 +36,7 @@
           <!-- Sections with subdirectories -->
           <li v-for="section in data.sections" :key="section.key">
             <details>
-              <summary class="capitalize">{{ section.title }}</summary>
+              <summary>{{ section.title }}</summary>
               <ul>
                 <li v-for="post in section.posts" :key="post.url">
                   <a
@@ -71,7 +71,7 @@
         <!-- Sections with subdirectories -->
         <li v-for="section in data.sections" :key="section.key">
           <details>
-            <summary class="capitalize">{{ section.title }}</summary>
+            <summary>{{ section.title }}</summary>
             <ul class="bg-base-100 rounded-box p-2">
               <li v-for="post in section.posts" :key="post.url">
                 <a
