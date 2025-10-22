@@ -53,7 +53,7 @@
           </li>
         </ul>
       </div>
-      <a href="/" class="btn btn-ghost text-xl">{{ site.title }}</a>
+      <a :href="site.base" class="btn btn-ghost text-xl">{{ site.title }}</a>
     </div>
 
     <div class="navbar-center hidden lg:flex">

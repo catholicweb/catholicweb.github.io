@@ -3,7 +3,9 @@ import { createContentLoader } from 'vitepress'
 export default createContentLoader(['./*.md', './**/*.md'], {
   transform(rawData) {
     // First, filter out all posts without title
-    const validPosts = rawData.filter(post => post.frontmatter?.title)
+    const validPosts = rawData
+      .filter(post => post.frontmatter?.title)
+      .filter(post => !post.url.endsWith('/'))
     
     // Separate root posts from sectioned posts
     const rootPosts = []
