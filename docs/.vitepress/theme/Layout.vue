@@ -4,6 +4,8 @@
     <!-- Navbar Component -->
     <component :is="components.Navbar" />
 
+    <component :is="components.Text" :block="page.frontmatter" />
+
     <!--<Hero :block="page.frontmatter"/>-->
 
     <!-- Main Content - Block System -->
