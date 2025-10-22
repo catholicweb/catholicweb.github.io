@@ -90,7 +90,6 @@ const modal = ref(null);
 const selectedImage = ref("");
 
 function is(prop) {
-  console.log(prop, props.block.type);
   return props.block.type.includes(prop);
 }
 

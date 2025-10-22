@@ -75,11 +75,11 @@ export default defineConfig({
       ['meta', { name: 'keywords', content: 'navarra, vocaciones, seminario, vida consagrada' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:title', content: pageData.title || '¿Quién soy?' }],
-      ['meta', { property: 'og:description', content: pageData.subtitle }],
-      ['meta', { property: 'og:image', content: pageData.image }],
-      ['meta', { name: 'twitter:card', content: pageData.image }],
+      ['meta', { property: 'og:description', content: pageData.subtitle || 'Vocaciones Navarra' }],
+      ['meta', { property: 'og:image', content: pageData.image || ''}],
+      ['meta', { name: 'twitter:card', content: pageData.image  || ''  }],
       ['link', { rel: 'icon', href: '/favicon.ico' }],
-      ['meta', { property: 'og:description', content: pageData.description }]
+      ['meta', { property: 'og:description', content: pageData.description || 'Vocaciones Navarra'  }]
     ]
   },
   transformPageData(pageData) {
