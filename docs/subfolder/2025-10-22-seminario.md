@@ -179,4 +179,7 @@ blocks:
           
       4.  **Formación pastoral:** aprender a ser un verdadero **pastor de
       almas**, acompañando a los fieles en sus alegrías y sufrimientos.
+  - type: text
+    title: "Testimonios "
+    description: AQUI PUEDES PONER LOS VIDEOS ESOS EN EL SCROOLL Y YA
 ---
