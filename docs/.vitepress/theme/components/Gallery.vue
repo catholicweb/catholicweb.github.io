@@ -25,7 +25,7 @@
       >
         <figure v-if="getImage(elem)">
           <img
-            class="object-cover"
+            class="object-cover mx-auto"
             :class="{
               'aspect-[1/1] mt-6 w-1/2 rounded-full': is('feature'),
               'aspect-[16/9]': !is('feature'),
@@ -130,7 +130,7 @@ function getImage(elem, play) {
     rgba(0, 0, 0, 0) 100%
   ) !important;
 }
-.image-full:before {
+.image-full {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.5) 0,

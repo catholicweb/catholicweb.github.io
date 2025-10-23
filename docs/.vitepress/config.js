@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/vite"
 
 import MarkdownIt from "markdown-it";
 const md = new MarkdownIt();
@@ -82,6 +83,9 @@ export default defineConfig({
       ['meta', { property: 'og:description', content: pageData.description || 'Vocaciones Navarra'  }]
     ]
   },
+  plugins: [
+    tailwindcss(),
+  ],
   transformPageData(pageData) {
     const fm = pageData.frontmatter;
     if (fm) renderMarkdownFields(fm);
