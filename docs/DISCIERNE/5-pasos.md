@@ -1,5 +1,5 @@
 ---
-title: "Los 5 pasos del discernimiento "
+title: "Los 5 formas del discernimiento "
 description: >-
   **¿Cómo conocer el plan de Dios para tu vida?**  
 
@@ -33,8 +33,8 @@ description: >-
       
 
   Cuando llegue el momento, ¡debes actuar! Muévete en la dirección que te
-  indique tu corazón, con la confianza de que Dios nunca te enviará a un
-  lugar donde Su gracia no pueda sostenerte.
+  indique tu corazón, con la confianza de que Dios nunca te enviará a un lugar
+  donde Su gracia no pueda sostenerte.
 blocks:
   - type: gallery-feature
     title: ¡Conoce cada vocación!
@@ -46,11 +46,9 @@ blocks:
       o hermana, o al diaconado.
     elements:
       - title: "Sacerdocio "
-        description: >-
+        description: |-
           que lleve a sacerodcio, y las otras dos tb 
-
-          se pueden presentar como tarjetas guays aqui tb despues de este
-          texto.
+          se pueden presentar como tarjetas guays aqui tb despues de este texto.
       - title: "Vida laical y familiar "
       - title: "Vida religiosa y misión "
 ---
