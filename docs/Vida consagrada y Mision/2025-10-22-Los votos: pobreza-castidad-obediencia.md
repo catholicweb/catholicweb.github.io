@@ -1,3 +1,3 @@
 ---
-title: "Pobreza. Castidad. Obediencia "
+title: "Los votos. Pobreza. Castidad. Obediencia "
 ---
