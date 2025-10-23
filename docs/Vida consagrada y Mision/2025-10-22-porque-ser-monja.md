@@ -1,3 +1,3 @@
 ---
-title: "¿Porqué ser monja? "
+title: "¿Que hace una monja? "
 ---
