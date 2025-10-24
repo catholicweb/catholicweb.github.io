@@ -73,7 +73,7 @@ content:
         options:
           collection: pages
           multiple: true
-          search: "fields.title,fields.description"
-          label: "{fields.title}"
-          image: "{fields.image}"
+          search: "title"
+          label: "{title}"
+          image: "{image}"
       - { name: blocks, component: blocks }
