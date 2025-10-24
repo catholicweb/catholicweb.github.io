@@ -12,12 +12,8 @@ blocks:
         description: PIDE
       - title: ¿Vivo fiel a lo que me ha llamado Dios?
         description: VIVE
-  - type: hero
-    elements:
-      - title: DISCIERNE
-      - title: PIDE
-      - title: VIVIE
   - type: gallery-feature
+    title: "Cada llamada es distinta "
     elements:
       - title: "Sacerdocio "
         description: Llevar a Cristo a los hombres
