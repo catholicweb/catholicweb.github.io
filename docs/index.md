@@ -20,7 +20,7 @@ blocks:
         image: /vocaciones/media/eucharist-1591663-480.webp
       - title: "Vida laical y familiar "
         description: Llevar a Cristo a la sociedad
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-2.jpg
+        image: /vocaciones/media/familia-iglesia-doméstica.jpg
       - title: "Vida religiosa y misión "
         description: "Llevar todo a Cristo "
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
