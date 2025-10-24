@@ -23,7 +23,7 @@ blocks:
         image: /vocaciones/media/familia-iglesia-doméstica.jpg
       - title: "Vida religiosa y misión "
         description: "Llevar todo a Cristo "
-        image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
+        image: /vocaciones/media/20120418T0900-Carmelite-Sisters-of-the-Divine-Heart-of-Jesus-S-1196109-1.jpg
   - type: hero
     title: Ready to Get Started?
     description: Join thousands of satisfied customers
