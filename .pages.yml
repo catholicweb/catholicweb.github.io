@@ -43,6 +43,26 @@ media:
   output: /media
   categories: ["image"]
 content:
+  - name: config
+    type: file
+    label: Configuración
+    path: config.md
+    fields:
+      - name: nav
+        label: Navegacion
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titulo sección }
+          - name: links
+            label: links
+            type: reference
+            options:
+              collection: pages
+              multiple: true
+              search: "title,description"
+              label: "{title}"
+              image: "{image}"
   - name: pages
     label: Paginas
     type: collection
@@ -57,7 +77,6 @@ content:
       - { name: subtitle, label: Subtitulo, type: string }
       - { name: description, label: Texto largo, type: rich-text }
       - { name: image, label: Imagen, type: image }
-      - { name: blocks, component: blocks }
       - name: links
         label: links
         type: reference
@@ -67,3 +86,4 @@ content:
           search: "title,description"
           label: "{title}"
           image: "{image}"
+      - { name: blocks, component: blocks }
