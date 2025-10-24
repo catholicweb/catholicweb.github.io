@@ -73,7 +73,5 @@ content:
         options:
           collection: pages
           multiple: true
-          search: "title"
           label: "{title}"
-          image: "{image}"
       - { name: blocks, component: blocks }
