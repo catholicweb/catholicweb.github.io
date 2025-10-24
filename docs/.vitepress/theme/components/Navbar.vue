@@ -148,7 +148,7 @@ const mobileMenuOpen = ref(false);
                 <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
               </svg>
             </button>
-            <div class="absolute right-0 w-36 bg-white opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50">
+            <div class="absolute right-0 w-36 bg-white opacity-0 group-hover:opacity-100 invisible group-hover:visible group-focus-within:visible group-focus-within:opacity-100 transition-all z-50">
               <a v-for="lang in languages" :key="lang.code" @click.prevent="switchLanguage(lang)" class="block px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors" :class="lang.code === currentLang.code ? 'text-accent' : 'text-gray-700 '">
                 {{ lang.label }}
               </a>
@@ -160,7 +160,7 @@ const mobileMenuOpen = ref(false);
             <button class="px-2 py-1 rounded-md text-gray-700 hover:bg-gray-100 transition-colors flex items-center space-x-1">
               <span>Theme</span>
             </button>
-            <div class="absolute right-0 w-64 bg-white opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50">
+            <div class="absolute right-0 w-64 bg-white opacity-0 group-hover:opacity-100 invisible group-hover:visible group-focus-within:visible group-focus-within:opacity-100 transition-all z-50">
               <div v-for="themeItem in themes" :key="themeItem.id" @click.prevent="switchTheme(themeItem.id)" class="flex items-start gap-3 px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer transition-colors" :class="themeItem.id === currentTheme ? 'text-accent' : 'text-gray-700 '">
                 <span class="text-xl">{{ themeItem.icon }}</span>
                 <div class="flex flex-col">
