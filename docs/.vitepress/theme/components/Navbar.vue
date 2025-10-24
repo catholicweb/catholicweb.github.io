@@ -91,7 +91,7 @@ const mobileMenuOpen = ref(false);
           <template v-for="item in nav" :key="item.text">
             <!-- Simple link -->
             <div v-if="!hasItems(item)">
-              <a :href="item.link" :class="['px-4 py-2 transition-colors', isActive(item) ? 'bg-accent text-accent' : 'text-gray-700 hover:text-accent  hover:bg-gray-50 ']">
+              <a :href="item.link" :class="['px-4 py-2 transition-colors', isActive(item) ? 'text-accent' : 'text-gray-700 hover:text-accent  hover:bg-gray-50 ']">
                 {{ item.text }}
               </a>
             </div>
@@ -120,7 +120,7 @@ const mobileMenuOpen = ref(false);
                     <!-- Subitems -->
                     <div v-show="openSections[section.text]" class="pl-4 space-y-1 mt-1">
                       <template v-for="sub in section.items" :key="sub.text">
-                        <a :href="sub.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors" :class="isActive(sub) ? 'bg-accent text-accent' : ''">
+                        <a :href="sub.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors" :class="isActive(sub) ? 'text-accent' : ''">
                           {{ sub.text }}
                         </a>
                       </template>
@@ -128,7 +128,7 @@ const mobileMenuOpen = ref(false);
                   </div>
 
                   <div v-else>
-                    <a :href="section.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors" :class="isActive(section) ? 'bg-accent text-accent' : ''">
+                    <a :href="section.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors" :class="isActive(section) ? 'text-accent' : ''">
                       {{ section.text }}
                     </a>
                   </div>

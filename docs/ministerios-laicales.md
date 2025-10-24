@@ -96,4 +96,7 @@ body: >-
   alegría de servir.
 links:
   - docs/celibato.md
+  - docs/conoce-las-vocaciones.md
+  - docs/5-pasos.md
+  - docs/familia-iglesia-domestica.md
 ---

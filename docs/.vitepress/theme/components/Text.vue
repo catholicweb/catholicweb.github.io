@@ -1,18 +1,17 @@
 <script setup>
-
 defineProps({
   block: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 
 <template>
   <section class="py-16">
     <div class="container mx-auto px-4">
       <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">{{ block.title }}</h2>
-      <div v-if="block.description" class="prose text-md mb-12 max-w-2xl mx-auto" v-html="block.descriptionHtml"></div>
+      <div v-if="block.body" class="prose text-md mb-12 max-w-2xl mx-auto" v-html="block.bodyHtml"></div>
     </div>
   </section>
 </template>

@@ -19,12 +19,12 @@ export function slugify(str) {
     .replace(/-+$/, "");
 }
 
-/** Renderiza los campos "description" como HTML */
+/** Renderiza los campos "body" como HTML */
 export function renderMarkdownFields(obj) {
   if (!obj || typeof obj !== "object") return;
   for (const key of Object.keys(obj)) {
     const value = obj[key];
-    if (key === "description" && typeof value === "string") {
+    if (key === "body" && typeof value === "string") {
       obj[key + "Html"] = md.render(value);
     } else if (typeof value === "object") {
       renderMarkdownFields(value);
@@ -56,7 +56,7 @@ export function addLinks(frontmatter) {
 
   const newBlock = {
     type: "gallery-feature",
-    title: frontmatter.linksTitle || "Enlaces...",
+    title: frontmatter.linksTitle || "Enlaces",
     description: frontmatter.galleryDescription || "",
     elements,
   };

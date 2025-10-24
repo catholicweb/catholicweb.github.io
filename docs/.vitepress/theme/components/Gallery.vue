@@ -23,7 +23,7 @@
       >
         <figure v-if="getImage(elem)">
           <img
-            class="object-cover mx-auto"
+            class="object-cover mx-auto transition-transform duration-500 ease-in-out hover:scale-110 hover:rotate-3 focus:scale-110 focus:rotate-3"
             :class="{
               'aspect-[1/1] mt-6 w-1/2 rounded-full': is('feature'),
               'aspect-[16/9] rounded-md': !is('feature'),
@@ -35,12 +35,13 @@
         </figure>
         <div
           v-if="elem.title || elem.description"
+          class="transition-transform duration-500 ease-in-out hover:rotate-[-3deg] focus:rotate-[-3deg]"
           :class="{
             'card-body': !is('feature'),
             'items-center text-center card-body': is('feature'),
           }"
         >
-          <h3 v-if="elem.title" class="card-title">{{ elem.title }}</h3>
+          <h3 v-if="elem.title" class="card-title text-accent">{{ elem.title }}</h3>
           <p v-if="elem.description">{{ elem.description }}</p>
           <div v-if="elem.action" class="card-actions">
             <button class="btn btn-primary">Buy Now</button>
