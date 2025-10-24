@@ -35,7 +35,7 @@ export function renderMarkdownFields(obj) {
 /** Genera rewrites para los ficheros de docs */
 export function generateRewrites(docsDir) {
   const files = fg.sync("**/*.md", {
-    cwd: './docs',
+    cwd: "./docs",
     ignore: ["node_modules", ".vitepress"],
   });
 
@@ -45,22 +45,57 @@ export function generateRewrites(docsDir) {
     const dirParts = parsed.dir ? parsed.dir.split(path.sep) : [];
     const slugifiedDir = dirParts.map(slugify).join("/");
     const slugifiedName = slugify(parsed.name);
-    const slugifiedPath = slugifiedDir
-      ? path.join(slugifiedDir, slugifiedName + ".md")
-      : slugifiedName + ".md";
+    const slugifiedPath = slugifiedDir ? path.join(slugifiedDir, slugifiedName + ".md") : slugifiedName + ".md";
     if (file !== slugifiedPath) rewrites[file] = slugifiedPath;
   }
 
   return rewrites;
 }
-/** Genera el árbol de navegación manualmente (sin createContentLoader) */
+
 export async function generateNav() {
+  // Path to your config.md
+  const configPath = path.resolve("./config.md");
+
+  // Parse frontmatter
+  const configContent = fs.readFileSync(configPath, "utf8");
+  const { data } = matter(configContent);
+
+  const baseDir = path.dirname(configPath);
+
+  // Helper: extract title from each linked doc
+  function getDocTitle(filePath) {
+    const fullPath = path.resolve(baseDir, filePath);
+    if (!fs.existsSync(fullPath)) {
+      console.warn(`⚠️ Missing file: ${fullPath}`);
+      return path.basename(filePath, ".md");
+    }
+    const fileContent = fs.readFileSync(fullPath, "utf8");
+    const { data: fm } = matter(fileContent);
+    return fm.title || path.basename(filePath, ".md");
+  }
+
+  // Build VitePress nav
+  const vitepressNav = data.nav.map((section) => ({
+    text: section.title,
+    items: section.links.map((linkPath) => ({
+      text: getDocTitle(linkPath),
+      link: "/" + linkPath.replace(/^docs\//, "").replace(/\.md$/, ""),
+    })),
+  }));
+
+  console.log(JSON.stringify(vitepressNav));
+
+  return vitepressNav;
+}
+
+/** Genera el árbol de navegación manualmente (sin createContentLoader) */
+export async function generateNav2() {
   const files = fg.sync(["**/*.md"], {
     cwd: "./docs/",
-    ignore: ["node_modules", ".vitepress","index.md"],
+    ignore: ["node_modules", ".vitepress", "index.md"],
   });
 
-  const posts = files.map(file => {
+  const posts = files.map((file) => {
     const parts = file.split("/").filter(Boolean);
 
     // Leer frontmatter
@@ -76,7 +111,7 @@ export async function generateNav() {
   const insertNode = (tree, parts, file, title) => {
     const [head, ...tail] = parts;
     if (!head) return;
-    let node = tree.find(n => n.key === head);
+    let node = tree.find((n) => n.key === head);
     if (!node) {
       node = { key: head, title: head, children: [], posts: [] };
       tree.push(node);
@@ -87,22 +122,20 @@ export async function generateNav() {
 
   for (const post of posts) insertNode(tree, post.parts, post.file, post.title);
 
-  const sortTree = nodes => {
+  const sortTree = (nodes) => {
     nodes.sort((a, b) => a.title.localeCompare(b.title));
-    nodes.forEach(n => sortTree(n.children));
+    nodes.forEach((n) => sortTree(n.children));
   };
   sortTree(tree);
 
-  const toVitepressNav = nodes =>
-    nodes.map(n => {
+  const toVitepressNav = (nodes) =>
+    nodes.map((n) => {
       if (n.children.length === 0) {
-        const items = n.posts.map(p => ({
+        const items = n.posts.map((p) => ({
           text: p.title.replaceAll("-", " "),
           link: "/" + p.file.replace(".md", ".html"),
         }));
-        return items.length === 1
-          ? { text: items[0].text, link: items[0].link }
-          : { text: n.title, items };
+        return items.length === 1 ? { text: items[0].text, link: items[0].link } : { text: n.title, items };
       }
       return { text: n.title, items: toVitepressNav(n.children) };
     });
