@@ -9,4 +9,7 @@ nav:
     links:
       - docs/como-escoger-una-buena-pareja.md
       - docs/familias.md
+  - title: Test
+    links:
+      - docs/index.md
 ---
