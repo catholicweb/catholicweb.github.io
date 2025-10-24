@@ -57,7 +57,7 @@ export function generateRewrites(docsDir) {
 export async function generateNav() {
   const files = fg.sync(["**/*.md"], {
     cwd: "./docs/",
-    ignore: ["node_modules", ".vitepress"],
+    ignore: ["node_modules", ".vitepress","index.md"],
   });
 
   const posts = files.map(file => {

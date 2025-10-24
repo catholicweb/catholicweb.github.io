@@ -4,10 +4,7 @@
     <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">
       {{ block.title }}
     </h2>
-    <p
-      v-if="block.description"
-      class="text-center text-lg mb-12 max-w-2xl mx-auto"
-    >
+    <p v-if="block.description" class="text-center text-lg mb-12 max-w-2xl mx-auto">
       {{ block.description }}
     </p>
 
@@ -18,7 +15,7 @@
         :key="idx"
         no="cursor-pointer hover:shadow-2xl"
         :class="{
-          'image-full card': !is('feature'),
+          'image-full card rounded-lg': !is('feature'),
           card: is('feature'),
         }"
         @click="openModal(elem)"
@@ -28,7 +25,7 @@
             class="object-cover mx-auto"
             :class="{
               'aspect-[1/1] mt-6 w-1/2 rounded-full': is('feature'),
-              'aspect-[16/9]': !is('feature'),
+              'aspect-[16/9] rounded-md': !is('feature'),
             }"
             loading="lazy"
             :src="getImage(elem)"
@@ -54,21 +51,8 @@
     <!-- Modal for enlarged image -->
     <dialog ref="modal" class="modal">
       <div class="modal-box max-w-4xl p-0 aspect-[16/9]">
-        <iframe
-          allowfullscreen="true"
-          allowtransparency="true"
-          frameborder="0"
-          allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          class="w-full aspect-[16/9]"
-          v-if="getImage(selectedImage).includes('youtube')"
-          :src="getImage(selectedImage, true)"
-        ></iframe>
-        <img
-          v-else
-          :src="selectedImage.image"
-          :alt="alt(selectedImage, ' modal')"
-          class="w-full h-full object-cover object-center rounded-lg"
-        />
+        <iframe allowfullscreen="true" allowtransparency="true" frameborder="0" allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="w-full aspect-[16/9]" v-if="getImage(selectedImage).includes('youtube')" :src="getImage(selectedImage, true)"></iframe>
+        <img v-else :src="selectedImage.image" :alt="alt(selectedImage, ' modal')" class="w-full h-full object-cover object-center rounded-md" />
       </div>
       <form method="dialog" class="modal-backdrop">
         <button>close</button>
@@ -105,8 +89,7 @@ function alt(elem, idx) {
 
 function getImage(elem, play) {
   try {
-    const regex =
-      /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
 
     const match = elem.link.match(regex);
     if (match && match[1]) {
@@ -124,18 +107,10 @@ function getImage(elem, play) {
 
 <style>
 .hero-overlay {
-  background: radial-gradient(
-    closest-side,
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0) 100%
-  ) !important;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%) !important;
 }
 .image-full {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5) 0,
-    rgba(0, 0, 0, 0) 100%
-  ) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%) !important;
 }
 .image-full,
 .hero {
