@@ -1,7 +1,7 @@
 ---
 title: "Contacto "
-subtitle: ¡Necesitas ayuda!
-description: >-
+description: ¡Necesitas ayuda!
+body: >-
   ### No se discierne solo: acompáñate en tu vocación
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Dificultades y rupturas: cuando el amor también purifica"
-description: >-
+body: >-
   ### Dificultades y rupturas: cuando el amor también purifica
 
 

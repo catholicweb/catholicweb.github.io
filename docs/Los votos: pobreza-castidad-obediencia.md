@@ -1,6 +1,6 @@
 ---
 title: "Los votos. Pobreza. Castidad. Obediencia "
-description: >-
+body: >-
   # Los votos religiosos: pobreza, castidad y obediencia, camino de amor total
 
 

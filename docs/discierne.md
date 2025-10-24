@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es el discernimiento?
-description: >-
+body: >-
   La vocación es el compromiso profundo de seguir el llamado de Dios. Se
   requiere esfuerzo y cuidado para comprender verdaderamente esa llamada.
   Este proceso de descubrir la voluntad de Dios se conoce como

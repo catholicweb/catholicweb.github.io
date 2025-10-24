@@ -1,6 +1,6 @@
 ---
 title: "¿Que hace un sacerdote? "
-description: >-
+body: >-
   **Los sacerdotes hacen mucho más que celebrar la Misa y rezar todo el
   día.**  
 

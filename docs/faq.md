@@ -1,6 +1,6 @@
 ---
 title: "Preguntas frecuentes "
-description: >-
+body: >-
   1.  ¿Qué hace un sacerdote?  
       El propósito de un sacerdote es llevar a las personas a Jesús y a Jesús a las personas. Lo hace principalmente predicando la Palabra y ofreciendo el Sacrificio de la Misa.
 

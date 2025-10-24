@@ -1,6 +1,6 @@
 ---
 title: "Colabora, el seminario es de todos. "
-description: >-
+body: >-
   ### **Los seminaristas necesitan nuestra colaboración**
 
 
@@ -105,9 +105,4 @@ description: >-
   Con tu oración y tu colaboración, **ayudamos a que la semilla de la vocación
   crezca y dé fruto abundante**. ¡Dios nos premiará por cada esfuerzo y cada
   gesto generoso!
-blocks:
-  - type: gallery-feature
-    elements:
-      - title: "BIZUM "
-      - title: "CUENTA "
 ---

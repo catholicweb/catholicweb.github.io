@@ -1,7 +1,7 @@
 ---
 title: "¿Porque ser sacerdote?"
 shortTitle: "Sacerdocio "
-description: >-
+body: >-
   **Un Ministerio Sagrado al Pueblo de Dios**
 
   _"Los fieles esperan de los sacerdotes solo una cosa: que sean

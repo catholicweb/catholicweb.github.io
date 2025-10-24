@@ -1,8 +1,8 @@
 ---
 title: "Familia, iglesia doméstica "
-subtitle: "Vive tu familia como Iglesia: ama, entrega y sé faro del amor de Dios
+description: "Vive tu familia como Iglesia: ama, entrega y sé faro del amor de Dios
   en el mundo."
-description: >-
+body: >-
   # **La familia: Iglesia doméstica**
 
 

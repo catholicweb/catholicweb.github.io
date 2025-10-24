@@ -1,6 +1,6 @@
 ---
 title: Catequistas, lectores... ¡Santos!
-description: >-
+body: >-
   # **Ministerios laicales: La Iglesia cuenta contigo**
 
 

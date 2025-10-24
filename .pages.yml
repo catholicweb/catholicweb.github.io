@@ -64,9 +64,9 @@ content:
     exclude: [.vitepress, public]
     fields:
       - { name: title, label: Título, type: string }
-      - { name: subtitle, label: Subtitulo, type: string }
+      - { name: description, label: Subtitulo, type: string }
       - { name: image, label: Imagen, type: image }
-      - { name: description, label: Texto largo, type: rich-text }
+      - { name: body, label: Texto largo, type: rich-text }
       - name: links
         label: Enlaces internos
         type: reference
