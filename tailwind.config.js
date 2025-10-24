@@ -7,8 +7,13 @@ export default {
   theme: {
     extend: {},
   },
+  darkMode: 'selector'
   plugins: [require("daisyui"), require('@tailwindcss/typography')],
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
+    themes: false, // We use custom themes
+    base: true,
+    styled: true,
+    utils: true,
+    logs: false
+  }
 }
