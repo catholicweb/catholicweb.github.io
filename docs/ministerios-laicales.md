@@ -94,4 +94,6 @@ description: >-
   _Imagen sugerida_: catequista con niños, lector entregando la Palabra en misa,
   acólito en oración profunda; imágenes que muestren concentración, entrega y
   alegría de servir.
+links:
+  - docs/celibato.md
 ---
