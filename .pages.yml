@@ -45,7 +45,7 @@ content:
         fields:
           - { name: title, label: Titulo sección, type: string }
           - name: links
-            label: links
+            label: Enlaces
             type: reference
             options:
               collection: pages
