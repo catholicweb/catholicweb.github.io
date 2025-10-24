@@ -40,7 +40,7 @@ function readFrontmatter(filePath) {
 }
 export function addLinks(frontmatter) {
   // Only process if 'links' field exists
-  if (!frontmatter.links) return;
+  if (!frontmatter.links || !frontmatter.links.map) return;
 
   const baseDir = path.resolve("");
   const elements = frontmatter.links.map((linkPath) => {
@@ -63,8 +63,6 @@ export function addLinks(frontmatter) {
 
   // Merge (don’t overwrite)
   frontmatter.blocks = Array.isArray(frontmatter.blocks) ? [...frontmatter.blocks, newBlock] : [newBlock];
-
-  console.log(JSON.stringify(frontmatter));
 
   // Must return modified pageData for VitePress to pick it up
   return frontmatter;
@@ -120,8 +118,6 @@ export async function generateNav() {
       link: "/" + linkPath.replace(/^docs\//, "").replace(/\.md$/, ""),
     })),
   }));
-
-  console.log(JSON.stringify(vitepressNav));
 
   return vitepressNav;
 }
