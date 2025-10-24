@@ -68,6 +68,12 @@ const switchTheme = (themeId: string) => {
   }
 }
 
+const openSections = ref<Record<string, boolean>>({})
+
+const toggleSection = (key: string) => {
+  openSections.value[key] = !openSections.value[key]
+}
+
 
 const mobileMenuOpen = ref(false)
 </script>
@@ -100,27 +106,43 @@ const mobileMenuOpen = ref(false)
             <div v-else class="relative group">
               <button class="px-4 py-2 text-sm font-medium text-gray-700  hover:text-blue-600  hover:bg-gray-50  transition-colors flex items-center gap-1">
                 {{ item.text }}
-              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+                <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
             <!-- Dropdown Menu -->
               <div class="absolute left-0 mt-0 w-56 bg-white  rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50">
-                <template v-for="section in item.items" :key="section.text">
-                  <div v-if="section.items">
-                    <div class="px-3 py-1 text-xs font-bold uppercase text-gray-500 ">{{ section.text }}</div>
-                    <div v-for="sub in section.items" :key="sub.text">
-                      <a :href="sub.link" :class="['block px-3 py-2 rounded-md text-gray-700  hover:bg-gray-100  transition-colors', isActive(sub) ? 'bg-accent-light text-accent-dark' : '']">
-                        {{ sub.text }}
-                      </a>
-                    </div>
-                  </div>
-                  <div v-else>
-                    <a :href="section.link" :class="['block px-3 py-2 rounded-md text-gray-700  hover:bg-gray-100  transition-colors', isActive(section) ? 'bg-accent-light text-accent-dark' : '']">
-                      {{ section.text }}
-                    </a>
-                  </div>
+                  <template v-for="section in item.items" :key="section.text">
+  <div v-if="section.items">
+    <!-- Botón de sección con subitems -->
+    <button @click="toggleSection(section.text)"
+            class="w-full text-left px-4 py-2 flex justify-between items-center text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors rounded-md">
+      {{ section.text }}
+      <svg class="w-4 h-4 transition-transform" :class="openSections[section.text] ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- Subitems -->
+    <div v-show="openSections[section.text]" class="pl-4 space-y-1 mt-1">
+      <template v-for="sub in section.items" :key="sub.text">
+        <a :href="sub.link"
+           class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+           :class="isActive(sub) ? 'bg-accent-light text-accent-dark' : ''">
+          {{ sub.text }}
+        </a>
+      </template>
+    </div>
+  </div>
+
+  <div v-else>
+    <a :href="section.link"
+       class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+       :class="isActive(section) ? 'bg-accent-light text-accent-dark' : ''">
+      {{ section.text }}
+    </a>
+  </div>
                 </template>
               </div>
             </div>
@@ -197,20 +219,30 @@ const mobileMenuOpen = ref(false)
               </summary>
               <div class="pl-4 space-y-1 mt-1">
                 <template v-for="section in item.items" :key="section.text">
-                  <div v-if="section.items">
-                    <div class="text-xs uppercase font-bold text-gray-500 ">{{ section.text }}</div>
-                    <div v-for="sub in section.items" :key="sub.text">
-                      <a :href="sub.link" class="block px-3 py-2 rounded-md text-gray-700  hover:bg-gray-100  transition-colors">
-                        {{ sub.text }}
-                      </a>
-                    </div>
-                  </div>
-                  <div v-else>
-                    <a :href="section.link" class="block px-3 py-2 rounded-md text-gray-700  hover:bg-gray-100  transition-colors">
-                      {{ section.text }}
-                    </a>
-                  </div>
-                </template>
+  <div v-if="section.items">
+    <details class="group">
+      <summary class="px-3 py-2 rounded-md flex justify-between items-center text-gray-700 hover:bg-gray-100 cursor-pointer">
+        {{ section.text }}
+        <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z"/>
+        </svg>
+      </summary>
+      <div class="pl-4 space-y-1 mt-1">
+        <template v-for="sub in section.items" :key="sub.text">
+          <a :href="sub.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors">
+            {{ sub.text }}
+          </a>
+        </template>
+      </div>
+    </details>
+  </div>
+  <div v-else>
+    <a :href="section.link" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors">
+      {{ section.text }}
+    </a>
+  </div>
+</template>
+
               </div>
             </details>
           </div>

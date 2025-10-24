@@ -1,6 +1,8 @@
 import MarkdownIt from "markdown-it";
 import fg from "fast-glob";
 import path from "path";
+import fs from "fs";
+import matter from "gray-matter";
 
 const md = new MarkdownIt();
 
@@ -51,7 +53,6 @@ export function generateRewrites(docsDir) {
 
   return rewrites;
 }
-
 /** Genera el árbol de navegación manualmente (sin createContentLoader) */
 export async function generateNav() {
   const files = fg.sync(["**/*.md"], {
@@ -61,12 +62,18 @@ export async function generateNav() {
 
   const posts = files.map(file => {
     const parts = file.split("/").filter(Boolean);
-    return { file, parts };
+
+    // Leer frontmatter
+    const content = fs.readFileSync(`./docs/${file}`, "utf-8");
+    const { data } = matter(content);
+    const title = data.title || parts[parts.length - 1].replace(".md", "");
+
+    return { file, parts, title };
   });
 
   const tree = [];
 
-  const insertNode = (tree, parts, file) => {
+  const insertNode = (tree, parts, file, title) => {
     const [head, ...tail] = parts;
     if (!head) return;
     let node = tree.find(n => n.key === head);
@@ -74,11 +81,11 @@ export async function generateNav() {
       node = { key: head, title: head, children: [], posts: [] };
       tree.push(node);
     }
-    if (tail.length === 0) node.posts.push(file);
-    else insertNode(node.children, tail, file);
+    if (tail.length === 0) node.posts.push({ file, title });
+    else insertNode(node.children, tail, file, title);
   };
 
-  for (const post of posts) insertNode(tree, post.parts, post.file);
+  for (const post of posts) insertNode(tree, post.parts, post.file, post.title);
 
   const sortTree = nodes => {
     nodes.sort((a, b) => a.title.localeCompare(b.title));
@@ -89,9 +96,9 @@ export async function generateNav() {
   const toVitepressNav = nodes =>
     nodes.map(n => {
       if (n.children.length === 0) {
-        const items = n.posts.map(f => ({
-          text: f.split("/").pop().replace(".md", "").replaceAll('-',' '),
-          link: "/" + f.replace(".md", ".html"),
+        const items = n.posts.map(p => ({
+          text: p.title.replaceAll("-", " "),
+          link: "/" + p.file.replace(".md", ".html"),
         }));
         return items.length === 1
           ? { text: items[0].text, link: items[0].link }
