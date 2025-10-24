@@ -49,7 +49,21 @@ content:
     fields:
       - name: theme
         type: string
-
+      - name: nav
+        label: Navegacion
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titulo sección }
+          - name: links
+            label: links
+            type: reference
+            options:
+              collection: pages
+              multiple: true
+              search: "title,description"
+              label: "{title}"
+              image: "{image}"
   - name: pages
     label: Paginas
     type: collection
