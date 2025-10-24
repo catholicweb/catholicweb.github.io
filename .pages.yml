@@ -54,7 +54,7 @@ content:
         type: object
         list: true
         fields:
-          - { name: title, label: Titulo sección }
+          - { name: title, label: Titulo sección, type: string }
           - name: links
             label: links
             type: reference
