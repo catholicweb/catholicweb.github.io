@@ -70,9 +70,6 @@ content:
       - name: links
         label: Enlaces internos
         type: reference
-        list: true
         options:
           collection: pages
-          multiple: false
           label: "{title}"
-      - { name: blocks, component: blocks, hidden: true }
