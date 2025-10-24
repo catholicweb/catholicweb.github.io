@@ -37,7 +37,6 @@ components:
           - { name: description, label: Texto, type: text }
           - { name: image, label: Imagen, type: image }
           - { name: param, label: Link, type: string }
-#- { name: section, label: seccion, type: select, options: { values: ['Discernimiento','Sacerdocio','Seminario','Monaguillos','Vida laical y familia','Noviazgo','Vida religiosa y mision', 'Recursos', 'Eventos']} }
 media:
   input: docs/public/media
   output: /media
@@ -48,21 +47,9 @@ content:
     label: Configuración
     path: config.md
     fields:
-      - name: nav
-        label: Navegacion
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Titulo sección }
-          - name: links
-            label: links
-            type: reference
-            options:
-              collection: pages
-              multiple: true
-              search: "title,description"
-              label: "{title}"
-              image: "{image}"
+      - name: theme
+        type: string
+
   - name: pages
     label: Paginas
     type: collection
