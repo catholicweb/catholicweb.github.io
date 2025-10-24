@@ -2,10 +2,16 @@
 title: "Llamados a la santidad "
 subtitle: Cada vocación comienza con una pregunta, crece en una comunidad que
   ora y se fortalece en una vida santa.
-description: ¿Ya he encontrado mi vocación? ¿Pido por las vocaciones en mi
-  comunidad? ¿Vivo fiel a lo que me ha llamado Dios?
 image: /vocaciones/media/YES-480.webp
 blocks:
+  - type: gallery
+    elements:
+      - title: ¿Ya he encontrado mi vocación?
+        description: DISCIERNE
+      - title: "¿Pido por las vocaciones en mi comunidad? "
+        description: PIDE
+      - title: ¿Vivo fiel a lo que me ha llamado Dios?
+        description: VIVE
   - type: hero
     elements:
       - title: DISCIERNE
@@ -22,11 +28,6 @@ blocks:
       - title: "Vida religiosa y misión "
         description: "Llevar todo a Cristo "
         image: https://nypriest.com/wp-content/uploads/2022/01/New-York-Priest-3.jpg
-  - type: gallery
-    title: "Seminario de Pamplona "
-    elements:
-      - title: Etapa de noviazgo para conocerse y crecer en el amor a Cristo
-        description: antes de dar el paso definitivo.
   - type: hero
     title: Ready to Get Started?
     description: Join thousands of satisfied customers
