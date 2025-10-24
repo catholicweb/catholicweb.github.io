@@ -38,7 +38,10 @@ content:
       - name: nav
         label: Navegacion
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
         fields:
           - { name: title, label: Titulo sección, type: string }
           - name: links
