@@ -7,21 +7,7 @@ components:
         collapsed: true
         summary: "{fields.type} - {fields.title}"
     fields:
-      - {
-          name: type,
-          label: Tipo,
-          type: select,
-          options:
-            {
-              values:
-                [
-                  "hero",
-                  "gallery",
-                  "gallery-feature",
-                  "text"
-                ],
-            },
-        }
+      - { name: type, label: Tipo, type: select, options: { values: ["hero", "gallery", "gallery-feature", "text"] } }
       - { name: title, label: Título, type: string }
       - { name: description, label: Texto, type: rich-text }
       - { name: image, label: Imagen, type: image }
@@ -71,7 +57,7 @@ content:
     view:
       fields: [image, title]
       primary: title
-    filename: '{primary}.md'
+    filename: "{primary}.md"
     exclude: [.vitepress, public]
     fields:
       - { name: title, label: Título, type: string }
@@ -79,7 +65,7 @@ content:
       - { name: description, label: Texto largo, type: rich-text }
       - { name: image, label: Imagen, type: image }
       - name: links
-        label: links
+        label: Enlaces internos
         type: reference
         options:
           collection: pages

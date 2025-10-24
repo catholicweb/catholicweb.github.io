@@ -32,6 +32,44 @@ export function renderMarkdownFields(obj) {
   }
 }
 
+/* MODIFY LINKS */
+function readFrontmatter(filePath) {
+  if (!fs.existsSync(filePath)) return {};
+  const content = fs.readFileSync(filePath, "utf8");
+  return matter(content).data || {};
+}
+export function addLinks(frontmatter) {
+  // Only process if 'links' field exists
+  if (!frontmatter.links) return;
+
+  const baseDir = path.resolve("");
+  const elements = frontmatter.links.map((linkPath) => {
+    const fullPath = path.resolve(baseDir, linkPath);
+    const fm = readFrontmatter(fullPath);
+    return {
+      title: fm.title || path.basename(linkPath, ".md"),
+      description: fm.description || "",
+      image: fm.image || "",
+      link: linkPath.replace("docs/", "").replace(".md", ""),
+    };
+  });
+
+  const newBlock = {
+    type: "gallery-feature",
+    title: frontmatter.linksTitle || "Enlaces...",
+    description: frontmatter.galleryDescription || "",
+    elements,
+  };
+
+  // Merge (don’t overwrite)
+  frontmatter.blocks = Array.isArray(frontmatter.blocks) ? [...frontmatter.blocks, newBlock] : [newBlock];
+
+  console.log(JSON.stringify(frontmatter));
+
+  // Must return modified pageData for VitePress to pick it up
+  return frontmatter;
+}
+
 /** Genera rewrites para los ficheros de docs */
 export function generateRewrites(docsDir) {
   const files = fg.sync("**/*.md", {

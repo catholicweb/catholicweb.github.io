@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import tailwindcss from "@tailwindcss/vite";
-import { renderMarkdownFields, generateRewrites, generateNav } from "./generateConfig.js";
+import { renderMarkdownFields, generateRewrites, generateNav, addLinks } from "./generateConfig.js";
 
 export default defineConfig(async () => ({
   title: "¿Quién soy?",
@@ -35,7 +35,10 @@ export default defineConfig(async () => ({
   plugins: [tailwindcss()],
   transformPageData(pageData) {
     const fm = pageData.frontmatter;
-    if (fm) renderMarkdownFields(fm);
+    if (fm) {
+      renderMarkdownFields(fm);
+      addLinks(fm);
+    }
     return pageData;
   },
 }));

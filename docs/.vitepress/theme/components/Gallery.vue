@@ -10,7 +10,7 @@
 
     <!-- Masonry Grid Gallery -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div
+      <a
         v-for="(elem, idx) in block.elements"
         :key="idx"
         no="cursor-pointer hover:shadow-2xl"
@@ -18,6 +18,7 @@
           'image-full card rounded-lg': !is('feature'),
           card: is('feature'),
         }"
+        :href="elem.link"
         @click="openModal(elem)"
       >
         <figure v-if="getImage(elem)">
@@ -45,7 +46,7 @@
             <button class="btn btn-primary">Buy Now</button>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Modal for enlarged image -->
@@ -79,6 +80,7 @@ function is(prop) {
 }
 
 const openModal = (elem) => {
+  if (elem.link) return;
   selectedImage.value = elem;
   modal.value?.showModal();
 };
