@@ -1,13 +1,6 @@
 ---
-title: ¿Quien soy?
+title: "Llamados "
 description: Vocaciones Navarra
-styles:
-  - selector: blockquote
-    cssClass: "opacity: 0;"
-    scroll: true
-  - selector: li, ul
-    cssClass: "opacity: 0.5; transform: scale(0.80);"
-    scroll: true
 nav:
   - title: Discierne
     links:
@@ -23,7 +16,11 @@ nav:
     links:
       - docs/index.md
       - docs/7-pasos.md
-theme:
-  bodyFont: Roboto
-  headingFont: Roboto
+styles:
+  - selector: blockquote
+    cssClass: "opacity: 0;"
+    scroll: true
+  - selector: li, ul
+    cssClass: "opacity: 0.5; transform: scale(0.80);"
+    scroll: true
 ---
