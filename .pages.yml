@@ -41,7 +41,7 @@ content:
           - name: links
             label: Enlaces
             type: reference
-            options: { collection: pages, multiple: true, search: "title,description", label: "{title}", image: "{image}" }
+            options: { collection: pages, multiple: true, label: "{title}" }
       - name: theme
         label: Tema visual
         type: object
