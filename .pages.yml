@@ -1,4 +1,7 @@
 components:
+  text:
+    label: Text Content
+    type: rich-text
   font:
     label: Font
     type: select
@@ -10,14 +13,14 @@ components:
     type: object
     fields:
       - { name: title, label: Título, type: string }
-      - { name: description, label: Texto, type: text }
+      - { name: description, label: Subtitulo, type: string }
       - name: elements
         label: Elementos
         type: object
         list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
           - { name: title, label: Título, type: string }
-          - { name: description, label: Texto, type: text }
+          - { name: description, label: Subtitulo, type: string }
           - { name: image, label: Imagen, type: image }
 media:
   input: docs/public/media
@@ -80,11 +83,9 @@ content:
         list: true
         blocks:
           - name: gallery
-            label: Add Galeria de imagenes
+            label: Galeria de imagenes
             component: gallery
           - name: text
-            label: Add Text Block
-            fields:
-              - name: content
-                label: Text Content
-                type: rich-text
+            label: Bloque de texto
+            component: text
+
