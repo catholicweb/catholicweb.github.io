@@ -14,6 +14,7 @@ function readFrontmatter(filePath) {
 }
 
 function autocomplete(fm) {
+  if (!fm.sections) return;
   for (var i = 0; i < fm.sections.length; i++) {
     if (typeof fm.sections[i].html === "string") {
       fm.sections[i].html = md.render(fm.sections[i].html);
