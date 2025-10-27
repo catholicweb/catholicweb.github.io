@@ -18,7 +18,7 @@ nav:
       - docs/7-pasos.md
 theme:
   bodyFont: Quicksand
-  headingFont: Kalam
+  headingFont: Story Script
 styles:
   - selector: blockquote
     cssClass: "opacity: 0;"
