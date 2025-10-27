@@ -81,3 +81,17 @@ content:
         label: Enlaces internos
         type: reference
         options: { collection: pages, multiple: true, label: "{title}" }
+      - name: sections
+        label: Page Sections
+        type: block
+        list: true
+        blocks:
+          - name: hero
+            label: Add Hero Section
+            component: font
+          - name: text
+            label: Add Text Block
+            fields:
+              - name: content
+                label: Text Content
+                type: rich-text
