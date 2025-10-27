@@ -122,10 +122,10 @@ async function generateNav2() {
   return toVitepressNav(tree);
 }
 
-function googleFont(fontName, weights = "400,700", styles = "normal,italic") {
+function googleFont(theme, weights = "400,700", styles = "normal,italic") {
   // Google Fonts URL format
   const baseURL = "https://fonts.googleapis.com/css2";
-  return `${baseURL}?family=${fontName.replace(/\s+/g, "+")}:wght@${weights}&display=swap`;
+  return `${baseURL}?family=${theme.bodyFont.replace(/\s+/g, "+")}&family=${theme.headingFont.replace(/\s+/g, "+")}&display=swap`;
 }
 
 async function printCSS(config) {
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   ${cssClass};
   animation: scrolled linear both;
   animation-timeline: view();
-  animation-range: entry 25% cover 25%;
+  animation-range: entry 30% cover 30%;
 }\n\n`;
     } else {
       css += `${selector} {  ${cssClass}; }\n\n`;
@@ -188,7 +188,7 @@ export async function generate() {
       ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
       ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" }],
       // Link to the Google Font stylesheet
-      ["link", { href: googleFont(config.theme.bodyFont), rel: "stylesheet" }],
+      ["link", { href: googleFont(config.theme), rel: "stylesheet" }],
     ],
     title: config.title,
     cleanUrls: true,
