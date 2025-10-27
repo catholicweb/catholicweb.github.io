@@ -18,7 +18,7 @@ nav:
       - docs/7-pasos.md
 theme:
   bodyFont: Roboto
-  headingFont: Knewave
+  headingFont: Roboto
 styles:
   - selector: blockquote
     cssClass: "opacity: 0;"
