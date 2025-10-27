@@ -5,18 +5,12 @@ components:
     options:
       creatable: true
       values: ["Roboto", "Open Sans", "Lato", "Montserrat", "Poppins", "Merriweather", "Raleway", "Oswald", "Playfair Display", "Source Sans Pro", "Nunito", "Quicksand", "Work Sans", "Bebas Neue", "Muli", "Roboto Slab", "Lora", "Josefin Sans", "Droid Serif", "Cabin", "Arimo", "Ubuntu", "Zilla Slab", "Tisa", "Anton", "Fira Sans", "Varela Round", "Crimson Pro", "Spectral", "Exo 2", "Bitter", "Archivo", "Dosis", "PT Sans", "Lobster", "Pacifico", "Dancing Script", "Sacramento", "Tangerine", "Unbounded", "Pangolin", "Bree Serif", "Vollkorn", "Monda", "Be Vietnam", "Karla", "Noto Sans", "Kalam"]
-  blocks:
-    label: Bloques pros
+  gallery:
+    label: Galleria imagenes
     type: object
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{fields.type} - {fields.title}"
     fields:
-      - { name: type, label: Tipo, type: select, options: { values: ["hero", "gallery", "gallery-feature", "text"] } }
       - { name: title, label: Título, type: string }
-      - { name: description, label: Texto, type: rich-text }
-      - { name: image, label: Imagen, type: image }
+      - { name: description, label: Texto, type: text }
       - name: elements
         label: Elementos
         type: object
@@ -25,7 +19,6 @@ components:
           - { name: title, label: Título, type: string }
           - { name: description, label: Texto, type: text }
           - { name: image, label: Imagen, type: image }
-          - { name: param, label: Link, type: string }
 media:
   input: docs/public/media
   output: /media
@@ -86,9 +79,9 @@ content:
         type: block
         list: true
         blocks:
-          - name: hero
-            label: Add Hero Section
-            component: font
+          - name: gallery
+            label: Add Galeria de imagenes
+            component: gallery
           - name: text
             label: Add Text Block
             fields:
