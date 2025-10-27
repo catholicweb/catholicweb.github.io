@@ -87,5 +87,6 @@ content:
             component: gallery
           - name: text
             label: Bloque de texto
-            component: text
+            fields:
+              - { name: content, label: Texto largo (usa / para cabeceras...), type: rich-text }
 
