@@ -6,20 +6,6 @@ import matter from "gray-matter";
 
 const md = new MarkdownIt();
 
-/** Renderiza los campos "body" como HTML */
-function renderMarkdownFields(obj) {
-  if (!obj || typeof obj !== "object") return;
-  for (const key of Object.keys(obj)) {
-    const value = obj[key];
-    if (key === "cuerpo" && typeof value === "string") {
-      obj[key + "Html"] = md.render(value);
-      console.log(key, obj);
-    } else if (typeof value === "object") {
-      renderMarkdownFields(value);
-    }
-  }
-}
-
 /* MODIFY LINKS */
 function readFrontmatter(filePath) {
   if (!fs.existsSync(filePath)) return {};
@@ -27,12 +13,22 @@ function readFrontmatter(filePath) {
   return matter(content).data || {};
 }
 
-function addLinks(frontmatter) {
-  // Only process if 'links' field exists
-  if (!frontmatter.links || !frontmatter.links.map) return;
+function autocomplete(fm) {
+  for (var i = 0; i < fm.sections.length; i++) {
+    if (typeof fm.sections[i].html === "string") {
+      fm.sections[i].html = md.render(fm.sections[i].html);
+    }
+    if (fm.sections[i]._block == "links") {
+      fm.sections[i] = addLinks(fm.sections[i]);
+    }
+  }
+}
+
+function addLinks(section) {
+  if (!section.links || !section.links.map) return;
 
   const baseDir = path.resolve("");
-  const elements = frontmatter.links.map((linkPath) => {
+  section.elements = section.links.map((linkPath) => {
     const fullPath = path.resolve(baseDir, linkPath);
     const fm = readFrontmatter(fullPath);
     return {
@@ -42,19 +38,8 @@ function addLinks(frontmatter) {
       link: linkPath.replace("docs/", "").replace(".md", ""),
     };
   });
-
-  const newBlock = {
-    type: "gallery-feature",
-    title: frontmatter.linksTitle || "Enlaces",
-    description: frontmatter.galleryDescription || "",
-    elements,
-  };
-
-  // Merge (don’t overwrite)
-  frontmatter.blocks = Array.isArray(frontmatter.blocks) ? [...frontmatter.blocks, newBlock] : [newBlock];
-
-  // Must return modified pageData for VitePress to pick it up
-  return frontmatter;
+  section._block = "gallery-feature";
+  return section;
 }
 
 async function generateNav(data) {
@@ -210,10 +195,7 @@ export async function generate() {
     ],*/
     transformPageData(pageData) {
       const fm = pageData.frontmatter;
-      if (fm) {
-        renderMarkdownFields(fm);
-        addLinks(fm);
-      }
+      if (fm) autocomplete(fm);
       return pageData;
     },
   };

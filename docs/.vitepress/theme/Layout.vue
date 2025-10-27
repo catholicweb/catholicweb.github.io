@@ -7,9 +7,9 @@
     <component :is="components.Hero" :block="page.frontmatter" />
 
     <!-- Main Content - Block System -->
-    <main class="flex-1" v-if="page.frontmatter.blocks">
-      <section v-for="(block, index) in page.frontmatter.blocks">
-        <component :key="index" :is="getBlockComponent(block.type)" :block="block" />
+    <main class="flex-1" v-if="page.frontmatter.sections">
+      <section v-for="(section, index) in page.frontmatter.sections">
+        <component :key="index" :is="getBlockComponent(section._block)" :block="section" />
       </section>
     </main>
 

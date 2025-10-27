@@ -76,7 +76,7 @@ const modal = ref(null);
 const selectedImage = ref("");
 
 function is(prop) {
-  return props.block.type.includes(prop);
+  return props.block._block.includes(prop);
 }
 
 const openModal = (elem) => {
