@@ -17,8 +17,8 @@ nav:
       - docs/index.md
       - docs/7-pasos.md
 theme:
-  bodyFont: Merriweather
-  headingFont: Exo 2
+  bodyFont: Quicksand
+  headingFont: Kalam
 styles:
   - selector: blockquote
     cssClass: "opacity: 0;"
