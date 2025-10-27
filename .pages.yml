@@ -32,16 +32,8 @@ content:
     fields:
       - { name: title, label: Titulo sitio, type: string }
       - { name: description, label: Description del sitio, type: text }
-      - name: styles
-        label: Estilos (pro)
-        type: object
-        list: { collapsible: { collapsed: true } }
-        fields:
-          - { name: selector, label: "Selector", type: string }
-          - { name: cssClass, label: "cssClass", type: string }
-          - { name: scroll, label: "scroll", type: boolean }
       - name: nav
-        label: Navegacion
+        label: Menu de navegación
         type: object
         list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
@@ -50,6 +42,21 @@ content:
             label: Enlaces
             type: reference
             options: { collection: pages, multiple: true, search: "title,description", label: "{title}", image: "{image}" }
+      - name: theme
+        label: Tema visual
+        type: object
+        fields:
+          - { name: bodyFont, label: Fuente del cuerpo, type: string }
+          - { name: headingFont, label: Fuente de los titulos, type: string }
+      - name: styles
+        label: Estilos y efectos
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
+        fields:
+          - { name: selector, label: "Selector", type: string }
+          - { name: cssClass, label: "cssClass", type: string }
+          - { name: scroll, label: "scroll", type: boolean }
+
   - name: pages
     label: Paginas
     type: collection

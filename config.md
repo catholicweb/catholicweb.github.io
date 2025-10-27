@@ -23,4 +23,7 @@ nav:
     links:
       - docs/index.md
       - docs/7-pasos.md
+theme:
+  bodyFont: Roboto
+  headingFont: Roboto
 ---
