@@ -88,7 +88,7 @@ content:
           - name: links
             label: Enlaces internos
             fields:
-              name: links
-              label: Enlaces internos
-              type: reference
-              options: { collection: pages, multiple: true, label: "{title}" }
+              - name: links
+                label: Enlaces internos
+                type: reference
+                options: { collection: pages, multiple: true, label: "{title}" }
