@@ -1,4 +1,13 @@
 ---
+title: ¿Quien soy?
+description: Vocaciones Navarra
+theme:
+  bodyFont: Roboto
+  headingFont: Roboto
+styles:
+  #- { selector: "blockquote", cssClass: "hover:rotate-6 hover:scale-105 focus:rotate-6 focus:scale-105", scroll: true }
+  - { selector: "blockquote", cssClass: "opacity: 0;", scroll: true }
+  - { selector: "li, ul", cssClass: "opacity: 0.5; transform: scale(0.80);", scroll: true }
 nav:
   - title: Discierne
     links:

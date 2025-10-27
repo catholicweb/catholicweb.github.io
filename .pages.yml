@@ -14,10 +14,7 @@ components:
       - name: elements
         label: Elementos
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{fields.title}"
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
           - { name: title, label: Título, type: string }
           - { name: description, label: Texto, type: text }
@@ -33,26 +30,26 @@ content:
     label: Configuración
     path: config.md
     fields:
-      - name: theme
-        type: string
+      - { name: title, label: Titulo sitio, type: string }
+      - { name: description, label: Description del sitio, type: text }
+      - name: styles
+        label: Estilos (pro)
+        type: object
+        list: { collapsible: { collapsed: true } }
+        fields:
+          - { name: selector, label: "Selector", type: string }
+          - { name: cssClass, label: "cssClass", type: string }
+          - { name: scroll, label: "scroll", type: boolean }
       - name: nav
         label: Navegacion
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{fields.title}"
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
           - { name: title, label: Titulo sección, type: string }
           - name: links
             label: Enlaces
             type: reference
-            options:
-              collection: pages
-              multiple: true
-              search: "title,description"
-              label: "{title}"
-              image: "{image}"
+            options: { collection: pages, multiple: true, search: "title,description", label: "{title}", image: "{image}" }
   - name: pages
     label: Paginas
     type: collection
@@ -70,7 +67,4 @@ content:
       - name: links
         label: Enlaces internos
         type: reference
-        options:
-          collection: pages
-          multiple: true
-          label: "{title}"
+        options: { collection: pages, multiple: true, label: "{title}" }

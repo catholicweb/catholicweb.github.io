@@ -6,21 +6,8 @@ import matter from "gray-matter";
 
 const md = new MarkdownIt();
 
-/** Convierte un string a slug */
-export function slugify(str) {
-  return str
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-\/]+/g, "")
-    .replace(/\-\-+/g, "-")
-    .replace(/^-+/, "")
-    .replace(/-+$/, "");
-}
-
 /** Renderiza los campos "body" como HTML */
-export function renderMarkdownFields(obj) {
+function renderMarkdownFields(obj) {
   if (!obj || typeof obj !== "object") return;
   for (const key of Object.keys(obj)) {
     const value = obj[key];
@@ -38,7 +25,8 @@ function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
   return matter(content).data || {};
 }
-export function addLinks(frontmatter) {
+
+function addLinks(frontmatter) {
   // Only process if 'links' field exists
   if (!frontmatter.links || !frontmatter.links.map) return;
 
@@ -68,62 +56,19 @@ export function addLinks(frontmatter) {
   return frontmatter;
 }
 
-/** Genera rewrites para los ficheros de docs */
-export function generateRewrites(docsDir) {
-  const files = fg.sync("**/*.md", {
-    cwd: "./docs",
-    ignore: ["node_modules", ".vitepress"],
-  });
-
-  const rewrites = {};
-  for (const file of files) {
-    const parsed = path.parse(file);
-    const dirParts = parsed.dir ? parsed.dir.split(path.sep) : [];
-    const slugifiedDir = dirParts.map(slugify).join("/");
-    const slugifiedName = slugify(parsed.name);
-    const slugifiedPath = slugifiedDir ? path.join(slugifiedDir, slugifiedName + ".md") : slugifiedName + ".md";
-    if (file !== slugifiedPath) rewrites[file] = slugifiedPath;
-  }
-
-  return rewrites;
-}
-
-export async function generateNav() {
-  // Path to your config.md
-  const configPath = path.resolve("./config.md");
-
-  // Parse frontmatter
-  const configContent = fs.readFileSync(configPath, "utf8");
-  const { data } = matter(configContent);
-
-  const baseDir = path.dirname(configPath);
-
-  // Helper: extract title from each linked doc
-  function getDocTitle(filePath) {
-    const fullPath = path.resolve(baseDir, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.warn(`⚠️ Missing file: ${fullPath}`);
-      return path.basename(filePath, ".md");
-    }
-    const fileContent = fs.readFileSync(fullPath, "utf8");
-    const { data: fm } = matter(fileContent);
-    return fm.title || path.basename(filePath, ".md");
-  }
-
+async function generateNav(data) {
   // Build VitePress nav
-  const vitepressNav = data.nav.map((section) => ({
+  return data.nav.map((section) => ({
     text: section.title,
     items: section.links.map((linkPath) => ({
-      text: getDocTitle(linkPath),
+      text: readFrontmatter(linkPath)?.title || path.basename(linkPath, ".md"),
       link: "/" + linkPath.replace(/^docs\//, "").replace(/\.md$/, ""),
     })),
   }));
-
-  return vitepressNav;
 }
 
-/** Genera el árbol de navegación manualmente (sin createContentLoader) */
-export async function generateNav2() {
+/** Genera el árbol de navegación */
+async function generateNav2() {
   const files = fg.sync(["**/*.md"], {
     cwd: "./docs/",
     ignore: ["node_modules", ".vitepress", "index.md"],
@@ -175,4 +120,100 @@ export async function generateNav2() {
     });
 
   return toVitepressNav(tree);
+}
+
+function googleFont(fontName, weights = "400,700", styles = "normal,italic") {
+  // Google Fonts URL format
+  const baseURL = "https://fonts.googleapis.com/css2";
+  return `${baseURL}?family=${fontName.replace(/\s+/g, "+")}:wght@${weights}&display=swap`;
+}
+
+async function printCSS(config) {
+  let css = `/* global.css or in your <style> block */
+:root {
+  --font-body: '${config.theme.bodyFont}', sans-serif;
+  --font-heading: '${config.theme.headingFont}', sans-serif;
+}
+
+/* You can also include other global styles */
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@keyframes scrolled {
+  to {
+    opacity: 1;          /* fully visible */
+    transform: scale(1) rotate(0) translate(0); /* no scaling or translation */
+  }
+}\n\n`;
+
+  config.styles.forEach(({ selector, cssClass, scroll }) => {
+    if (scroll) {
+      css += `${selector} {
+  ${cssClass};
+  animation: scrolled linear both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 25%;
+}\n\n`;
+    } else {
+      css += `${selector} {  ${cssClass}; }\n\n`;
+    }
+  });
+
+  const baseDir = path.resolve("");
+  console.log(baseDir);
+  fs.writeFileSync(baseDir + "/docs/.vitepress/theme/vars.css", css, "utf8");
+}
+
+export async function generate() {
+  let config = readFrontmatter("./config.md");
+
+  config.languages = [
+    { code: "es", label: "Español", path: "/" },
+    { code: "en", label: "English", path: "en/" },
+    { code: "eus", label: "Euskara", path: "eus/" },
+  ];
+
+  console.log(config);
+
+  await printCSS(config);
+
+  return {
+    head: [
+      // Preconnect to Google Fonts and Fonts CDN
+      ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+      ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true }],
+      // Link to the Google Font stylesheet
+      ["link", { href: googleFont(config.theme.bodyFont), rel: "stylesheet" }],
+    ],
+    title: config.title,
+    cleanUrls: true,
+    description: config.description,
+    themeConfig: {
+      nav: await generateNav(config),
+      languages: config.languages,
+    },
+    /*transformHead: ({ pageData }) => [
+      ["meta", { name: "keywords", content: "navarra, vocaciones, seminario, vida consagrada" }],
+      ["meta", { property: "og:type", content: "website" }],
+      ["meta", { property: "og:title", content: pageData.title || "¿Quién soy?" }],
+      ["meta", { property: "og:description", content: pageData.subtitle || "Vocaciones Navarra" }],
+      ["meta", { property: "og:image", content: pageData.image || "" }],
+      ["meta", { name: "twitter:card", content: pageData.image || "" }],
+      ["link", { rel: "icon", href: "/favicon.ico" }],
+      ["meta", { property: "og:description", content: pageData.description || "Vocaciones Navarra" }],
+    ],*/
+    transformPageData(pageData) {
+      const fm = pageData.frontmatter;
+      if (fm) {
+        renderMarkdownFields(fm);
+        addLinks(fm);
+      }
+      return pageData;
+    },
+  };
 }
