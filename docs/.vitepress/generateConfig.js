@@ -167,15 +167,22 @@ export async function generate() {
 
   console.log(config);
 
-  await printCSS(config);
+  const FONT_URL = googleFont(config.theme);
+
+  async function getFontCSS(url) {
+    const res = await fetch(url);
+    let css = await res.text();
+    if (!css.includes("font-display")) css = css.replace(/}/g, "font-display:swap;}");
+    return css;
+  }
 
   return {
     head: [
       // Preconnect to Google Fonts and Fonts CDN
-      ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+      //["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
       ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" }],
       // Link to the Google Font stylesheet
-      ["link", { href: googleFont(config.theme), rel: "stylesheet" }],
+      ["style", {}, await getFontCSS(FONT_URL)],
     ],
     title: config.title,
     cleanUrls: true,
