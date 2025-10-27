@@ -1,4 +1,11 @@
 components:
+  font:
+    label: Font
+    type: select
+    description: "Nombre de cualquier fuente en https://fonts.google.com/"
+    options:
+      creatable: true
+      values: ["Roboto", "Open Sans", "Lato", "Montserrat", "Poppins", "Merriweather", "Raleway", "Oswald", "Playfair Display", "Source Sans Pro", "Nunito", "Quicksand", "Work Sans", "Bebas Neue", "Muli", "Roboto Slab", "Lora", "Josefin Sans", "Droid Serif", "Cabin", "Arimo", "Ubuntu", "Zilla Slab", "Tisa", "Anton", "Fira Sans", "Varela Round", "Crimson Pro", "Spectral", "Exo 2", "Bitter", "Archivo", "Dosis", "PT Sans", "Lobster", "Pacifico", "Dancing Script", "Sacramento", "Tangerine", "Unbounded", "Pangolin", "Bree Serif", "Vollkorn", "Monda", "Be Vietnam", "Karla", "Noto Sans", "Kalam"]
   blocks:
     label: Bloques pros
     type: object
@@ -46,8 +53,8 @@ content:
         label: Tema visual
         type: object
         fields:
-          - { name: bodyFont, label: Fuente del cuerpo, description: "Nombre de cualquier fuente en https://fonts.google.com/", type: string }
-          - { name: headingFont, label: Fuente de los titulos, description: "Nombre de cualquier fuente en https://fonts.google.com/", type: string }
+          - { name: bodyFont, label: Fuente del cuerpo, component: font }
+          - { name: headingFont, label: Fuente de los titulos, component: font }
       - name: styles
         label: Estilos y efectos
         type: object
