@@ -52,8 +52,8 @@ content:
         label: Tema visual
         type: object
         fields:
-          - { name: bodyFont, label: Fuente del cuerpo (cualquiera de https://fonts.google.com/), component: font }
-          - { name: headingFont, label: Fuente de los titulos (cualquiera de https://fonts.google.com/), component: font }
+          - { name: bodyFont, label: Tipo de letra del cuerpo (cualquiera de https://fonts.google.com/), component: font }
+          - { name: headingFont, label: Tipo de letra de los titulos (cualquiera de https://fonts.google.com/), component: font }
       - name: styles
         label: Estilos y efectos
         type: object
