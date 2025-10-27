@@ -80,7 +80,7 @@ content:
       - name: sections
         label: Page Sections
         type: block
-        list: true
+        list: { collapsible: { collapsed: false, summary: "{fields.title}" } }
         blocks:
           - name: gallery
             label: Galeria de imagenes
