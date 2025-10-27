@@ -166,7 +166,7 @@ export async function generate() {
   ];
 
   console.log(config);
-
+  await printCSS(config);
   const FONT_URL = googleFont(config.theme);
 
   async function getFontCSS(url) {
