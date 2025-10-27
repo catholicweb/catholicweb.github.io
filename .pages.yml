@@ -83,7 +83,7 @@ content:
           - name: text
             label: Bloque de texto
             fields:
-              - { name: html, label: Texto largo (usa / para cabeceras...), type: rich-text }
+              - { name: html, label: Texto largo, type: rich-text }
           - name: links
             label: Enlaces internos
             fields:
