@@ -72,7 +72,6 @@ content:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }
       - { name: image, label: Imagen, type: image }
-      - { name: cuerpo, label: Texto largo, type: rich-text }
       - name: sections
         label: Page Sections
         type: block
