@@ -1,6 +1,6 @@
 ---
 title: "¿Que hace un monje? "
-body: >-
+cuerpo: >-
   ## ¿Qué hace un monje?
 
 

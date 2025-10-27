@@ -1,6 +1,6 @@
 ---
 title: "Vida contemplativa "
-body: >-
+cuerpo: >-
   ## Vida Contemplativa: Amor, Adoración y Esperanza
 
 

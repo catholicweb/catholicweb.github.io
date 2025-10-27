@@ -1,6 +1,6 @@
 ---
 title: "Los 5 formas del discernimiento "
-body: >-
+cuerpo: >-
   **¿Cómo conocer el plan de Dios para tu vida?**  
 
   ¡Sigue estas recomendaciones y Dios te ayudará a comprender a qué te está

@@ -1,6 +1,6 @@
 ---
 title: "Los 7 pasos del discernimiento "
-body: >-
+cuerpo: >-
   ## **Cada vocación es un misterio: cada hombre pasa por estas etapas de
   manera diferente.**
 

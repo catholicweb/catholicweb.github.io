@@ -1,6 +1,6 @@
 ---
 title: ¿Ser laico es una vocación?
-body: >-
+cuerpo: >-
   ### **El Pueblo de Dios y la Vocación Laical**
 
 

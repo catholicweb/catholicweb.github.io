@@ -1,6 +1,6 @@
 ---
 title: "¿Qué es el noviazgo? "
-body: >-
+cuerpo: >-
   # ¿Qué es el noviazgo cristiano?
 
 

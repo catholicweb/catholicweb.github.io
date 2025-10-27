@@ -1,6 +1,6 @@
 ---
 title: "Conoce a nuestros seminaristas "
-body: >-
+cuerpo: >-
   El camino hacia el sacerdocio es una verdadera aventura de gracia: un **viaje
   donde el corazón aprende a escuchar, a servir y a amar como Cristo, el Buen
   Pastor**.  

@@ -2,7 +2,7 @@
 title: "Familia, iglesia doméstica "
 description: "Vive tu familia como Iglesia: ama, entrega y sé faro del amor de Dios
   en el mundo."
-body: >-
+cuerpo: >-
   # **La familia: Iglesia doméstica**
 
 

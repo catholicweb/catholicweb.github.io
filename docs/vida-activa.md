@@ -1,6 +1,6 @@
 ---
 title: Vida activa
-body: >-
+cuerpo: >-
   # La Vida Activa: servir al mundo desde la entrega total a Dios
 
 

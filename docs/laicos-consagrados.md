@@ -1,6 +1,6 @@
 ---
 title: "Laicos consagrados "
-body: >-
+cuerpo: >-
   # **Laicos Consagrados: Entrega Radical en Medio del Mundo**
 
 

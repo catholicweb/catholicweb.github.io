@@ -1,6 +1,6 @@
 ---
 title: ¿Diaconado permanente?
-body: >-
+cuerpo: >-
   ### **El diaconado permanente**
 
 

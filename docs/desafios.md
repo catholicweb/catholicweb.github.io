@@ -1,6 +1,6 @@
 ---
 title: "Desafíos para los laicos "
-body: >-
+cuerpo: >-
   ### **Desafíos actuales de la vocación laical**
 
 

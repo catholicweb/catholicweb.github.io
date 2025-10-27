@@ -20,7 +20,7 @@
     <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">{{ block.title }}</h2>
   </div>
   <div class="container mx-auto px-4 py-16">
-    <div v-if="block.body" class="prose text-lg mb-12 max-w-2xl mx-auto" v-html="block.bodyHtml"></div>
+    <div v-if="block.cuerpo" class="prose text-lg mb-12 max-w-2xl mx-auto" v-html="block.cuerpoHtml"></div>
   </div>
 </template>
 

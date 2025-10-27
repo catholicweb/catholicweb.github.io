@@ -1,6 +1,6 @@
 ---
 title: "Seminario "
-body: >-
+cuerpo: >-
   ¡La mejor formación que ofrece la Iglesia!
 
 

@@ -1,6 +1,6 @@
 ---
 title: "¿Como funciona el seminario? "
-body: >-
+cuerpo: >-
   **Requisitos para ser sacerdote**
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Vocación matrimonial "
 description: "Cada matrimonio es reflejo del amor de Dios. "
-body: >-
+cuerpo: >-
   ### **La vocación al matrimonio: entrega total y santidad en la vida
   cotidiana**
 

@@ -1,6 +1,6 @@
 ---
 title: "¿Que hace una monja? "
-body: >-
+cuerpo: >-
   # ¿Qué hacen las monjas?
 
 

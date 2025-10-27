@@ -1,6 +1,6 @@
 ---
 title: "Colabora, el seminario es de todos. "
-body: >-
+cuerpo: >-
   ### **Los seminaristas necesitan nuestra colaboración**
 
 

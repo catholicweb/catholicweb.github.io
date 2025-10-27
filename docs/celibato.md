@@ -1,6 +1,7 @@
 ---
 title: "¿Porque el celibato? "
-body: >- ## **Discerniendo el Celibato Sacerdotal**
+cuerpo: >- ## **Discerniendo el Celibato Sacerdotal**
+
 
 
 

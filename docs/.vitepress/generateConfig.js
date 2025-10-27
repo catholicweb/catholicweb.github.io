@@ -11,8 +11,9 @@ function renderMarkdownFields(obj) {
   if (!obj || typeof obj !== "object") return;
   for (const key of Object.keys(obj)) {
     const value = obj[key];
-    if (key === "body" && typeof value === "string") {
+    if (key === "cuerpo" && typeof value === "string") {
       obj[key + "Html"] = md.render(value);
+      console.log(key, obj);
     } else if (typeof value === "object") {
       renderMarkdownFields(value);
     }

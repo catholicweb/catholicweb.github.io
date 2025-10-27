@@ -1,6 +1,6 @@
 ---
 title: El noviazgo como vocación y camino de entrega
-body: >-
+cuerpo: >-
   ### El noviazgo como vocación y camino de entrega
 
 

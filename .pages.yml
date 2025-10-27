@@ -72,7 +72,7 @@ content:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }
       - { name: image, label: Imagen, type: image }
-      - { name: body, label: Texto largo, type: rich-text }
+      - { name: cuerpo, label: Texto largo, type: rich-text }
       - name: links
         label: Enlaces internos
         type: reference
@@ -89,4 +89,3 @@ content:
             label: Bloque de texto
             fields:
               - { name: content, label: Texto largo (usa / para cabeceras...), type: rich-text }
-
