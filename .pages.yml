@@ -3,11 +3,43 @@ components:
     label: Text Content
     type: rich-text
   font:
-    label: Font
+    label: Tipo letra
     type: select
     options:
       creatable: true
       values: ["Roboto", "Open Sans", "Lato", "Montserrat", "Poppins", "Merriweather", "Raleway", "Oswald", "Playfair Display", "Source Sans Pro", "Nunito", "Quicksand", "Work Sans", "Bebas Neue", "Muli", "Roboto Slab", "Lora", "Josefin Sans", "Droid Serif", "Cabin", "Arimo", "Ubuntu", "Zilla Slab", "Tisa", "Anton", "Fira Sans", "Varela Round", "Crimson Pro", "Spectral", "Exo 2", "Bitter", "Archivo", "Dosis", "PT Sans", "Lobster", "Pacifico", "Dancing Script", "Sacramento", "Tangerine", "Unbounded", "Pangolin", "Bree Serif", "Vollkorn", "Monda", "Be Vietnam", "Karla", "Noto Sans", "Kalam"]
+  selector:
+    label: Selector
+    type: select
+    options:
+      creatable: true
+      values: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "img", "blockquote", "a", "ul", "ol", "li", "div", "span", "strong", "em", "br", "hr", "table", "tr", "td", "th", "form", "input", "button", "label", "select", "option", "textarea", "iframe", "header", "footer", "nav", "article", "section", "aside", "details", "summary", "video", "audio", "canvas", "svg"]
+  colors:
+    label: Colors
+    type: select
+    options:
+      creatable: true
+      values: ["white", "black", "red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "gray", "lightgray", "darkgray", "beige", "ivory", "teal", "coral", "slateblue", "rgb(255, 99, 71)", "hsl(180, 100%, 25%)"]
+  effects:
+    label: Efectos CSS
+    type: select
+    options:
+      creatable: true
+      values: ["opacity: 0;", "opacity: 0.5;", "transform: scale(0.8);", "transform: scale(1.2);", "transform: scaleX(1.5);", "transform: scaleY(.5);", "transform: rotate(6deg);", "transform: rotate(-6deg);", "transform: translateX(-20%);", "transform: translateX(20%);", "transform: translateY(-20%);", "transform: translateY(20%);", "transform: translate(-50%, -50%);", "filter: blur(5px);", "filter: brightness(1.2);", "filter: contrast(150%);", "filter: grayscale(100%);", "filter: invert(100%);", "color: rgb(var(--color-accent));"]
+  hero:
+    label: Hero
+    type: object
+    fields:
+      - { name: title, label: Título, type: string }
+      - { name: description, label: Subtitulo, type: string }
+      - { name: image, label: Image, type: image }
+      - name: elements
+        label: Acciones
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: Título, type: string }
+          - { name: link, label: Accion, type: string }
   gallery:
     label: Galleria imagenes
     type: object
@@ -50,14 +82,15 @@ content:
         fields:
           - { name: bodyFont, label: Tipo de letra del cuerpo (cualquiera de https://fonts.google.com/), component: font }
           - { name: headingFont, label: Tipo de letra de los titulos (cualquiera de https://fonts.google.com/), component: font }
-      - name: styles
-        label: Estilos y efectos
-        type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
-        fields:
-          - { name: selector, label: "Selector", type: string }
-          - { name: cssClass, label: "cssClass", type: string }
-          - { name: scroll, label: "scroll", type: boolean }
+          - { name: accentColor, label: Color elementos acentuados, component: color }
+          - name: styles
+            label: Estilos y efectos individuales
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
+            fields:
+              - { name: selector, label: "Selector", type: string }
+              - { name: cssClass, label: "cssClass", type: string }
+              - { name: scroll, label: "scroll", type: boolean }
 
   - name: pages
     label: Paginas
@@ -84,6 +117,9 @@ content:
             label: Bloque de texto
             fields:
               - { name: html, label: Texto largo, type: rich-text }
+          - name: hero
+            label: Hero (cabezera)
+            component: hero
           - name: links
             label: Enlaces internos
             fields:

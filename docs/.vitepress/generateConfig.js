@@ -13,8 +13,9 @@ function readFrontmatter(filePath) {
   return matter(content).data || {};
 }
 
-function autocomplete(fm) {
+function autocomplete(fm, config) {
   if (!fm.sections) return;
+  addMeta(fm, config);
   for (var i = 0; i < fm.sections.length; i++) {
     if (typeof fm.sections[i].html === "string") {
       fm.sections[i].html = md.render(fm.sections[i].html);
@@ -23,6 +24,11 @@ function autocomplete(fm) {
       fm.sections[i] = addLinks(fm.sections[i]);
     }
   }
+}
+
+function addMeta(fm, config) {
+  fm.head ??= [];
+  fm.head.push(["meta", { property: "og:type", content: "website" }], ["meta", { property: "og:title", content: fm.title || config.title }], ["meta", { property: "og:description", content: fm.description || config.description }], ["meta", { property: "og:image", content: fm.image || config.image }], ["name", { property: "twitter:card", content: fm.image || config.image }]);
 }
 
 function addLinks(section) {
@@ -120,6 +126,7 @@ async function printCSS(config) {
 :root {
   --font-body: '${config.theme.bodyFont}', sans-serif;
   --font-heading: '${config.theme.headingFont}', sans-serif;
+  --color-accent: ${config.theme.accentColor};
 }
 
 /* You can also include other global styles */
@@ -138,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }\n\n`;
 
-  config.styles.forEach(({ selector, cssClass, scroll }) => {
+  config.theme.styles.forEach(({ selector, cssClass, scroll }) => {
     if (scroll) {
       css += `${selector} {
   ${cssClass};
@@ -152,7 +159,6 @@ h1, h2, h3, h4, h5, h6 {
   });
 
   const baseDir = path.resolve("");
-  console.log(baseDir);
   fs.writeFileSync(baseDir + "/docs/.vitepress/theme/vars.css", css, "utf8");
 }
 
@@ -165,7 +171,6 @@ export async function generate() {
     { code: "eus", label: "Euskara", path: "eus/" },
   ];
 
-  console.log(config);
   await printCSS(config);
   const FONT_URL = googleFont(config.theme);
 
@@ -191,19 +196,9 @@ export async function generate() {
       nav: await generateNav(config),
       languages: config.languages,
     },
-    /*transformHead: ({ pageData }) => [
-      ["meta", { name: "keywords", content: "navarra, vocaciones, seminario, vida consagrada" }],
-      ["meta", { property: "og:type", content: "website" }],
-      ["meta", { property: "og:title", content: pageData.title || "¿Quién soy?" }],
-      ["meta", { property: "og:description", content: pageData.subtitle || "Vocaciones Navarra" }],
-      ["meta", { property: "og:image", content: pageData.image || "" }],
-      ["meta", { name: "twitter:card", content: pageData.image || "" }],
-      ["link", { rel: "icon", href: "/favicon.ico" }],
-      ["meta", { property: "og:description", content: pageData.description || "Vocaciones Navarra" }],
-    ],*/
     transformPageData(pageData) {
       const fm = pageData.frontmatter;
-      if (fm) autocomplete(fm);
+      if (fm) autocomplete(fm, config);
       return pageData;
     },
   };

@@ -19,14 +19,18 @@ nav:
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
-styles:
-  - selector: blockquote
-    cssClass: "opacity: 0;"
-    scroll: true
-  - selector: li, ul
-    cssClass: "opacity: 0.5; transform: scale(0.80);"
-    scroll: true
-  - selector: .card
-    cssClass: "@apply hover:scale-110 hover:rotate-3"
-    scroll: false
+  accentColor: red
+  styles:
+    - selector: blockquote
+      cssClass: "opacity: 0;"
+      scroll: true
+    - selector: h2
+      cssClass: "@apply hover:text-accent"
+      scroll: false
+    - selector: li, ul
+      cssClass: "opacity: 0.5; transform: scale(0.80);"
+      scroll: true
+    - selector: .card
+      cssClass: "@apply hover:scale-110 hover:rotate-3"
+      scroll: false
 ---
