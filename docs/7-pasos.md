@@ -11,7 +11,7 @@ sections:
       laical u otros para encontrar su vocación sacerdotal.
 
 
-      ## **1\. El Llamado inicial**
+      ## **1\. La llamada**
 
 
       Si estás en la etapa 1 has experimentado recientemente una llamada a
