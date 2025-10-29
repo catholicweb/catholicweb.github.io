@@ -1,5 +1,6 @@
 ---
 title: "Conoce a nuestros seminaristas "
+image: /media/Reunion-Conjunta-entre-Seminario-de-Bilbao-y-Pamplona.jpeg
 sections:
   - _block: text
     html: >-
