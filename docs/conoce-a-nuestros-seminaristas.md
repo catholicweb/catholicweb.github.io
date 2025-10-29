@@ -51,7 +51,7 @@ sections:
 
 
       En esta etapa tenemos a **Álvaro y Carlos**, profundizando en la vida
-      espiritual y pastoral.  
+      espiritual y pastoral.
 
 
       ![](/media/Seminaristas.jpg)
@@ -99,5 +99,6 @@ sections:
       Aquí tenemos a **David, Ion y Manu**, viviendo la misión de servir con
       corazón de pastor.  
 
-      _(Foto de ellos)_
+
+      ![](/media/WhatsApp%20Image%202025-10-29%20at%2015.48.02.jpeg)
 ---
