@@ -1,5 +1,6 @@
 ---
 title: "¿Que hace un monje? "
+image: /media/Imagen-452-scaled.jpg
 sections:
   - _block: text
     html: >-
@@ -8,10 +9,10 @@ sections:
 
       **Ora et labora** —reza y trabaja—.  
 
-      Esa es la fórmula que resume toda la vida del monje. Pero detrás de esas tres
-      palabras hay un mundo: una forma de vida centrada en **la búsqueda de Dios**,
-      en el silencio del monasterio y en la paz de una rutina que se ofrece como
-      oración.
+      Esa es la fórmula que resume toda la vida del monje. Pero detrás de esas
+      tres palabras hay un mundo: una forma de vida centrada en **la búsqueda de
+      Dios**, en el silencio del monasterio y en la paz de una rutina que se
+      ofrece como oración.
 
 
       * * *
@@ -20,14 +21,14 @@ sections:
       ### Una vida centrada en Dios
 
 
-      El **monje** vive para **contemplar a Dios**. No huye del mundo, sino que lo
-      abraza desde el corazón, intercediendo por las necesidades de todos los
+      El **monje** vive para **contemplar a Dios**. No huye del mundo, sino que
+      lo abraza desde el corazón, intercediendo por las necesidades de todos los
       hombres.  
 
       Cada día, su oración sostiene invisiblemente a la Iglesia.  
 
-      Su vocación es **contemplativa**, pero no inútil: los monjes atraen la gracia
-      sobre el mundo con su fidelidad silenciosa.
+      Su vocación es **contemplativa**, pero no inútil: los monjes atraen la
+      gracia sobre el mundo con su fidelidad silenciosa.
 
 
       * * *
@@ -87,10 +88,11 @@ sections:
       ### Los grandes guardianes de la cultura
 
 
-      De la atención amorosa a la **lectio divina**, los monjes pasaron naturalmente
-      al **estudio**.  
+      De la atención amorosa a la **lectio divina**, los monjes pasaron
+      naturalmente al **estudio**.  
 
-      Por eso, las abadías medievales fueron **focos de luz** en tiempos oscuros:  
+      Por eso, las abadías medievales fueron **focos de luz** en tiempos
+      oscuros:  
 
       copiaron manuscritos, enseñaron a leer y sembraron la base de la cultura
       europea.
@@ -102,14 +104,14 @@ sections:
       ### Una vida comunitaria, no solitaria
 
 
-      Aunque “monje” viene del griego _monos_ (solo), el monje **no vive aislado**,
-      sino **en comunidad**.  
+      Aunque “monje” viene del griego _monos_ (solo), el monje **no vive
+      aislado**, sino **en comunidad**.  
 
-      Bajo la guía de un abad, todos buscan “**tener un solo corazón y una sola alma
-      en Dios**”, como dice San Agustín.  
+      Bajo la guía de un abad, todos buscan “**tener un solo corazón y una sola
+      alma en Dios**”, como dice San Agustín.  
 
-      El monasterio es una familia donde cada hermano ayuda al otro a alcanzar el
-      cielo.
+      El monasterio es una familia donde cada hermano ayuda al otro a alcanzar
+      el cielo.
 
 
       * * *
@@ -121,11 +123,11 @@ sections:
       Los **monjes** viven según la **Regla de San Benito**, centrados en la
       contemplación.  
 
-      Los **frailes** (franciscanos, dominicos, carmelitas…) también consagrados,
-      salen al mundo a predicar y servir.  
+      Los **frailes** (franciscanos, dominicos, carmelitas…) también
+      consagrados, salen al mundo a predicar y servir.  
 
-      Y los **clérigos regulares** (como los jesuitas) dedican su vida al apostolado
-      y la enseñanza.  
+      Y los **clérigos regulares** (como los jesuitas) dedican su vida al
+      apostolado y la enseñanza.  
 
       Cada camino es distinto, pero todos buscan lo mismo: **Dios en todo**.
 
