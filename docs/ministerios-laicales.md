@@ -1,6 +1,6 @@
 ---
 title: Catequistas, lectores... ¡Santos!
-image: /media/images (1).jpg
+image: /media/WhatsApp-Image-2025-03-11-at-11.46.12-800x900.jpeg
 sections:
   - _block: text
     html: >-
