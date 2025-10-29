@@ -11,9 +11,11 @@ nav:
       - docs/faq.md
   - title: "Sacerdocio "
     links:
-      - docs/como-escoger-una-buena-pareja.md
-      - docs/familias.md
+      - docs/seminario.md
       - docs/celibato.md
+      - docs/diaconado-permanente.md
+      - docs/porque-ser-sacerdote.md
+      - docs/que-hace-un-sacerdote.md
   - title: "Vida laical y familia "
     links:
       - docs/desafios.md
