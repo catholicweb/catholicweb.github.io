@@ -2,7 +2,7 @@
 title: Llamados
 description: Vocaciones Navarra
 nav:
-  - title: Discierne
+  - title: Disciernimiento
     links:
       - docs/7-pasos.md
       - docs/5-pasos.md
@@ -16,6 +16,14 @@ nav:
     links:
       - docs/index.md
       - docs/7-pasos.md
+  - title: "Vida religiosa y misión "
+    links:
+      - "docs/Los votos: pobreza-castidad-obediencia.md"
+      - docs/porque-ser-monja.md
+      - docs/que-hace-un-monje.md
+      - docs/vida-activa.md
+      - docs/vida-contemplativa.md
+      - docs/laicos-consagrados.md
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
