@@ -12,11 +12,11 @@ sections:
     links:
       - docs/contacto.md
   - _block: hero
-    title: "!Busca el relevo!"
+    title: ¡Busca el relevo!
     description: "Pedir al dueño de la mies. Con rostros concretos "
   - _block: links
     links:
-      - docs/el-papel-de-la-familia-y-la-comunidad.md
-      - docs/no-solo-rezar-buscar.md
       - docs/pedid-al-dueno-de-la-mies.md
+      - docs/no-solo-rezar-buscar.md
+      - docs/el-papel-de-la-familia-y-la-comunidad.md
 ---
