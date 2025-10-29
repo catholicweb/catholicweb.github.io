@@ -14,8 +14,9 @@ nav:
       - docs/celibato.md
   - title: "Vida laical y familia "
     links:
-      - docs/index.md
-      - docs/7-pasos.md
+      - docs/desafios.md
+      - docs/diaconado-permanente.md
+      - docs/el-papel-de-la-familia-y-la-comunidad.md
   - title: "Vida religiosa y misión "
     links:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
