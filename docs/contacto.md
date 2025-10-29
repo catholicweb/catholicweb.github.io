@@ -27,7 +27,7 @@ sections:
       **Iñigo Beunza** – Delegado de Pastoral Vocacional y Formador del
       Seminario  
 
-      **Teléfono:** 000 000 000
+      **Teléfono:** 660 36 39 53
 
 
       *   FOTO BEUNZA
