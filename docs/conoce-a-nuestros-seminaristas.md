@@ -113,5 +113,5 @@ sections:
       corazón de pastor.
 
 
-      ![](/media/imagen_circular_recortada.png)
+      ![](/media/unnamed.jpg)
 ---
