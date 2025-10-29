@@ -52,7 +52,4 @@ sections:
       **es tener vocación**, y ser laico significa **ordenar toda la vida social
       desde dentro**, desde las entrañas de la realidad actual, con la luz del
       Evangelio.
-
-
-      \-desarollar mas-
 ---
