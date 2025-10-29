@@ -6,6 +6,7 @@ nav:
     links:
       - docs/7-pasos.md
       - docs/5-pasos.md
+      - docs/discierne.md
       - docs/noviazgo-y-seminario.md
   - title: "Sacerdocio "
     links:
