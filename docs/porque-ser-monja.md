@@ -1,5 +1,6 @@
 ---
 title: "¿Que hace una monja? "
+image: /media/web2-sister-lucia-marie-op-dominican-first-profession-jeffrey-bruno-005.webp
 sections:
   - _block: text
     html: >-
@@ -9,15 +10,15 @@ sections:
       ### Dos caminos, una misma entrega: la vida activa y la vida contemplativa
 
 
-      Cuando alguien pregunta _“¿qué hacen las monjas?”_, la respuesta más honesta
-      sería:  
+      Cuando alguien pregunta _“¿qué hacen las monjas?”_, la respuesta más
+      honesta sería:  
 
       **“aman, sirven y oran por el mundo”**.  
 
       Pero detrás de esas tres palabras hay **una vida entera de entrega**.  
 
-      Algunas lo hacen **en silencio, entre muros**, y otras **en medio del ruido
-      del mundo**.  
+      Algunas lo hacen **en silencio, entre muros**, y otras **en medio del
+      ruido del mundo**.  
 
       Ambas formas son dos rostros de un mismo amor: **Cristo**.
 
@@ -34,8 +35,9 @@ sections:
       Son las **monjas contemplativas**, las que viven “escondidas con Cristo en
       Dios”.  
 
-      Desde el silencio de sus monasterios, **rezan por todos**, por los que creen y
-      por los que no, por los que sufren, por los que aman, por el mundo entero.
+      Desde el silencio de sus monasterios, **rezan por todos**, por los que
+      creen y por los que no, por los que sufren, por los que aman, por el mundo
+      entero.
 
 
       ### Así late su día
@@ -63,7 +65,8 @@ sections:
       Acogen visitas en el locutorio, oran por intenciones concretas, y algunas
       elaboran productos que venden para sostener su comunidad.  
 
-      En un mundo que corre, ellas **se detienen para que el amor siga respirando**.
+      En un mundo que corre, ellas **se detienen para que el amor siga
+      respirando**.
 
 
       * * *
@@ -72,8 +75,8 @@ sections:
       ## Monjas de vida activa: las manos visibles del Evangelio
 
 
-      Mientras las contemplativas oran en el silencio, las **monjas de vida activa**
-      salen al encuentro del mundo.  
+      Mientras las contemplativas oran en el silencio, las **monjas de vida
+      activa** salen al encuentro del mundo.  
 
       Son las que **enseñan, cuidan, acompañan, curan y evangelizan**.  
 
@@ -94,8 +97,8 @@ sections:
       *   En **parroquias**, acompañando grupos, jóvenes, familias, ancianos.
           
 
-      > “Mientras unas oran por el mundo, otras lo abrazan con sus manos. Pero las
-      dos lo aman con el mismo amor.”
+      > “Mientras unas oran por el mundo, otras lo abrazan con sus manos. Pero
+      las dos lo aman con el mismo amor.”
 
 
       * * *
@@ -111,7 +114,8 @@ sections:
 
       Unas lo hacen desde la contemplación; otras, desde la acción.  
 
-      Pero ambas son **pilares invisibles** que sostienen el cuerpo de la Iglesia.
+      Pero ambas son **pilares invisibles** que sostienen el cuerpo de la
+      Iglesia.
 
 
       > “Si la Iglesia es un cuerpo, las monjas de clausura son el corazón que
@@ -124,7 +128,8 @@ sections:
 
       Las activas recuerdan que **el amor de Dios se traduce en obras**.  
 
-      Y juntas nos enseñan que **la fe no se entiende sin oración ni sin caridad**.
+      Y juntas nos enseñan que **la fe no se entiende sin oración ni sin
+      caridad**.
 
 
       * * *
