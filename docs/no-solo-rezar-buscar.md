@@ -1,5 +1,6 @@
 ---
 title: "No solo rezar: buscar "
+image: /media/cerca-feliz-padre-maduro-hijo-adulto-abrazandose-acurrucandose-disfrutando-momento-tierno-pie-casa-sonriendo-joven-padre-mayor-gafas-divirtiendose-dos-generaciones-buena-relacion_650366-8997.jpg
 sections:
   - _block: text
     html: >-
