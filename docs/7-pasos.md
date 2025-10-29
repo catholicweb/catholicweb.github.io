@@ -1,5 +1,6 @@
 ---
 title: "Los 7 pasos del discernimiento "
+image: /media/FuturoJovenesYMisionCompartida1.jpg
 sections:
   - _block: text
     html: >-
