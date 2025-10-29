@@ -1,5 +1,6 @@
 ---
 title: "Contacto "
+image: /media/aute.webp
 sections:
   - _block: text
     html: >-
