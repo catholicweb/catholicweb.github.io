@@ -124,10 +124,50 @@ function googleFont(theme, weights = "400,700", styles = "normal,italic") {
 async function printCSS(config) {
   let css = `/* global.css or in your <style> block */
 :root {
+  /* === Your core parameters === */
   --font-body: '${config.theme.bodyFont}', sans-serif;
   --font-heading: '${config.theme.headingFont}', sans-serif;
-  --color-accent: ${config.theme.accentColor};
-}
+  --accent-color: ${config.theme.accentColor};
+  --primary-color: ${config.theme.accentPrimary};
+  --border-radius-mult: ${config.theme.borderRadius};
+  --border-width-mult: ${config.theme.borderWidth};
+  --shadow-depth-mult: ${config.theme.shadowDepth};
+
+    
+  /* === Derived Tailwind vars (reactive) === */
+
+    /* Radius */
+    --radius-sm: calc(0.125rem * var(--border-radius-mult));
+    --radius: calc(0.25rem * var(--border-radius-mult));
+    --radius-md: calc(0.375rem * var(--border-radius-mult));
+    --radius-lg: calc(0.5rem * var(--border-radius-mult));
+    --radius-xl: calc(0.75rem * var(--border-radius-mult));
+    --radius-2xl: calc(1rem * var(--border-radius-mult));
+    --radius-3xl: calc(1.5rem * var(--border-radius-mult));
+    --radius-full: 9999px;
+
+    /* Border widths */
+    --border-width: calc(1px * var(--border-width-mult));
+    --border-width-2: calc(2px * var(--border-width-mult));
+    --border-width-4: calc(4px * var(--border-width-mult));
+    --border-width-8: calc(8px * var(--border-width-mult));
+
+    /* Shadows */
+    --shadow-color: 0 0% 0% / 0.15;
+    --shadow-sm: 0 calc(1px * var(--shadow-depth-mult)) calc(2px * var(--shadow-depth-mult)) hsl(var(--shadow-color));
+    --shadow: 0 calc(1px * var(--shadow-depth-mult)) calc(3px * var(--shadow-depth-mult)) hsl(var(--shadow-color)),
+              0 calc(1px * var(--shadow-depth-mult)) calc(2px * var(--shadow-depth-mult)) hsl(var(--shadow-color));
+    --shadow-md: 0 calc(4px * var(--shadow-depth-mult)) calc(6px * var(--shadow-depth-mult)) -1px hsl(var(--shadow-color)),
+                 0 calc(2px * var(--shadow-depth-mult)) calc(4px * var(--shadow-depth-mult)) -2px hsl(var(--shadow-color));
+    --shadow-lg: 0 calc(10px * var(--shadow-depth-mult)) calc(15px * var(--shadow-depth-mult)) -3px hsl(var(--shadow-color)),
+                 0 calc(4px * var(--shadow-depth-mult)) calc(6px * var(--shadow-depth-mult)) -4px hsl(var(--shadow-color));
+    --shadow-xl: 0 calc(20px * var(--shadow-depth-mult)) calc(25px * var(--shadow-depth-mult)) -5px hsl(var(--shadow-color)),
+                 0 calc(10px * var(--shadow-depth-mult)) calc(10px * var(--shadow-depth-mult)) -5px hsl(var(--shadow-color));
+
+    /* Apply directly to Tailwind font vars */
+    --font-sans: var(--font-body);
+    --font-display: var(--font-heading);
+  }
 
 /* You can also include other global styles */
 body {

@@ -20,6 +20,12 @@ components:
     options:
       creatable: true
       values: ["white", "black", "red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "gray", "lightgray", "darkgray", "beige", "ivory", "teal", "coral", "slateblue", "rgb(255, 99, 71)", "hsl(180, 100%, 25%)"]
+  multiplier:
+    label: Multiplier
+    type: select
+    options:
+      creatable: true
+      values: ["0.25", "0.5", "0.75", "1", "1.25", "1.50", "2", "4"]
   effects:
     label: Efectos CSS
     type: select
@@ -83,6 +89,10 @@ content:
           - { name: bodyFont, label: Tipo de letra del cuerpo (cualquiera de https://fonts.google.com/), component: font }
           - { name: headingFont, label: Tipo de letra de los titulos (cualquiera de https://fonts.google.com/), component: font }
           - { name: accentColor, label: Color elementos acentuados, component: color }
+          - { name: accentPrimary, label: Color elementos secundario, component: color }
+          - { name: borderRadius, label: Redondeado de borders, component: multiplier }
+          - { name: borderWidth, label: Grosor de los borders, component: multiplier }
+          - { name: shadowDepth, label: Profundidaz de las sombras, component: multiplier }
           - name: styles
             label: Estilos y efectos individuales
             type: object

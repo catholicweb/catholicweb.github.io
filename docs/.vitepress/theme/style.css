@@ -6,47 +6,38 @@
 /* Apply theme variables as Tailwind utilities */
 @layer utilities {
   .bg-primary {
-    background-color: rgb(var(--color-primary));
-  }
-  .bg-secondary {
-    background-color: rgb(var(--color-secondary));
+    background-color: rgb(var(--primary-color));
   }
   .bg-accent {
-    background-color: rgb(var(--color-accent));
+    background-color: rgb(var(--accent-color));
   }
-  .bg-neutral {
-    background-color: rgb(var(--color-neutral));
-  }
-  .bg-base-100 {
-    background-color: rgb(var(--color-base-100));
-  }
-  .bg-base-200 {
-    background-color: rgb(var(--color-base-200));
-  }
-  .bg-base-300 {
-    background-color: rgb(var(--color-base-300));
-  }
-
   .text-primary {
-    color: rgb(var(--color-primary));
-  }
-  .text-secondary {
-    color: rgb(var(--color-secondary));
+    color: rgb(var(--primary-color));
   }
   .text-accent {
-    color: rgb(var(--color-accent));
+    color: rgb(var(--accent-color));
   }
-  .text-neutral {
-    color: rgb(var(--color-neutral));
-  }
-  .text-base-content {
-    color: rgb(var(--color-base-content));
-  }
-  .text-primary-content {
-    color: rgb(var(--color-primary-content));
-  }
+}
 
-  .border-base-300 {
-    border-color: rgb(var(--color-base-300));
+h2 strong {
+  position: relative;
+  white-space: nowrap;
+  &:after {
+    --deco-height: 0.3125em;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--deco-height) * -0.625);
+    height: var(--deco-height);
+
+    background-color: var(--accent-color); /* color dinámico */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='100' height='64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='black' stroke-width='10' fill='none'/%3E%3C/svg%3E") no-repeat;
+    -webkit-mask-size: auto 100%;
+    -webkit-mask-repeat: round;
+
+    mask: url("data:image/svg+xml,%3Csvg width='100' height='64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='black' stroke-width='10' fill='none'/%3E%3C/svg%3E") no-repeat;
+    mask-size: auto 100%;
+    mask-repeat: round;
   }
 }
