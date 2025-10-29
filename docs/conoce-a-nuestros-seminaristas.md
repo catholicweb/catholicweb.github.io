@@ -74,11 +74,17 @@ sections:
       sea asignado.
 
 
-      En esta etapa contamos con **Andrés, Diego, Xavi, Andoni y Miguel**,
-      creciendo en experiencia y entrega pastoral.  
+      En esta etapa contamos con **Andrés,** en tercer curso de seminario:
 
 
       ![](/media/68b1b4c290c03.r_d.0-0-1897.jpeg)
+
+
+      **Diego, Xavi,** en cuarto curso
+
+
+      Y **Andoni y Miguel**, en sexto curso, creciendo en experiencia y entrega
+      pastoral.
 
 
       * * *
