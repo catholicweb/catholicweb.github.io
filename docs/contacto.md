@@ -20,7 +20,8 @@ sections:
       vocación y a dar pasos concretos hacia ella.
 
 
-      Si quieres informarte o unirte a alguno de estos grupos, puedes contactar
+      Si quieres informarte o unirte a alguno de estos grupos, ¡contacta con tu
+      parroco! O habla con un sacerdote de tu confianza. Si no, puedes contactar
       con:
 
 
@@ -28,7 +29,4 @@ sections:
       Seminario  
 
       **Teléfono:** 660 36 39 53
-
-
-      *   FOTO BEUNZA
 ---
