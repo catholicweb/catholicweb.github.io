@@ -1,6 +1,8 @@
 ---
-    title: "Signos de vocación sacerdotal "
-    description: >-
+title: "Signos de vocación sacerdotal"
+sections:
+  - _block: text
+    html: >-
       ## **¿Cómo saber si Dios me está llamando?**
 
 

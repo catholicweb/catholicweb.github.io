@@ -127,8 +127,8 @@ async function printCSS(config) {
   /* === Your core parameters === */
   --font-body: '${config.theme.bodyFont}', sans-serif;
   --font-heading: '${config.theme.headingFont}', sans-serif;
-  --accent-color: ${config.theme.accentColor};
-  --primary-color: ${config.theme.accentPrimary};
+  --color-accent: ${config.theme.accentColor};
+  --color-primary: ${config.theme.accentPrimary};
   --border-radius-mult: ${config.theme.borderRadius};
   --border-width-mult: ${config.theme.borderWidth};
   --shadow-depth-mult: ${config.theme.shadowDepth};

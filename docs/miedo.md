@@ -1,7 +1,8 @@
 ---
-
-    title: ¡Supera el miedo!
-    description: >-
+title: ¡Supera el miedo!
+sections:
+  - _block: text
+    html: >-
       ## **¿Cómo saber si Dios me llama? — Vencer el miedo**
 
 
@@ -188,5 +189,4 @@
 
       Permanece fiel a la oración diaria, confía en Dios y tu corazón estará en
       paz, sea cual sea tu vocación.
-
 ---
