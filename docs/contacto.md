@@ -1,5 +1,5 @@
 ---
-title: "Contacto "
+title: "Grupos de disciernimiento "
 image: /media/aute.webp
 sections:
   - _block: text
