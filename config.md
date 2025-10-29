@@ -21,6 +21,10 @@ nav:
       - docs/desafios.md
       - docs/diaconado-permanente.md
       - docs/el-papel-de-la-familia-y-la-comunidad.md
+      - docs/familia-iglesia-domestica.md
+      - docs/laicos-consagrados.md
+      - docs/ser-laico-es-una-vocacion.md
+      - docs/ministerios-laicales.md
   - title: "Vida religiosa y misión "
     links:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
