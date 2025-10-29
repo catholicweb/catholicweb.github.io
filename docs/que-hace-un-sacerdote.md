@@ -1,5 +1,6 @@
 ---
 title: "¿Que hace un sacerdote? "
+image: /media/lavado-de-pies-2.png
 sections:
   - _block: text
     html: >-
