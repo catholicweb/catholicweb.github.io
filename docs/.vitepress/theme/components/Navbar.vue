@@ -76,7 +76,7 @@ const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-  <div class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+  <div class="sticky top-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 shadow-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -110,7 +110,7 @@ const mobileMenuOpen = ref(false);
                 <template v-for="section in item.items" :key="section.text">
                   <div v-if="section.items">
                     <!-- Botón de sección con subitems -->
-                    <button @click="toggleSection(section.text)" class="w-full text-left px-4 py-2 flex justify-between items-center text-gray-700 hover:bg-gray-50 hover:text-accent transition-colors font-bold">
+                    <button @click="toggleSection(section.text)" class="w-full text-left px-4 py-2 flex justify-between items-center hover:bg-gray-50 hover:text-accent transition-colors font-bold">
                       {{ section.text }}
                       <svg class="w-4 h-4 transition-transform" :class="openSections[section.text] ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -120,7 +120,7 @@ const mobileMenuOpen = ref(false);
                     <!-- Subitems -->
                     <div v-show="openSections[section.text]" class="pl-4 space-y-1 mt-1">
                       <template v-for="sub in section.items" :key="sub.text">
-                        <a :href="sub.link" class="block px-3 py-2 rounded-sm text-gray-700 hover:bg-gray-100 hover:text-accent transition-colors" :class="isActive(sub) ? 'text-accent' : ''">
+                        <a :href="sub.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 hover:text-accent transition-colors" :class="isActive(sub) ? 'text-accent' : ''">
                           {{ sub.text }}
                         </a>
                       </template>
@@ -128,7 +128,7 @@ const mobileMenuOpen = ref(false);
                   </div>
 
                   <div v-else>
-                    <a :href="section.link" class="block px-3 py-2 rounded-sm text-gray-700 hover:bg-gray-100 hover:text-accent transition-colors" :class="isActive(section) ? 'text-accent' : ''">
+                    <a :href="section.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 hover:text-accent transition-colors" :class="isActive(section) ? 'text-accent' : ''">
                       {{ section.text }}
                     </a>
                   </div>
@@ -142,7 +142,7 @@ const mobileMenuOpen = ref(false);
         <div class="flex items-center space-x-2">
           <!-- Language Switcher -->
           <div v-if="languages.length > 1" class="relative group">
-            <button class="px-2 py-1 rounded-sm text-gray-700 hover:bg-gray-100 hover:text-accent transition-colors flex items-center space-x-1">
+            <button class="px-2 py-1 rounded-sm hover:bg-gray-100 hover:text-accent transition-colors flex items-center space-x-1">
               <span>{{ currentLang.code.toUpperCase() }}</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
@@ -157,7 +157,7 @@ const mobileMenuOpen = ref(false);
 
           <!-- Theme Switcher -->
           <div v-if="themes.length > 0" class="relative group">
-            <button class="px-2 py-1 rounded-sm text-gray-700 hover:bg-gray-100 hover:text-accent transition-colors flex items-center space-x-1">
+            <button class="px-2 py-1 rounded-sm hover:bg-gray-100 hover:text-accent transition-colors flex items-center space-x-1">
               <span>Theme</span>
             </button>
             <div class="absolute right-0 w-64 bg-white opacity-0 group-hover:opacity-100 invisible group-hover:visible group-focus-within:visible group-focus-within:opacity-100 transition-all z-50">
@@ -172,7 +172,7 @@ const mobileMenuOpen = ref(false);
           </div>
 
           <!-- Mobile Menu Button -->
-          <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden px-2 py-1 rounded-sm text-gray-700 hover:bg-gray-100 transition-colors hover:text-accent">
+          <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden px-2 py-1 rounded-sm hover:bg-gray-100 transition-colors hover:text-accent">
             <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -188,13 +188,13 @@ const mobileMenuOpen = ref(false);
         <div class="px-2 pt-2 pb-3 space-y-1">
           <template v-for="item in nav" :key="item.text">
             <div v-if="!hasItems(item)">
-              <a :href="item.link" @click="mobileMenuOpen = false" class="block px-3 py-1 rounded-sm text-gray-700 hover:bg-gray-100 transition-colors hover:text-accent">
+              <a :href="item.link" @click="mobileMenuOpen = false" class="block px-3 py-1 rounded-sm hover:bg-gray-100 transition-colors hover:text-accent">
                 {{ item.text }}
               </a>
             </div>
             <div v-else>
               <details class="group">
-                <summary class="font-bold px-3 py-2 rounded-sm flex justify-between items-center text-gray-700 hover:bg-gray-100 cursor-pointer hover:text-accent">
+                <summary class="font-bold px-3 py-2 rounded-sm flex justify-between items-center hover:bg-gray-100 cursor-pointer hover:text-accent">
                   <span>{{ item.text }}</span>
                   <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
@@ -204,7 +204,7 @@ const mobileMenuOpen = ref(false);
                   <template v-for="section in item.items" :key="section.text">
                     <div v-if="section.items">
                       <details class="group">
-                        <summary class="px-3 py-2 font-bold rounded-sm flex justify-between items-center text-gray-700 hover:bg-gray-100 cursor-pointer hover:text-accent">
+                        <summary class="px-3 py-2 font-bold rounded-sm flex justify-between items-center hover:bg-gray-100 cursor-pointer hover:text-accent">
                           {{ section.text }}
                           <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.91l3.71-3.7a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
@@ -212,7 +212,7 @@ const mobileMenuOpen = ref(false);
                         </summary>
                         <div class="pl-4 space-y-1 mt-1">
                           <template v-for="sub in section.items" :key="sub.text">
-                            <a @click="mobileMenuOpen = false" :href="sub.link" class="block px-3 py-2 rounded-sm text-gray-700 hover:bg-gray-100 transition-colors hover:text-accent">
+                            <a @click="mobileMenuOpen = false" :href="sub.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 transition-colors hover:text-accent">
                               {{ sub.text }}
                             </a>
                           </template>
@@ -220,7 +220,7 @@ const mobileMenuOpen = ref(false);
                       </details>
                     </div>
                     <div v-else>
-                      <a @click="mobileMenuOpen = false" :href="section.link" class="block px-3 py-2 rounded-sm text-gray-700 hover:bg-gray-100 transition-colors hover:text-accent">
+                      <a @click="mobileMenuOpen = false" :href="section.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 transition-colors hover:text-accent">
                         {{ section.text }}
                       </a>
                     </div>
