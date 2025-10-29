@@ -90,6 +90,9 @@ sections:
       pastoral.
 
 
+      ![](/media/pixverse_i2i_ori_d6211423-5061-4622-822c-109316aef1b1.jpg)
+
+
       * * *
 
 
