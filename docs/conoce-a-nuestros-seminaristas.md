@@ -1,6 +1,6 @@
 ---
 title: "Conoce a nuestros seminaristas "
-image: /media/Reunion-Conjunta-entre-Seminario-de-Bilbao-y-Pamplona.jpeg
+image: /media/seminaristas (1).jpg
 sections:
   - _block: text
     html: >-
@@ -97,7 +97,7 @@ sections:
 
 
       Aquí tenemos a **David, Ion y Manu**, viviendo la misión de servir con
-      corazón de pastor.  
+      corazón de pastor.
 
 
       ![](/media/imagen_circular_recortada.png)
