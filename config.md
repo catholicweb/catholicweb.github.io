@@ -23,7 +23,6 @@ nav:
       - docs/diaconado-permanente.md
       - docs/el-papel-de-la-familia-y-la-comunidad.md
       - docs/familia-iglesia-domestica.md
-      - docs/laicos-consagrados.md
       - docs/ser-laico-es-una-vocacion.md
       - docs/ministerios-laicales.md
       - docs/noviazgo.md
@@ -34,7 +33,6 @@ nav:
       - docs/que-hace-un-monje.md
       - docs/vida-activa.md
       - docs/vida-contemplativa.md
-      - docs/laicos-consagrados.md
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
