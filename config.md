@@ -12,7 +12,7 @@ nav:
       - docs/como-escoger-una-buena-pareja.md
       - docs/familias.md
       - docs/celibato.md
-  - title: Pide
+  - title: "Vida laical y familia "
     links:
       - docs/index.md
       - docs/7-pasos.md
