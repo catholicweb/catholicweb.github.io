@@ -7,7 +7,7 @@ nav:
       - docs/7-pasos.md
       - docs/5-pasos.md
       - docs/noviazgo-y-seminario.md
-  - title: Vive
+  - title: "Sacerdocio "
     links:
       - docs/como-escoger-una-buena-pareja.md
       - docs/familias.md
