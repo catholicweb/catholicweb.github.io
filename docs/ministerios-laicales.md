@@ -1,5 +1,6 @@
 ---
 title: Catequistas, lectores... ¡Santos!
+image: /media/images (1).jpg
 sections:
   - _block: text
     html: >-
@@ -11,7 +12,8 @@ sections:
       La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel bautizado
       tiene un lugar único en la historia de la salvación. A través de su fe, su
       entrega y su compromiso, los laicos participan en la misión de Cristo:
-      **sacerdotal, profética y real**, cada uno según sus dones y circunstancias.
+      **sacerdotal, profética y real**, cada uno según sus dones y
+      circunstancias.
 
 
       _Imagen sugerida_: grupo diverso de laicos en oración o acción social,
@@ -24,15 +26,15 @@ sections:
       ## **El corazón de la vocación laical**
 
 
-      Ser laico no significa ser espectador. Significa **tomar la fe y vivirla en la
-      vida diaria**. Los laicos son llamados a actuar como **luz en el mundo**,
-      transformando la política, la economía, la cultura, la ciencia, la educación,
-      los medios de comunicación y, sobre todo, la vida familiar y profesional,
-      **desde el espíritu de Cristo**.
+      Ser laico no significa ser espectador. Significa **tomar la fe y vivirla
+      en la vida diaria**. Los laicos son llamados a actuar como **luz en el
+      mundo**, transformando la política, la economía, la cultura, la ciencia,
+      la educación, los medios de comunicación y, sobre todo, la vida familiar y
+      profesional, **desde el espíritu de Cristo**.
 
 
-      > “Cuantos más laicos compenetrados con el espíritu evangélico existan, más el
-      mundo se abrirá al Reino de Dios”.
+      > “Cuantos más laicos compenetrados con el espíritu evangélico existan,
+      más el mundo se abrirá al Reino de Dios”.
 
 
       _Imagen sugerida_: jóvenes trabajando en un proyecto social, aula de
@@ -45,9 +47,9 @@ sections:
       ## **Ministerios litúrgicos y suplencias**
 
 
-      Los laicos pueden participar directamente en la vida de la Iglesia de muchas
-      maneras. **No es necesario ser sacerdote** para contribuir a la liturgia o al
-      cuidado pastoral, siempre bajo la guía de los pastores.
+      Los laicos pueden participar directamente en la vida de la Iglesia de
+      muchas maneras. **No es necesario ser sacerdote** para contribuir a la
+      liturgia o al cuidado pastoral, siempre bajo la guía de los pastores.
 
 
       *   Dar catequesis
@@ -60,8 +62,8 @@ sections:
           
 
       Estas tareas, aunque importantes, **no hacen del laico un sacerdote**. Su
-      legitimidad proviene de la autoridad pastoral y su **raíz sacramental es el
-      Bautismo y la Confirmación**, no la ordenación.
+      legitimidad proviene de la autoridad pastoral y su **raíz sacramental es
+      el Bautismo y la Confirmación**, no la ordenación.
 
 
       _Imagen sugerida_: lector o acólito durante la misa, familia participando
@@ -73,29 +75,31 @@ sections:
 
       Cada lector, administrador de la Comunión, catequista o participante en
       cualquier ministerio laical **no sólo cumple una función**, sino que está
-      llamado a **ser santo en su servicio**. La verdadera eficacia de su labor no
-      depende únicamente de la técnica o del cumplimiento formal, sino de la **vida
-      entregada y coherente con la fe**. Ser lector o catequista implica preparar el
-      corazón, cultivar la oración y vivir el Evangelio para que cada palabra, cada
-      gesto y cada encuentro **transmita la presencia de Cristo**.
+      llamado a **ser santo en su servicio**. La verdadera eficacia de su labor
+      no depende únicamente de la técnica o del cumplimiento formal, sino de la
+      **vida entregada y coherente con la fe**. Ser lector o catequista implica
+      preparar el corazón, cultivar la oración y vivir el Evangelio para que
+      cada palabra, cada gesto y cada encuentro **transmita la presencia de
+      Cristo**.
 
 
       El ministerio laical se convierte así en un **camino de santificación
-      personal**: no es suficiente transmitir conocimientos, repartir la Eucaristía
-      o guiar en la catequesis si antes no se vive la propia fe con autenticidad. La
-      santidad del laico transforma su ministerio, convirtiéndolo en luz para los
-      demás y apoyo verdadero para los sacerdotes. Cada acto de servicio, por
-      pequeño que parezca, **es un testimonio vivo del amor de Dios** y un ejemplo
-      que inspira a toda la comunidad.
+      personal**: no es suficiente transmitir conocimientos, repartir la
+      Eucaristía o guiar en la catequesis si antes no se vive la propia fe con
+      autenticidad. La santidad del laico transforma su ministerio,
+      convirtiéndolo en luz para los demás y apoyo verdadero para los
+      sacerdotes. Cada acto de servicio, por pequeño que parezca, **es un
+      testimonio vivo del amor de Dios** y un ejemplo que inspira a toda la
+      comunidad.
 
 
-      > Ser laico que sirve es ser santo en lo ordinario, reflejando el Evangelio no
-      solo en la función, sino en toda la vida.
+      > Ser laico que sirve es ser santo en lo ordinario, reflejando el
+      Evangelio no solo en la función, sino en toda la vida.
 
 
-      _Imagen sugerida_: catequista con niños, lector entregando la Palabra en misa,
-      acólito en oración profunda; imágenes que muestren concentración, entrega y
-      alegría de servir.
+      _Imagen sugerida_: catequista con niños, lector entregando la Palabra en
+      misa, acólito en oración profunda; imágenes que muestren concentración,
+      entrega y alegría de servir.
   - _block: links
     links:
       - docs/celibato.md
