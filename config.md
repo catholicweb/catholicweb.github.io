@@ -21,7 +21,6 @@ nav:
     links:
       - docs/desafios.md
       - docs/diaconado-permanente.md
-      - docs/el-papel-de-la-familia-y-la-comunidad.md
       - docs/familia-iglesia-domestica.md
       - docs/ser-laico-es-una-vocacion.md
       - docs/ministerios-laicales.md
