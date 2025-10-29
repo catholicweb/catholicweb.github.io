@@ -83,6 +83,9 @@ sections:
       **Diego, Xavi,** en cuarto curso
 
 
+      ![](/media/xavi%20diego.png)
+
+
       Y **Andoni y Miguel**, en sexto curso, creciendo en experiencia y entrega
       pastoral.
 
