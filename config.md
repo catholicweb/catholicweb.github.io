@@ -26,6 +26,7 @@ nav:
       - docs/laicos-consagrados.md
       - docs/ser-laico-es-una-vocacion.md
       - docs/ministerios-laicales.md
+      - docs/noviazgo.md
   - title: "Vida religiosa y misión "
     links:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
