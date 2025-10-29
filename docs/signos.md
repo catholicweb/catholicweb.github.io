@@ -1,5 +1,6 @@
 ---
-title: "Signos de vocación sacerdotal"
+title: Signos de vocación sacerdotal
+image: /media/confession_1.jpg
 sections:
   - _block: text
     html: >-
