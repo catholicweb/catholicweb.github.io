@@ -4,9 +4,6 @@ image: /media/WhatsApp-Image-2025-03-11-at-11.46.12-800x900.jpeg
 sections:
   - _block: text
     html: >-
-      \[\[toc\]\]
-
-
       # **Ministerios laicales: La Iglesia cuenta contigo**
 
 
