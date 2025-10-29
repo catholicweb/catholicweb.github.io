@@ -1,6 +1,6 @@
 ---
 title: "Seminario "
-image: /media/IMG-20250928-WA0001-480.webp
+image: /media/SEMINARIO-1.jpg
 sections:
   - _block: text
     html: >-
