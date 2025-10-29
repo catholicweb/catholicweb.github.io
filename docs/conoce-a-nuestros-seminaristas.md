@@ -77,7 +77,8 @@ sections:
       En esta etapa contamos con **Andrés, Diego, Xavi, Andoni y Miguel**,
       creciendo en experiencia y entrega pastoral.  
 
-      _(Foto de ellos)_
+
+      ![](/media/DIEGO%201.png)
 
 
       * * *
