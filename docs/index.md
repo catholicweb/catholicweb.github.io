@@ -19,6 +19,7 @@ sections:
       - docs/contacto-1.md
       - docs/5-pasos.md
       - docs/7-pasos.md
+      - docs/noviazgo-y-seminario.md
   - _block: hero
     title: ¡Busca el relevo!
     description: "Pedir al dueño de la mies. Con rostros concretos "
