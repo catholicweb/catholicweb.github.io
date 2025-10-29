@@ -8,6 +8,7 @@ nav:
       - docs/5-pasos.md
       - docs/discierne.md
       - docs/noviazgo-y-seminario.md
+      - docs/faq.md
   - title: "Sacerdocio "
     links:
       - docs/como-escoger-una-buena-pareja.md
