@@ -9,6 +9,7 @@ nav:
       - docs/discierne.md
       - docs/noviazgo-y-seminario.md
       - docs/faq.md
+      - docs/miedo.md
   - title: "Sacerdocio "
     links:
       - docs/seminario.md
