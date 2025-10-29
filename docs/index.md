@@ -12,4 +12,7 @@ sections:
   - _block: links
     links:
       - docs/contacto.md
+  - _block: hero
+    title: "!Busca el relevo!"
+    description: "Pedir al dueño de la mies. Con rostros concretos "
 ---
