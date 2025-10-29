@@ -1,5 +1,6 @@
 ---
 title: "Contacto "
+image: /media/unnamed (3).jpg
 sections:
   - _block: text
     html: >-
