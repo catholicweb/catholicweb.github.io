@@ -78,7 +78,7 @@ sections:
       creciendo en experiencia y entrega pastoral.  
 
 
-      ![](/media/DIEGO%201.png)
+      ![](/media/68b1b4c290c03.r_d.0-0-1897.jpeg)
 
 
       * * *
