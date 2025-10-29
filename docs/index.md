@@ -22,6 +22,12 @@ sections:
   - _block: hero
     title: ¡Busca el relevo!
     description: "Pedir al dueño de la mies. Con rostros concretos "
+  - _block: text
+    html: >-
+      Todos caminamos juntos y **lo que vivimos de Dios se transmite**.  
+
+      **Observa quién puede continuar la entrega y anima a otros a seguir este
+      camino.**
   - _block: links
     links:
       - docs/pedid-al-dueno-de-la-mies.md
