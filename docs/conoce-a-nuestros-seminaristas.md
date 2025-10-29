@@ -100,5 +100,5 @@ sections:
       corazón de pastor.  
 
 
-      ![](/media/WhatsApp%20Image%202025-10-29%20at%2015.48.02.jpeg)
+      ![](/media/imagen_circular_recortada.png)
 ---
