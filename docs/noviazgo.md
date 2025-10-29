@@ -6,4 +6,6 @@ sections:
     links:
       - docs/que-es-el-noviazgo.md
       - docs/el-noviazgo-como-vocacion-y-camino-de-entrega.md
+      - docs/dificultades-y-rupturas-cuando-el-amor-tambien-purifica.md
+      - docs/relaciones-antes-del-matrimonio-amar-sin-poseer.md
 ---
