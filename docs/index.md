@@ -14,6 +14,7 @@ sections:
       **Atrévete a descubrirla… y a vivirla a fondo.**
   - _block: links
     links:
+      - docs/discierne.md
       - docs/contacto.md
   - _block: hero
     title: ¡Busca el relevo!
