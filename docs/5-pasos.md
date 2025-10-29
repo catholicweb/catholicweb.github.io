@@ -1,5 +1,6 @@
 ---
 title: "Los 5 formas del discernimiento "
+image: /media/abrio-libro-sagrada-biblia-sobre-fondo-oscuro_488220-43539.jpg
 sections:
   - _block: text
     html: >-
@@ -35,6 +36,6 @@ sections:
           
 
       Cuando llegue el momento, ¡debes actuar! Muévete en la dirección que te
-      indique tu corazón, con la confianza de que Dios nunca te enviará a un lugar
-      donde Su gracia no pueda sostenerte.
+      indique tu corazón, con la confianza de que Dios nunca te enviará a un
+      lugar donde Su gracia no pueda sostenerte.
 ---
