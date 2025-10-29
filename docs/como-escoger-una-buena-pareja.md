@@ -1,6 +1,7 @@
 ---
 title: "Cómo elegir bien: amar con los ojos de Dios"
 description: "Cómo elegir bien: amar con los ojos de Dios"
+image: /media/jonathan-leppan-R6z01CiUS-0-unsplash.jpg
 sections:
   - _block: text
     html: >-
