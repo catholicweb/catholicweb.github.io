@@ -1,5 +1,5 @@
 ---
-title: "Los 5 formas del discernimiento "
+title: Los 6 formas de discernir
 image: /media/abrio-libro-sagrada-biblia-sobre-fondo-oscuro_488220-43539.jpg
 sections:
   - _block: text
