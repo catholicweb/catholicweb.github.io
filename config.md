@@ -36,6 +36,7 @@ nav:
       - docs/que-hace-un-monje.md
       - docs/vida-activa.md
       - docs/vida-contemplativa.md
+      - docs/testimonios-r.md
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
