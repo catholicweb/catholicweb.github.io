@@ -13,9 +13,6 @@ sections:
       gozosa.
 
 
-      * * *
-
-
       #### **1\. Etapa Propedéutica**
 
 
@@ -27,11 +24,13 @@ sections:
       la **voz de Dios**.  
 
       Se centra en **crear una vida de oración y fraternidad** que sostendrá
-      todo el camino formativo.
+      todo el camino formativo. El año se vive en Alcalá de Henares, junto con
+      seminaristas de Madrid y Alcalá, reforzando el discernimiento y la
+      fraternidad.
 
 
       En esta etapa contamos con **Nico y Alejandro**, dando sus primeros pasos
-      en la fe y en la formación.  
+      en la fe y en la formación.
 
 
       ![](/media/WhatsApp%20Image%202025-10-30%20at%2015.59.39.jpeg)
