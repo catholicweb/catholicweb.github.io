@@ -96,10 +96,4 @@ sections:
 
       > Ser laico que sirve es ser santo en lo ordinario, reflejando el
       Evangelio no solo en la función, sino en toda la vida.
-  - _block: links
-    links:
-      - docs/celibato.md
-      - docs/conoce-las-vocaciones.md
-      - docs/5-pasos.md
-      - docs/familia-iglesia-domestica.md
 ---
