@@ -4,7 +4,7 @@ image: /media/68b57188679d1.r_d.0-0-12008.jpeg
 sections:
   - _block: text
     html: >-
-      ### **Acompañar, rezar y sostener las vocaciones**
+      # **Acompañar, rezar y sostener las vocaciones**
 
 
       ### **Los seminaristas necesitan nuestra colaboración**
