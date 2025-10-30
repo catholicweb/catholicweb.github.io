@@ -7,20 +7,14 @@ sections:
       # **Ministerios laicales: La Iglesia cuenta contigo**
 
 
-      **Todos estamos llamados. Todos podemos servir.**  
+      ## **Todos estamos llamados. Todos podemos servir.**
 
-      La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel bautizado
-      tiene un lugar único en la historia de la salvación. A través de su fe, su
-      entrega y su compromiso, los laicos participan en la misión de Cristo:
-      **sacerdotal, profética y real**, cada uno según sus dones y
+
+      ### La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel
+      bautizado tiene un lugar único en la historia de la salvación. A través de
+      su fe, su entrega y su compromiso, los laicos participan en la misión de
+      Cristo: **sacerdotal, profética y real**, cada uno según sus dones y
       circunstancias.
-
-
-      _Imagen sugerida_: grupo diverso de laicos en oración o acción social,
-      mostrando participación y diversidad.
-
-
-      * * *
 
 
       ## **El corazón de la vocación laical**
@@ -28,20 +22,26 @@ sections:
 
       Ser laico no significa ser espectador. Significa **tomar la fe y vivirla
       en la vida diaria**. Los laicos son llamados a actuar como **luz en el
-      mundo**, transformando la política, la economía, la cultura, la ciencia,
-      la educación, los medios de comunicación y, sobre todo, la vida familiar y
-      profesional, **desde el espíritu de Cristo**.
+      mundo**, transformando, **desde el espíritu de Cristo**,
 
+
+      *   la política
+          
+      *   la economía
+          
+      *   la cultura
+          
+      *   la ciencia
+          
+      *   la educación
+          
+      *   los medios de comunicación
+          
+      *   Sobre todo, la vida familiar y profesional.
+          
 
       > “Cuantos más laicos compenetrados con el espíritu evangélico existan,
       más el mundo se abrirá al Reino de Dios”.
-
-
-      _Imagen sugerida_: jóvenes trabajando en un proyecto social, aula de
-      enseñanza, oficina, o familia participando activamente.
-
-
-      * * *
 
 
       ## **Ministerios litúrgicos y suplencias**
@@ -66,21 +66,20 @@ sections:
       el Bautismo y la Confirmación**, no la ordenación.
 
 
-      _Imagen sugerida_: lector o acólito durante la misa, familia participando
-      activamente.
-
-
       ## **Ministerios laicales: santos en lo cotidiano**
 
 
-      Cada lector, administrador de la Comunión, catequista o participante en
-      cualquier ministerio laical **no sólo cumple una función**, sino que está
-      llamado a **ser santo en su servicio**. La verdadera eficacia de su labor
-      no depende únicamente de la técnica o del cumplimiento formal, sino de la
-      **vida entregada y coherente con la fe**. Ser lector o catequista implica
-      preparar el corazón, cultivar la oración y vivir el Evangelio para que
-      cada palabra, cada gesto y cada encuentro **transmita la presencia de
-      Cristo**.
+      <h2 style="text-align: center">Cada lector, administrador de la Comunión,
+      catequista o participante en cualquier ministerio laical <strong>no sólo
+      cumple una función</strong>, sino que está llamado a <strong>ser santo en
+      su servicio</strong>.</h2>
+
+
+      La verdadera eficacia de su labor no depende únicamente de la técnica o
+      del cumplimiento formal, sino de la **vida entregada y coherente con la
+      fe**. Ser lector o catequista implica preparar el corazón, cultivar la
+      oración y vivir el Evangelio para que cada palabra, cada gesto y cada
+      encuentro **transmita la presencia de Cristo**.
 
 
       El ministerio laical se convierte así en un **camino de santificación
@@ -95,11 +94,6 @@ sections:
 
       > Ser laico que sirve es ser santo en lo ordinario, reflejando el
       Evangelio no solo en la función, sino en toda la vida.
-
-
-      _Imagen sugerida_: catequista con niños, lector entregando la Palabra en
-      misa, acólito en oración profunda; imágenes que muestren concentración,
-      entrega y alegría de servir.
   - _block: links
     links:
       - docs/celibato.md
