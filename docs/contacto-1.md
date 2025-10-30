@@ -11,17 +11,14 @@ sections:
       Puedes contactar con:
 
 
-      *   **Jesús Echeverz**, rector del Seminario.
+      *   **Jesús Echeverz**, rector del Seminario. 620 58 26 31
           
       *   **Iñigo Beunza Sola**, **sacerdote y encargado de Pastoral
-      Vocacional**.
+      Vocacional**. 660 36 39 53
           
       *   **Perdon**, **virgen consagrada y colaboradora en Pastoral
-      Vocacional**.
+      Vocacional**. 680 58 13 89
           
-
-      Teléfonos de contacto: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
 
       Ellos estarán **encantados de escucharte, orientarte y caminar contigo**
       en este camino de descubrimiento.
