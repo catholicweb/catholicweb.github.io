@@ -82,14 +82,16 @@ sections:
       encuentro **transmita la presencia de Cristo**.
 
 
-      El ministerio laical se convierte así en un **camino de santificación
-      personal**: no es suficiente transmitir conocimientos, repartir la
-      Eucaristía o guiar en la catequesis si antes no se vive la propia fe con
-      autenticidad. La santidad del laico transforma su ministerio,
-      convirtiéndolo en luz para los demás y apoyo verdadero para los
-      sacerdotes. Cada acto de servicio, por pequeño que parezca, **es un
-      testimonio vivo del amor de Dios** y un ejemplo que inspira a toda la
-      comunidad.
+      <h2 style="text-align: center">El ministerio laical se convierte así en un
+      <strong>camino de santificación personal</strong>: no es suficiente
+      transmitir conocimientos, repartir la Eucaristía o guiar en la catequesis
+      si antes no se vive la propia fe con autenticidad.</h2>
+
+
+      La santidad del laico transforma su ministerio, convirtiéndolo en luz para
+      los demás y apoyo verdadero para los sacerdotes. Cada acto de servicio,
+      por pequeño que parezca, **es un testimonio vivo del amor de Dios** y un
+      ejemplo que inspira a toda la comunidad.
 
 
       > Ser laico que sirve es ser santo en lo ordinario, reflejando el
