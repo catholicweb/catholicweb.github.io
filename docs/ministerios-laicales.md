@@ -10,10 +10,10 @@ sections:
       ## **Todos estamos llamados. Todos podemos servir.**
 
 
-      ### La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel
-      bautizado tiene un lugar único en la historia de la salvación. A través de
-      su fe, su entrega y su compromiso, los laicos participan en la misión de
-      Cristo: **sacerdotal, profética y real**, cada uno según sus dones y
+      La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel bautizado
+      tiene un lugar único en la historia de la salvación. A través de su fe, su
+      entrega y su compromiso, los laicos participan en la misión de Cristo:
+      **sacerdotal, profética y real**, cada uno según sus dones y
       circunstancias.
 
 
@@ -69,10 +69,10 @@ sections:
       ## **Ministerios laicales: santos en lo cotidiano**
 
 
-      <h2 style="text-align: center">Cada lector, administrador de la Comunión,
+      <p style="text-align: center">Cada lector, administrador de la Comunión,
       catequista o participante en cualquier ministerio laical <strong>no sólo
       cumple una función</strong>, sino que está llamado a <strong>ser santo en
-      su servicio</strong>.</h2>
+      su servicio</strong>.</p>
 
 
       La verdadera eficacia de su labor no depende únicamente de la técnica o
@@ -82,10 +82,10 @@ sections:
       encuentro **transmita la presencia de Cristo**.
 
 
-      <h2 style="text-align: center">El ministerio laical se convierte así en un
+      <p style="text-align: center">El ministerio laical se convierte así en un
       <strong>camino de santificación personal</strong>: no es suficiente
       transmitir conocimientos, repartir la Eucaristía o guiar en la catequesis
-      si antes no se vive la propia fe con autenticidad.</h2>
+      si antes no se vive la propia fe con autenticidad.</p>
 
 
       La santidad del laico transforma su ministerio, convirtiéndolo en luz para
