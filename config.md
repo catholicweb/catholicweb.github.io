@@ -4,12 +4,13 @@ description: Vocaciones Navarra
 nav:
   - title: Disciernimiento
     links:
+      - docs/discierne.md
       - docs/7-pasos.md
       - docs/5-pasos.md
-      - docs/discierne.md
       - docs/noviazgo-y-seminario.md
       - docs/faq.md
       - docs/miedo.md
+      - docs/testimonios.md
   - title: "Sacerdocio "
     links:
       - docs/seminario.md
