@@ -94,6 +94,6 @@ sections:
       ejemplo que inspira a toda la comunidad.
 
 
-      Ser laico que sirve es ser santo en lo ordinario, reflejando el Evangelio
-      no solo en la función, sino en toda la vida.
+      > Ser laico que sirve es ser santo en lo ordinario, reflejando el
+      Evangelio no solo en la función, sino en toda la vida.
 ---
