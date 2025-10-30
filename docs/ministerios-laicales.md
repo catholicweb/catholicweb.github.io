@@ -40,8 +40,8 @@ sections:
       *   Sobre todo, la vida familiar y profesional.
           
 
-      > “Cuantos más laicos compenetrados con el espíritu evangélico existan,
-      más el mundo se abrirá al Reino de Dios”.
+      “Cuantos más laicos compenetrados con el espíritu evangélico existan, más
+      el mundo se abrirá al Reino de Dios”.
 
 
       ## **Ministerios litúrgicos y suplencias**
@@ -94,6 +94,6 @@ sections:
       ejemplo que inspira a toda la comunidad.
 
 
-      > Ser laico que sirve es ser santo en lo ordinario, reflejando el
-      Evangelio no solo en la función, sino en toda la vida.
+      Ser laico que sirve es ser santo en lo ordinario, reflejando el Evangelio
+      no solo en la función, sino en toda la vida.
 ---
