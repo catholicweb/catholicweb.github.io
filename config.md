@@ -21,12 +21,14 @@ nav:
       - docs/testimonios-s.md
   - title: "Vida laical y familia "
     links:
-      - docs/desafios.md
-      - docs/diaconado-permanente.md
-      - docs/familia-iglesia-domestica.md
       - docs/ser-laico-es-una-vocacion.md
+      - docs/desafios.md
+      - docs/vocacion-matrimonial.md
+      - docs/familia-iglesia-domestica.md
+      - docs/diaconado-permanente.md
       - docs/ministerios-laicales.md
       - docs/noviazgo.md
+      - docs/testimonios-f.md
   - title: "Vida religiosa y misión "
     links:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
