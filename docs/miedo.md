@@ -1,5 +1,6 @@
 ---
 title: ¡Supera el miedo!
+image: /media/istockphoto-547436912-612x612.jpg
 sections:
   - _block: text
     html: >-
@@ -23,11 +24,9 @@ sections:
 
 
       La primera verdad que debes recordar es que **Dios no habla a través del
-      miedo**.
-
-      El miedo es un arma del Enemigo para apartarte de la voluntad de Dios; es
-      como la mordida de un animal que paraliza a su presa para que no pueda
-      moverse.
+      miedo**. El miedo es un arma del Enemigo para apartarte de la voluntad de
+      Dios; es como la mordida de un animal que paraliza a su presa para que no
+      pueda moverse.
 
 
       Un hombre dominado por el miedo tendrá dificultad para avanzar hacia la
@@ -44,15 +43,10 @@ sections:
 
 
       Puedes tener preocupaciones legítimas sobre el celibato o la predicación,
-      pero eso no es lo mismo que tener miedo.
-
-      En lugar de dejarte dominar por el temor, mira las exigencias del
-      sacerdocio con objetividad.
-
-      Es verdad que el sacerdote necesita dominio propio, madurez afectiva y
-      capacidad de hablar en público.
-
-      Estas y otras áreas requieren un examen personal serio.
+      pero eso no es lo mismo que tener miedo. En lugar de dejarte dominar por
+      el temor, mira las exigencias del sacerdocio con objetividad. Es verdad
+      que el sacerdote necesita dominio propio, madurez afectiva y capacidad de
+      hablar en público. Estas y otras áreas requieren un examen personal serio.
 
 
       Sí, descubrirás cosas que debes mejorar, pero haz tu discernimiento con la
@@ -69,10 +63,9 @@ sections:
       > “Apártate de mí, Señor, que soy un pecador.”
 
 
-      Y Jesús le aseguró que no debía tener miedo de seguirlo.
-
-      Del mismo modo, Jesús conoce tus debilidades y dificultades. Si confías en
-      Él y “echas las redes mar adentro”, todo saldrá bien.
+      Y Jesús le aseguró que no debía tener miedo de seguirlo. Del mismo modo,
+      Jesús conoce tus debilidades y dificultades. Si confías en Él y “echas las
+      redes mar adentro”, todo saldrá bien.
 
 
       * * *
@@ -86,21 +79,11 @@ sections:
 
 
       > “Dios es infinito en poder y me ama infinitamente. Nadie puede
-      arrebatarme de su mano.
-
-      > Dios nunca me enviará donde su gracia no pueda sostenerme.
-
-      > Si me pide algo difícil, como ser sacerdote, me dará la gracia para
-      hacerlo.
-
-      > No fracasaré, porque Él está conmigo.
-
-      > Seré feliz porque hago su voluntad.
-
-      > Aunque no tenga todas las cualidades necesarias, Dios me ayudará a
-      desarrollarlas.
-
-      > En su voluntad está mi paz.”
+      arrebatarme de su mano. Dios nunca me enviará donde su gracia no pueda
+      sostenerme. Si me pide algo difícil, como ser sacerdote, me dará la gracia
+      para hacerlo. No fracasaré, porque Él está conmigo. Seré feliz porque hago
+      su voluntad. Aunque no tenga todas las cualidades necesarias, Dios me
+      ayudará a desarrollarlas. En su voluntad está mi paz.”
 
 
       * * *
@@ -127,12 +110,10 @@ sections:
 
 
       Desde un punto de vista práctico, es consolador saber que, si Dios te
-      llama al sacerdocio, la ordenación todavía está lejos.
-
-      El seminario es un tiempo de formación intensa para afrontar las dudas,
-      crecer en santidad y prepararse para un ministerio fecundo.
-
-      **Ningún hombre entra al seminario estando ya listo para ser sacerdote.**
+      llama al sacerdocio, la ordenación todavía está lejos. El seminario es un
+      tiempo de formación intensa para afrontar las dudas, crecer en santidad y
+      prepararse para un ministerio fecundo. **Ningún hombre entra al seminario
+      estando ya listo para ser sacerdote.**
 
 
       * * *
@@ -141,11 +122,9 @@ sections:
       ### **5) Busca consuelo en la Palabra de Dios.**
 
 
-      Si tienes miedo al sacerdocio, no estás solo.
-
-      Los profetas y apóstoles también sintieron temor cuando fueron llamados.
-
-      Lee las siguientes citas bíblicas para ver cómo Dios los animó:
+      Si tienes miedo al sacerdocio, no estás solo. Los profetas y apóstoles
+      también sintieron temor cuando fueron llamados. Lee las siguientes citas
+      bíblicas para ver cómo Dios los animó:
 
 
       *   **No soy lo bastante santo:** Is 6,1-9; Lc 5,1-11
@@ -180,11 +159,9 @@ sections:
       perfecto expulsa el temor.”
 
 
-      Como recordaba con frecuencia san Juan Pablo II: **¡No tengáis miedo!**
-
-      No dejes que el miedo te paralice.
-
-      Habla con un sacerdote en quien confíes sobre tus inquietudes.
+      Como recordaba con frecuencia san Juan Pablo II: **¡No tengáis miedo!** No
+      dejes que el miedo te paralice. Habla con un sacerdote en quien confíes
+      sobre tus inquietudes.
 
 
       Permanece fiel a la oración diaria, confía en Dios y tu corazón estará en
