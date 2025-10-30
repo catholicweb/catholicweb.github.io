@@ -117,9 +117,6 @@ sections:
       _(reemplaza este número por el real)_. 
           
 
-
-        
-
       Cada aporte, grande o pequeño, ayuda a **formar a los futuros
       sacerdotes**, garantizar su bienestar y sostener su misión de servicio a
       todos nosotros. Con tu oración y tu colaboración, **ayudamos a que la
