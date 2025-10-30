@@ -33,7 +33,8 @@ sections:
       En esta etapa contamos con **Nico y Alejandro**, dando sus primeros pasos
       en la fe y en la formación.  
 
-      _(Foto de Nico y Alejandro)_
+
+      ![](/media/WhatsApp%20Image%202025-10-30%20at%2015.59.39.jpeg)
 
 
       * * *
