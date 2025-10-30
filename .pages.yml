@@ -61,7 +61,7 @@ components:
           - { name: description, label: Subtitulo, type: string }
           - { name: image, label: Imagen, type: image }
 media:
-  input: docs
+  input: docs/public/media
   output: /media
   categories: ["image","document"]
 content:
