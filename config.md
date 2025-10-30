@@ -13,11 +13,12 @@ nav:
       - docs/testimonios.md
   - title: "Sacerdocio "
     links:
-      - docs/seminario.md
-      - docs/celibato.md
-      - docs/diaconado-permanente.md
       - docs/porque-ser-sacerdote.md
       - docs/que-hace-un-sacerdote.md
+      - docs/celibato.md
+      - docs/seminario.md
+      - docs/diaconado-permanente.md
+      - docs/testimonios-s.md
   - title: "Vida laical y familia "
     links:
       - docs/desafios.md
