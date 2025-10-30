@@ -10,7 +10,6 @@ nav:
       - docs/noviazgo-y-seminario.md
       - docs/faq.md
       - docs/miedo.md
-      - docs/testimonios.md
   - title: "Sacerdocio "
     links:
       - docs/porque-ser-sacerdote.md
@@ -18,7 +17,6 @@ nav:
       - docs/celibato.md
       - docs/seminario.md
       - docs/diaconado-permanente.md
-      - docs/testimonios-s.md
   - title: "Vida laical y familia "
     links:
       - docs/ser-laico-es-una-vocacion.md
@@ -28,7 +26,6 @@ nav:
       - docs/diaconado-permanente.md
       - docs/ministerios-laicales.md
       - docs/noviazgo.md
-      - docs/testimonios-f.md
   - title: "Vida religiosa y misión "
     links:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
@@ -36,7 +33,6 @@ nav:
       - docs/que-hace-un-monje.md
       - docs/vida-activa.md
       - docs/vida-contemplativa.md
-      - docs/testimonios-r.md
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
