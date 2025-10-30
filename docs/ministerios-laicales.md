@@ -40,8 +40,8 @@ sections:
       *   Sobre todo, la vida familiar y profesional.
           
 
-      “Cuantos más laicos compenetrados con el espíritu evangélico existan, más
-      el mundo se abrirá al Reino de Dios”.
+      > Cuantos más laicos compenetrados con el espíritu evangélico existan, más
+      el mundo se abrirá al Reino de Dios.
 
 
       ## **Ministerios litúrgicos y suplencias**
