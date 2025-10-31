@@ -1,7 +1,7 @@
 ---
 title: "Vocación matrimonial "
 description: "Cada matrimonio es reflejo del amor de Dios. "
-image: /media/Wedding_rings.jpg
+image: /media/Wedding_rings.webp
 sections:
   - _block: text
     html: >-

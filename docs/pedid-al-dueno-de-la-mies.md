@@ -1,6 +1,6 @@
 ---
 title: Pedid al dueño de la mies
-image: /media/premium_photo-1661821196004-0e36470a4dc5.jpg
+image: /media/premium_photo-1661821196004-0e36470a4dc5.webp
 sections:
   - _block: text
     html: >-

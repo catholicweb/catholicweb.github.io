@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es el discernimiento?
-image: /media/depositphotos_322263350-stock-photo-religious-young-man-praying-to.jpg
+image: /media/depositphotos_322263350-stock-photo-religious-young-man-praying-to.webp
 sections:
   - _block: text
     html: >-

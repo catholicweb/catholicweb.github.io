@@ -1,6 +1,6 @@
 ---
 title: ¡Supera el miedo!
-image: /media/istockphoto-547436912-612x612.jpg
+image: /media/istockphoto-547436912-612x612.webp
 sections:
   - _block: text
     html: >-

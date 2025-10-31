@@ -1,6 +1,6 @@
 ---
 title: Vida activa
-image: /media/jc3b3venes-relig-de-iessu-comm.jpg
+image: /media/jc3b3venes-relig-de-iessu-comm.webp
 sections:
   - _block: text
     html: >-

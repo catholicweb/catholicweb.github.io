@@ -1,6 +1,6 @@
 ---
 title: El papel de la familia y la comunidad
-image: /media/FT3TuUxWIAEJAOF.jpg
+image: /media/FT3TuUxWIAEJAOF.webp
 sections:
   - _block: text
     html: >-

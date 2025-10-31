@@ -1,6 +1,6 @@
 ---
 title: "Vida contemplativa "
-image: /media/68f490dfba17c.jpeg
+image: /media/68f490dfba17c.webp
 sections:
   - _block: text
     html: >-

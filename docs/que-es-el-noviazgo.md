@@ -1,6 +1,6 @@
 ---
 title: "¿Qué es el noviazgo? "
-image: /media/depositphotos_316710272-stock-photo-smiling-young-couple-looking-each.jpg
+image: /media/depositphotos_316710272-stock-photo-smiling-young-couple-looking-each.webp
 sections:
   - _block: text
     html: >-

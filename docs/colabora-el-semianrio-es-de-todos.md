@@ -1,6 +1,6 @@
 ---
 title: "Colabora, el seminario es de todos. "
-image: /media/68b57188679d1.r_d.0-0-12008.jpeg
+image: /media/68b57188679d1.r_d.0-0-12008.webp
 sections:
   - _block: text
     html: >-

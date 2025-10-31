@@ -1,6 +1,6 @@
 ---
 title: ¿Diaconado permanente?
-image: /media/684ff18bcf5dc.jpeg
+image: /media/684ff18bcf5dc.webp
 sections:
   - _block: text
     html: >-

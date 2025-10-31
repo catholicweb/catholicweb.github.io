@@ -1,6 +1,6 @@
 ---
 title: "Conoce a nuestros seminaristas "
-image: /media/seminaristas (1).jpg
+image: /media/seminaristas (1).webp
 sections:
   - _block: text
     html: >-
@@ -54,7 +54,7 @@ sections:
       espiritual y pastoral.
 
 
-      ![](/media/Seminaristas.jpg)
+      ![](/media/Seminaristas.webp)
 
 
       * * *
@@ -77,7 +77,7 @@ sections:
       En esta etapa contamos con **Andrés,** en tercer curso de seminario:
 
 
-      ![](/media/68b1b4c290c03.r_d.0-0-1897.jpeg)
+      ![](/media/68b1b4c290c03.r_d.0-0-1897.webp)
 
 
       **Diego, Xavi,** en cuarto curso
@@ -90,7 +90,7 @@ sections:
       pastoral.
 
 
-      ![](/media/pixverse_i2i_ori_d6211423-5061-4622-822c-109316aef1b1.jpg)
+      ![](/media/pixverse_i2i_ori_d6211423-5061-4622-822c-109316aef1b1.webp)
 
 
       * * *
@@ -113,5 +113,5 @@ sections:
       corazón de pastor.
 
 
-      ![](/media/unnamed.jpg)
+      ![](/media/unnamed.webp)
 ---

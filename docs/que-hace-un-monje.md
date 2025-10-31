@@ -1,6 +1,6 @@
 ---
 title: "¿Que hace un monje? "
-image: /media/Imagen-452-scaled.jpg
+image: /media/Imagen-452-scaled.webp
 sections:
   - _block: text
     html: >-

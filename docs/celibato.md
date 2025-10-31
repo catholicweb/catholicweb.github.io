@@ -1,6 +1,6 @@
 ---
 title: "¿Porque el celibato? "
-image: /media/crucifijo-metal-dorado-cristo-padre-espiritu-santo.jpg
+image: /media/crucifijo-metal-dorado-cristo-padre-espiritu-santo.webp
 sections:
   - _block: text
     html: >-

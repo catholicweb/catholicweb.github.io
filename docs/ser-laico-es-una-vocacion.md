@@ -1,6 +1,6 @@
 ---
 title: ¿Ser laico es una vocación?
-image: /media/MECANICOS-TALLER-1080x675.jpg
+image: /media/MECANICOS-TALLER-1080x675.webp
 sections:
   - _block: text
     html: >-

@@ -1,6 +1,6 @@
 ---
 title: "Contacto "
-image: /media/unnamed (3).jpg
+image: /media/unnamed (3).webp
 sections:
   - _block: text
     html: >-
