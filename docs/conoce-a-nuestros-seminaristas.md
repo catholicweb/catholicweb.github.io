@@ -13,7 +13,7 @@ sections:
       gozosa.
 
 
-      #### **1\. Etapa Propedéutica**
+      ### **1\. Etapa Propedéutica**
 
 
       Es el **primer año**, un tiempo para **clarificar y afianzar la vocación
@@ -39,7 +39,7 @@ sections:
       * * *
 
 
-      #### **2\. Etapa Discipular**
+      ### **2\. Etapa Discipular**
 
 
       Normalmente dura **dos años** y tiene como objetivo **verificar y
@@ -60,7 +60,7 @@ sections:
       * * *
 
 
-      #### **3\. Etapa Configuradora**
+      ### **3\. Etapa Configuradora**
 
 
       Normalmente dura **tres años** y se dedica a la **asimilación e
@@ -96,7 +96,7 @@ sections:
       * * *
 
 
-      #### **4\. Etapa Pastoral**
+      ### **4\. Etapa Pastoral**
 
 
       Es **el año de inserción pastoral** y de preparación definitiva para el
