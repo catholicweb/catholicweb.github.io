@@ -21,9 +21,6 @@ sections:
       por la fe.**
 
 
-      * * *
-
-
       ## **No te dejes cegar por los sentimientos**
 
 
