@@ -1,6 +1,6 @@
 <!-- .vitepress/theme/blocks/GalleryBlock.vue -->
 <template>
-  <section class="py-16 container mx-auto px-4">
+  <div class="py-4 container mx-auto px-4">
     <h2 v-if="block.title" class="text-4xl font-bold text-center mb-4">
       {{ block.title }}
     </h2>
@@ -40,7 +40,7 @@
             'items-center text-center card-body': is('feature'),
           }"
         >
-          <h3 v-if="elem.title" class="card-title text-accent">{{ elem.title }}</h3>
+          <h3 v-if="elem.title" class="card-title text-accent text-xl">{{ elem.title }}</h3>
           <p v-if="elem.description">{{ elem.description }}</p>
           <div v-if="elem.action" class="card-actions">
             <button class="btn btn-primary">Buy Now</button>
@@ -59,7 +59,7 @@
         <button>close</button>
       </form>
     </dialog>
-  </section>
+  </div>
 </template>
 
 <script setup>
@@ -116,7 +116,7 @@ function getImage(elem, play) {
 }
 .image-full,
 .hero {
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
   font-weight: bolder;
 }
 

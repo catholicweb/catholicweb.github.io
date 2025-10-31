@@ -4,10 +4,9 @@ description: Cada vocación comienza con una pregunta, crece en una comunidad qu
   ora y se fortalece en una vida santa.
 image: /media/Gemini_Generated_Image_1nlm3l1nlm3l1nlm.png
 sections:
-  - _block: hero
-    title: ¡Discierne tu vocación!
   - _block: text
     html: >-
+      ## ¡Discierne tu vocación!
       Dios no te hizo por casualidad: **te soñó para algo grande**. Tu vocación
       es **la forma única en que Él quiere amarte y que tú le ames**.  
 
@@ -22,7 +21,7 @@ sections:
       - docs/noviazgo-y-seminario.md
   - _block: hero
     title: ¡Busca el relevo!
-    description: "Pedir al dueño de la mies. Con rostros concretos "
+    description: Pedir al dueño de la mies. Con rostros concretos
   - _block: text
     html: >-
       Todos caminamos juntos y **lo que vivimos de Dios se transmite**.  
