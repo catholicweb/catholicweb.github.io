@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const md = new MarkdownIt();
+const md = new MarkdownIt({ html: true, linkify: true });
 
 /* MODIFY LINKS */
 function readFrontmatter(filePath) {
