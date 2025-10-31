@@ -4,10 +4,10 @@ image: /media/WhatsApp-Image-2025-03-11-at-11.46.12-800x900.jpeg
 sections:
   - _block: text
     html: >-
-      # **Ministerios laicales: La Iglesia cuenta contigo**
+      ## **Ministerios laicales: La Iglesia cuenta contigo**
 
 
-      ## **Todos estamos llamados. Todos podemos servir.**
+      ### **Todos estamos llamados. Todos podemos servir.**
 
 
       La misión de la Iglesia no es sólo de los sacerdotes. Cada fiel bautizado
@@ -17,7 +17,7 @@ sections:
       circunstancias.
 
 
-      ## **El corazón de la vocación laical**
+      ### **El corazón de la vocación laical**
 
 
       Ser laico no significa ser espectador. Significa **tomar la fe y vivirla
@@ -44,7 +44,7 @@ sections:
       el mundo se abrirá al Reino de Dios.
 
 
-      ## **Ministerios litúrgicos y suplencias**
+      ### **Ministerios litúrgicos y suplencias**
 
 
       Los laicos pueden participar directamente en la vida de la Iglesia de
@@ -66,7 +66,7 @@ sections:
       el Bautismo y la Confirmación**, no la ordenación.
 
 
-      ## **Ministerios laicales: santos en lo cotidiano**
+      ### **Ministerios laicales: santos en lo cotidiano**
 
 
       <p style="text-align: center">Cada lector, administrador de la Comunión,

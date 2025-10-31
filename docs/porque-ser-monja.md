@@ -4,7 +4,7 @@ image: /media/web2-sister-lucia-marie-op-dominican-first-profession-jeffrey-brun
 sections:
   - _block: text
     html: >-
-      # ¿Qué hacen las monjas?
+      ## ¿Qué hacen las monjas?
 
 
       ### Dos caminos, una misma entrega: la vida activa y la vida contemplativa

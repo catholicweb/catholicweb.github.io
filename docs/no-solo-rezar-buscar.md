@@ -4,7 +4,7 @@ image: /media/cerca-feliz-padre-maduro-hijo-adulto-abrazandose-acurrucandose-dis
 sections:
   - _block: text
     html: >-
-      # **No solo rezar, buscar**
+      ## **No solo rezar, buscar**
 
 
       ### **La vocación no nace de la nada**

@@ -4,7 +4,7 @@ image: /media/depositphotos_316710272-stock-photo-smiling-young-couple-looking-e
 sections:
   - _block: text
     html: >-
-      # ¿Qué es el noviazgo cristiano?
+      ## ¿Qué es el noviazgo cristiano?
 
 
       El noviazgo es un tiempo para **conocerse, tratarse y respetarse**. No es

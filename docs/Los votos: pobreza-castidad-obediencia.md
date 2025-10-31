@@ -4,7 +4,7 @@ image: /media/2024_02_02_sluby.jpeg
 sections:
   - _block: text
     html: >-
-      # Los votos religiosos: pobreza, castidad y obediencia, camino de amor
+      ## Los votos religiosos: pobreza, castidad y obediencia, camino de amor
       total
 
 
@@ -15,7 +15,7 @@ sections:
       modo de vivir: el de **Jesús pobre, casto y obediente**.
 
 
-      ## ¿Qué es un voto?
+      ### ¿Qué es un voto?
 
 
       Un _voto_ es una **promesa hecha a Dios**. No es un simple propósito
@@ -42,7 +42,7 @@ sections:
       * * *
 
 
-      ## ✨ El voto de castidad: amar con corazón indiviso
+      ### ✨ El voto de castidad: amar con corazón indiviso
 
 
       El **canon 599** del Derecho Canónico enseña:
@@ -81,7 +81,7 @@ sections:
       * * *
 
 
-      ## 💧 El voto de pobreza: libre para amar
+      ### 💧 El voto de pobreza: libre para amar
 
 
       El **canon 600** indica:
@@ -119,7 +119,7 @@ sections:
       * * *
 
 
-      ## 🔥 El voto de obediencia: escuchar y seguir a Cristo
+      ### 🔥 El voto de obediencia: escuchar y seguir a Cristo
 
 
       Dice el **canon 601**:
@@ -157,7 +157,7 @@ sections:
       * * *
 
 
-      ## Un amor que se hace comunidad
+      ### Un amor que se hace comunidad
 
 
       Los votos no se viven en soledad. Cada consagrado y consagrada pertenece a

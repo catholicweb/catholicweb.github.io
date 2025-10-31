@@ -4,7 +4,7 @@ image: /media/sesion-pre-boda-joao-jimenez-fotografo_11_109884-164502837871748.w
 sections:
   - _block: text
     html: >-
-      # Relaciones antes del matrimonio: amar sin poseer
+      ## Relaciones antes del matrimonio: amar sin poseer
 
 
       El amor no se mide por la intensidad del deseo, sino por la verdad de la

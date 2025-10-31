@@ -6,7 +6,7 @@ image: /media/g.webp
 sections:
   - _block: text
     html: >-
-      # **La familia: Iglesia doméstica**
+      ## **La familia: Iglesia doméstica**
 
 
       Cristo quiso nacer y crecer en la Sagrada Familia de José y María. Desde
@@ -19,7 +19,7 @@ sections:
       * * *
 
 
-      ## Padres y madres, primeros evangelizadores
+      ### Padres y madres, primeros evangelizadores
 
 
       Los padres son los **primeros predicadores de la fe**. Con sus palabras y
@@ -37,7 +37,7 @@ sections:
       * * *
 
 
-      ### **Comunidad de fe, esperanza y caridad**
+      #### **Comunidad de fe, esperanza y caridad**
 
 
       La familia cristiana es **una comunión de personas**, que refleja la
@@ -56,7 +56,7 @@ sections:
       * * *
 
 
-      ## Imagen de Dios Creador
+      ### Imagen de Dios Creador
 
 
       Como Dios crea y educa, la familia participa de su obra: **procrear,
@@ -73,7 +73,7 @@ sections:
       * * *
 
 
-      ### Misión que ilumina el mundo
+      #### Misión que ilumina el mundo
 
 
       Vivir la fe en familia no es solo cuidar del propio hogar, es **ser faro
@@ -89,7 +89,7 @@ sections:
       * * *
 
 
-      ## Oración y vida cotidiana
+      ### Oración y vida cotidiana
 
 
       La oración familiar **une y fortalece**. Leer la Palabra de Dios, rezar
@@ -107,7 +107,7 @@ sections:
       * * *
 
 
-      # **Dignidad y responsabilidad**
+      ## **Dignidad y responsabilidad**
 
 
       La familia cristiana es **una Iglesia viva y presente en el mundo**,

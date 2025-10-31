@@ -5,7 +5,7 @@ image: /media/jonathan-leppan-R6z01CiUS-0-unsplash.jpg
 sections:
   - _block: text
     html: >-
-      # **Elegir con quién compartir la vida**
+      ## **Elegir con quién compartir la vida**
 
 
       **Elegir con quién compartir la vida** es una de las decisiones más
@@ -21,7 +21,7 @@ sections:
       por la fe.**
 
 
-      ## **No te dejes cegar por los sentimientos**
+      ### **No te dejes cegar por los sentimientos**
 
 
       El amor verdadero no es un _tsunami_ de emociones que te arrastra sin
@@ -47,7 +47,7 @@ sections:
       * * *
 
 
-      ## **No quemes etapas**
+      ### **No quemes etapas**
 
 
       Hoy parece que las relaciones funcionan como en las series: dos se
@@ -84,7 +84,7 @@ sections:
       * * *
 
 
-      ## **El noviazgo: escuela de amor**
+      ### **El noviazgo: escuela de amor**
 
 
       El **noviazgo cristiano** es una **escuela de amor**.  
@@ -134,7 +134,7 @@ sections:
       * * *
 
 
-      ## **Mira con los ojos de la fe**
+      ### **Mira con los ojos de la fe**
 
 
       En el discernimiento de pareja hay que mirar más allá de lo superficial.  
@@ -182,7 +182,7 @@ sections:
       * * *
 
 
-      ## **Un proyecto de vida compartido**
+      ### **Un proyecto de vida compartido**
 
 
       Casarse no es simplemente “quererse mucho”.  
@@ -215,7 +215,7 @@ sections:
       * * *
 
 
-      ## **Amar con los ojos de Dios**
+      ### **Amar con los ojos de Dios**
 
 
       **Amar con los ojos de Dios** es mirar al otro como Él lo mira: con
