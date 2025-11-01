@@ -33,6 +33,9 @@ sections:
       en la fe y en la formación.
 
 
+      ![](/media/WhatsApp%20Image%202025-10-30%20at%2015.59.39.webp)
+
+
       ![](/media/WhatsApp%20Image%202025-10-30%20at%2015.59.39.jpeg)
 
 
@@ -83,7 +86,7 @@ sections:
       **Diego, Xavi,** en cuarto curso
 
 
-      ![](/media/XAVI%20DIEGO%20.png)
+      ![](/media/Gemini_Generated_Image_jixow0jixow0jixo.webp)
 
 
       Y **Andoni y Miguel**, en sexto curso, creciendo en experiencia y entrega
