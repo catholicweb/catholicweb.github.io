@@ -1,7 +1,5 @@
 ---
 title: Dios te sueña a lo grande
-description: Cada vocación comienza con una pregunta, crece en una comunidad que
-  ora y se fortalece en una vida santa.
 image: /media/Gemini_Generated_Image_1nlm3l1nlm3l1nlm.webp
 sections:
   - _block: text
