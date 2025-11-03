@@ -44,4 +44,13 @@ sections:
       - docs/porque-ser-sacerdote.md
       - docs/que-hace-un-sacerdote.md
       - docs/seminario.md
+  - _block: hero
+    title: ¿Y si Dios me llama a darle todo?
+    description: "Llevar el mundo a Cristo "
+    image: /media/istockphoto-108270861-612x612.webp
+  - _block: links
+    links:
+      - "docs/Los votos: pobreza-castidad-obediencia.md"
+      - docs/vida-activa.md
+      - docs/vida-contemplativa.md
 ---
