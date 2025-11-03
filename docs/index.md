@@ -4,9 +4,11 @@ image: /media/Gemini_Generated_Image_1nlm3l1nlm3l1nlm.webp
 sections:
   - _block: text
     html: >-
-      ## ¡Discierne tu vocación! Dios no te hizo por casualidad: **te soñó para
-      algo grande**. Tu vocación es **la forma única en que Él quiere amarte y
-      que tú le ames**.
+      ## ¡Discierne tu vocación!
+
+
+      ## Dios no te hizo por casualidad: **te soñó para algo grande**. Tu
+      vocación es **la forma única en que Él quiere amarte y que tú le ames**.
 
 
       **Atrévete a descubrirla… y a vivirla a fondo.**
