@@ -57,4 +57,8 @@ sections:
     title: ¿Llevar a Cristo a todas las partes de la sociedad?
     description: "Ordenar todo a Cristo desde dentro "
     image: /media/Los-Laicos-en-la-vida-publica.webp
+  - _block: links
+    links:
+      - docs/ser-laico-es-una-vocacion.md
+      - docs/desafios.md
 ---
