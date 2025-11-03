@@ -6,9 +6,10 @@ image: /media/Gemini_Generated_Image_1nlm3l1nlm3l1nlm.webp
 sections:
   - _block: text
     html: >-
-      ## ¡Discierne tu vocación!
-      Dios no te hizo por casualidad: **te soñó para algo grande**. Tu vocación
-      es **la forma única en que Él quiere amarte y que tú le ames**.  
+      ## ¡Discierne tu vocación! Dios no te hizo por casualidad: **te soñó para
+      algo grande**. Tu vocación es **la forma única en que Él quiere amarte y
+      que tú le ames**.
+
 
       **Atrévete a descubrirla… y a vivirla a fondo.**
   - _block: links
@@ -22,6 +23,7 @@ sections:
   - _block: hero
     title: ¡Busca el relevo!
     description: Pedir al dueño de la mies. Con rostros concretos
+    image: /media/cambio-batuta-carrera-relevos_70391-11.jpg
   - _block: text
     html: >-
       Todos caminamos juntos y **lo que vivimos de Dios se transmite**.  
