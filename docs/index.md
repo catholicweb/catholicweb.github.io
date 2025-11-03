@@ -53,4 +53,8 @@ sections:
       - "docs/Los votos: pobreza-castidad-obediencia.md"
       - docs/vida-activa.md
       - docs/vida-contemplativa.md
+  - _block: hero
+    title: ¿Llevar a Cristo a todas las partes de la sociedad?
+    description: "Ordenar todo a Cristo desde dentro "
+    image: /media/Los-Laicos-en-la-vida-publica.webp
 ---
