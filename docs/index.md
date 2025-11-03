@@ -35,4 +35,13 @@ sections:
       - docs/pedid-al-dueno-de-la-mies.md
       - docs/no-solo-rezar-buscar.md
       - docs/el-papel-de-la-familia-y-la-comunidad.md
+  - _block: hero
+    title: "¿Dios me está llamando al sacerdocio? "
+    description: "Llevar a Cristo a todos los hombres "
+    image: /media/istockphoto-1464747649-612x612.jpg
+  - _block: links
+    links:
+      - docs/porque-ser-sacerdote.md
+      - docs/que-hace-un-sacerdote.md
+      - docs/seminario.md
 ---
