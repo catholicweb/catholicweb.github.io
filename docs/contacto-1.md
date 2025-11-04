@@ -1,6 +1,6 @@
 ---
 title: "Contacto "
-image: /media/unnamed (3).webp
+image: /media/unnamed-removebg-preview.png
 sections:
   - _block: text
     html: >-
