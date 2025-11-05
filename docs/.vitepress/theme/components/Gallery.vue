@@ -109,14 +109,14 @@ function getImage(elem, play) {
 
 <style>
 .hero-overlay {
-  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%) !important;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0) 100%) !important;
 }
 .image-full {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0) 100%) !important;
 }
 .image-full,
 .hero {
-  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
   font-weight: bolder;
 }
 

@@ -123,7 +123,7 @@ function googleFont(theme, weights = "400,700", styles = "normal,italic") {
 
 async function printCSS(config) {
   let css = `/* global.css or in your <style> block */
-:root {
+:root, body {
   /* === Your core parameters === */
   --font-body: '${config.theme.bodyFont}', sans-serif;
   --font-heading: '${config.theme.headingFont}', sans-serif;
