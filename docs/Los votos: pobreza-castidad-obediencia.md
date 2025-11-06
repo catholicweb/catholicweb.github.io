@@ -1,6 +1,6 @@
 ---
 title: "Los votos. Pobreza. Castidad. Obediencia "
-image: /media/Gg4-1.png
+image: /media/Gg4-1.webp
 sections:
   - _block: text
     html: >-

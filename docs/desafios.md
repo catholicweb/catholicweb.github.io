@@ -1,6 +1,6 @@
 ---
 title: "Desafíos para los laicos "
-image: /media/joven-cruza-calle_158595-889.jpg
+image: /media/joven-cruza-calle_158595-889.webp
 sections:
   - _block: text
     html: >-

@@ -1,6 +1,6 @@
 ---
 title: "Preguntas frecuentes "
-image: /media/acercamiento-al-sacerdote-hablando-persona_23-2149284615.jpg
+image: /media/acercamiento-al-sacerdote-hablando-persona_23-2149284615.webp
 sections:
   - _block: text
     html: >-

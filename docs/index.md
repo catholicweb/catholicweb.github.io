@@ -23,7 +23,7 @@ sections:
   - _block: hero
     title: ¡Busca el relevo!
     description: Pedir al dueño de la mies. Con rostros concretos
-    image: /media/cambio-batuta-carrera-relevos_70391-11.jpg
+    image: /media/cambio-batuta-carrera-relevos_70391-11.webp
   - _block: text
     html: >-
       Todos caminamos juntos y **lo que vivimos de Dios se transmite**.  
@@ -38,7 +38,7 @@ sections:
   - _block: hero
     title: "¿Dios me está llamando al sacerdocio? "
     description: "Llevar a Cristo a todos los hombres "
-    image: /media/istockphoto-1464747649-612x612.jpg
+    image: /media/istockphoto-1464747649-612x612.webp
   - _block: links
     links:
       - docs/porque-ser-sacerdote.md

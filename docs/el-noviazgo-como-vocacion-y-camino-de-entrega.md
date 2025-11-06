@@ -1,6 +1,6 @@
 ---
 title: El noviazgo como vocación y camino de entrega
-image: /media/pareja-rezando-juntos-sosteniendo-rosario-mano_488220-5885.jpg
+image: /media/pareja-rezando-juntos-sosteniendo-rosario-mano_488220-5885.webp
 sections:
   - _block: text
     html: >-
