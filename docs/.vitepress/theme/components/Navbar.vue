@@ -35,6 +35,7 @@ const hasItems = (item: NavItem) => item.items && item.items.length > 0;
 const isActive = (item: NavItem) => item.link && (route.path === item.link || route.path.startsWith(item.link + "/"));
 
 const switchLanguage = (langPath) => {
+  return;
   let pathname = "";
   let origin = "";
   if (typeof window !== "undefined") {
