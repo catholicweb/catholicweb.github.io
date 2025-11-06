@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "optimize-images": "node docs/.vitepress/optimize-images.js",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "npm run optimize-images && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
