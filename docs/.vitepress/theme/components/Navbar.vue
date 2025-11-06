@@ -25,14 +25,19 @@ const currentLang = computed(() => {
   return languages.value.find((l) => path.startsWith(`/${l.path}`) || (l.path === "/" && !path.match(/^\/(en|eus)\//))) || languages.value[0];
 });
 
+function langUrl(url) {
+  return url.replace(/^\/+/, "");
+  //console.log(currentLang.value.path, url);
+  //return "/" + currentLang.value.path + url;
+}
+
 const hasItems = (item: NavItem) => item.items && item.items.length > 0;
 const isActive = (item: NavItem) => item.link && (route.path === item.link || route.path.startsWith(item.link + "/"));
 
-const switchLanguage = (lang: Language) => {
-  const currentPath = window.location.pathname;
-  let cleanPath = currentPath.replace(/^\/(en|eus)\//, "/");
-  const newPath = lang.path === "/" ? cleanPath : `/${lang.path}${cleanPath}`;
-  window.location.href = newPath.replaceAll(/\/+/, "/");
+const switchLanguage = (langPath) => {
+  const newPath = window.location.origin + "/" + window.location.pathname.replace(currentLang.value.path, langPath).replace("//", "/");
+  console.log(window.location.pathname, currentLang.value.path, langPath, newPath);
+  return newPath;
 };
 
 const openSections = ref<Record<string, boolean>>({});
@@ -47,7 +52,7 @@ const mobileMenuOpen = ref(false);
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <a :href="currentLang?.path || '/'" class="text-xl font-bold hover:text-accent transition-colors">
+          <a :href="langUrl('/')" class="text-xl font-bold hover:text-accent transition-colors">
             {{ site.title }}
           </a>
         </div>
@@ -57,7 +62,7 @@ const mobileMenuOpen = ref(false);
           <template v-for="item in nav" :key="item.text">
             <!-- Simple link -->
             <div v-if="!hasItems(item)">
-              <a :href="item.link" :class="['px-4 py-2 transition-colors rounded-sm', isActive(item) ? 'text-accent' : 'hover:text-accent hover:bg-gray-50']">
+              <a :href="langUrl(item.link)" :class="['px-4 py-2 transition-colors rounded-sm', isActive(item) ? 'text-accent' : 'hover:text-accent hover:bg-gray-50']">
                 {{ item.text }}
               </a>
             </div>
@@ -74,7 +79,7 @@ const mobileMenuOpen = ref(false);
               <!-- Dropdown Menu -->
               <div class="absolute left-0 mt-0 w-96 rounded-sm shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50 bg-[var(--root-bg)]">
                 <template v-for="section in item.items" :key="section.text">
-                  <a :href="section.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-accent transition-colors" :class="isActive(section) ? 'text-accent' : ''">
+                  <a :href="langUrl(section.link)" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-accent transition-colors" :class="isActive(section) ? 'text-accent' : ''">
                     {{ section.text }}
                   </a>
                 </template>
@@ -94,7 +99,7 @@ const mobileMenuOpen = ref(false);
               </svg>
             </button>
             <div class="absolute right-0 w-36 opacity-0 group-hover:opacity-100 invisible group-hover:visible group-focus-within:visible group-focus-within:opacity-100 transition-all z-50 bg-[var(--root-bg)]">
-              <a v-for="lang in languages" :key="lang.code" @pointerdown.prevent="switchLanguage(lang)" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors" :class="lang.code === currentLang.code ? 'text-accent' : ''">
+              <a v-for="lang in languages" :key="lang.code" :href="switchLanguage(lang.path)" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer transition-colors" :class="lang.code === currentLang.code ? 'text-accent' : ''">
                 {{ lang.label }}
               </a>
             </div>
@@ -117,7 +122,7 @@ const mobileMenuOpen = ref(false);
         <div class="px-2 pt-2 pb-3 space-y-1">
           <template v-for="item in nav" :key="item.text">
             <div v-if="!hasItems(item)">
-              <a :href="item.link" @click="mobileMenuOpen = false" class="block px-3 py-1 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hover:text-accent">
+              <a :href="langUrl(item.link)" @click="mobileMenuOpen = false" class="block px-3 py-1 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hover:text-accent">
                 {{ item.text }}
               </a>
             </div>
@@ -131,7 +136,7 @@ const mobileMenuOpen = ref(false);
                 </summary>
                 <div class="pl-4 space-y-1 mt-1">
                   <template v-for="section in item.items" :key="section.text">
-                    <a @click="mobileMenuOpen = false" :href="section.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hover:text-accent">
+                    <a @click="mobileMenuOpen = false" :href="langUrl(section.link)" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors hover:text-accent">
                       {{ section.text }}
                     </a>
                   </template>
