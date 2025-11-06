@@ -35,8 +35,14 @@ const hasItems = (item: NavItem) => item.items && item.items.length > 0;
 const isActive = (item: NavItem) => item.link && (route.path === item.link || route.path.startsWith(item.link + "/"));
 
 const switchLanguage = (langPath) => {
-  const newPath = window.location.origin + "/" + window.location.pathname.replace(currentLang.value.path, langPath).replace("//", "/");
-  console.log(window.location.pathname, currentLang.value.path, langPath, newPath);
+  let pathname = "";
+  let origin = "";
+  if (typeof window !== "undefined") {
+    pathname = window.location;
+    origin = window.location.origin;
+  }
+
+  const newPath = origin + "/" + pathname.replace(currentLang.value.path, langPath).replace("//", "/");
   return newPath;
 };
 
