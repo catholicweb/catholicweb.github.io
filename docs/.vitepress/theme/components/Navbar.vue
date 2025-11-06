@@ -72,7 +72,7 @@ const mobileMenuOpen = ref(false);
               </button>
 
               <!-- Dropdown Menu -->
-              <div class="absolute left-0 mt-0 w-96 rounded-sm shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50 group-focus-within:visible group-focus-within:opacity-100 bg-[var(--root-bg)]">
+              <div class="absolute left-0 mt-0 w-96 rounded-sm shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-50 bg-[var(--root-bg)]">
                 <template v-for="section in item.items" :key="section.text">
                   <a :href="section.link" class="block px-3 py-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-accent transition-colors" :class="isActive(section) ? 'text-accent' : ''">
                     {{ section.text }}

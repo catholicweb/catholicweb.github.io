@@ -116,7 +116,7 @@ function getImage(elem, play) {
 }
 .image-full,
 .hero {
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
   font-weight: bolder;
 }
 
