@@ -36,7 +36,7 @@ nav:
 theme:
   bodyFont: Quicksand
   headingFont: Story Script
-  accentColor: red
+  accentColor: "#2e7d32"
   styles:
     - selector: blockquote
       cssClass: "opacity: 0;"

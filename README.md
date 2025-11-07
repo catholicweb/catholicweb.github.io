@@ -1,4 +1,4 @@
-# VitePress + Tailwind CSS + DaisyUI
+# VitePress + Tailwind CSS
 
 ## Setup
 
@@ -28,7 +28,6 @@ npm run docs:preview
 
 - ✅ VitePress for documentation
 - ✅ Tailwind CSS v3 for utility-first styling
-- ✅ DaisyUI for beautiful components
 - ✅ Full working examples
 
 ## Project Structure

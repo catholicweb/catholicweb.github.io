@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "vars.css";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
 
 /* Apply theme variables as Tailwind utilities */
 @layer utilities {
@@ -16,6 +15,32 @@
   }
   .text-accent {
     color: rgb(var(--color-accent));
+  }
+}
+
+.typewriter {
+  max-width: fit-content;
+  border-right: 4px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typewriter 3s steps(25) normal both,
+    blinkTextCursor 500ms steps(4) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: currentColor;
+  }
+  to {
+    border-right-color: transparent;
   }
 }
 

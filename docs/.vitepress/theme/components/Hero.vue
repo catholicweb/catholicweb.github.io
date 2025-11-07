@@ -1,21 +1,24 @@
-<!-- .vitepress/theme/blocks/HeroBlock.vue -->
 <template>
-  <div class="hero min-h-[50vh]" :style="heroBgStyle(block.image)">
-    <div class="hero-overlay"></div>
-    <div class="hero-content text-white text-center">
-      <div class="max-w-md">
-        <h1 v-if="block.title" class="mb-5 text-5xl font-bold">
-          {{ block.title }}
-        </h1>
-        <p v-if="block.description" class="mb-5 font-bold">{{ block.description }}</p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a v-for="(elem, idx) in block.elements" :key="idx" :href="elem.link" class="btn btn-primary">
-            {{ elem.title }}
-          </a>
-        </div>
+  <section class="relative flex items-center justify-center min-h-[50vh] text-center text-white font-extrabold [text-shadow:_0_0_8px_rgba(0,0,0,1)]" :style="heroBgStyle(block.image)">
+    <!-- Overlay -->
+    <div class="absolute inset-0 [background:radial-gradient(closest-side,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0)_100%)]"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 px-4">
+      <h1 v-if="block.title" class="mb-5 text-5xl">
+        {{ block.title }}
+      </h1>
+      <p v-if="block.description" class="mb-5">
+        {{ block.description }}
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a v-for="(elem, idx) in block.elements" :key="idx" :href="elem.link" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-lg transition-colors">
+          {{ elem.title }}
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
