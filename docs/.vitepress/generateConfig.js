@@ -19,6 +19,8 @@ function autocomplete(fm, config) {
   for (var i = 0; i < fm.sections.length; i++) {
     if (typeof fm.sections[i].html === "string") {
       fm.sections[i].html = md.render(fm.sections[i].html);
+      fm.sections[i]._block = "gallery";
+      fm.sections[i].type = "text";
     }
     if (fm.sections[i]._block == "links") {
       fm.sections[i] = addLinks(fm.sections[i]);
@@ -46,6 +48,7 @@ function addLinks(section) {
     };
   });
   section._block = "gallery-feature";
+  section.type = section.type || "team-cards";
   return section;
 }
 

@@ -14,6 +14,12 @@ components:
     options:
       creatable: true
       values: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "img", "blockquote", "a", "ul", "ol", "li", "div", "span", "strong", "em", "br", "hr", "table", "tr", "td", "th", "form", "input", "button", "label", "select", "option", "textarea", "iframe", "header", "footer", "nav", "article", "section", "aside", "details", "summary", "video", "audio", "canvas", "svg"]
+  blocktype:
+    label: Selector
+    type: select
+    options:
+      creatable: false
+      values: ["card-full", "gallery", "resource-list", "video-grid", "hero-banner", "portfolio", "product-cards", "article-list", "team-cards", "compact-list", "text", "timeline", "calendar-cards", "carousel", "accordion"]
   colors:
     label: Colors
     type: select
@@ -60,10 +66,11 @@ components:
           - { name: title, label: Título, type: string }
           - { name: description, label: Subtitulo, type: string }
           - { name: image, label: Imagen, type: image }
+          - { name: type, label: tipo de bloque, component: blocktype }
 media:
   input: docs/public/media
   output: /media
-  categories: ["image","document"]
+  categories: ["image", "document"]
 content:
   - name: config
     type: file

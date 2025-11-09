@@ -27,6 +27,6 @@ const { page } = useData();
 function getBlockComponent(type) {
   // Convert "hero-options" → "Hero"
   const name = type.split("-")[0].replace(/(^\w)/g, (s) => s.toUpperCase());
-  return components[name] || components["Text"];
+  return components[name] || components["Gallery"];
 }
 </script>
