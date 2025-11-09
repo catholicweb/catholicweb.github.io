@@ -72,6 +72,42 @@ media:
   output: /media
   categories: ["image", "document"]
 content:
+  - name: pages
+    label: Paginas
+    type: collection
+    path: docs
+    view:
+      fields: [image, title]
+      primary: title
+    filename: "{primary}.md"
+    exclude: [.vitepress, public]
+    fields:
+      - { name: title, label: Título, type: string }
+      - { name: description, label: Subtitulo, type: string }
+      - { name: image, label: Imagen, type: image }
+      - name: sections
+        label: Page Sections
+        type: block
+        list: { collapsible: { collapsed: false, summary: "{fields.title}" } }
+        blocks:
+          - name: gallery
+            label: Galeria de imagenes
+            component: gallery
+          - name: text
+            label: Bloque de texto
+            fields:
+              - { name: html, label: Texto largo, type: rich-text }
+          - name: hero
+            label: Hero (cabezera)
+            component: hero
+          - name: links
+            label: Enlaces internos
+            fields:
+              - name: links
+                label: Enlaces internos
+                type: reference
+                options: { collection: pages, multiple: true, label: "{title}" }
+
   - name: config
     type: file
     label: Configuración
@@ -108,39 +144,3 @@ content:
               - { name: selector, label: "Selector", type: string }
               - { name: cssClass, label: "cssClass", type: string }
               - { name: scroll, label: "scroll", type: boolean }
-
-  - name: pages
-    label: Paginas
-    type: collection
-    path: docs
-    view:
-      fields: [image, title]
-      primary: title
-    filename: "{primary}.md"
-    exclude: [.vitepress, public]
-    fields:
-      - { name: title, label: Título, type: string }
-      - { name: description, label: Subtitulo, type: string }
-      - { name: image, label: Imagen, type: image }
-      - name: sections
-        label: Page Sections
-        type: block
-        list: { collapsible: { collapsed: false, summary: "{fields.title}" } }
-        blocks:
-          - name: gallery
-            label: Galeria de imagenes
-            component: gallery
-          - name: text
-            label: Bloque de texto
-            fields:
-              - { name: html, label: Texto largo, type: rich-text }
-          - name: hero
-            label: Hero (cabezera)
-            component: hero
-          - name: links
-            label: Enlaces internos
-            fields:
-              - name: links
-                label: Enlaces internos
-                type: reference
-                options: { collection: pages, multiple: true, label: "{title}" }
