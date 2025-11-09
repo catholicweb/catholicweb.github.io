@@ -58,6 +58,7 @@ components:
     fields:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }
+      - { name: type, label: tipo de bloque, component: blocktype }
       - name: elements
         label: Elementos
         type: object
@@ -66,7 +67,6 @@ components:
           - { name: title, label: Título, type: string }
           - { name: description, label: Subtitulo, type: string }
           - { name: image, label: Imagen, type: image }
-          - { name: type, label: tipo de bloque, component: blocktype }
 media:
   input: docs/public/media
   output: /media
