@@ -2,22 +2,6 @@
 @import "vars.css";
 @plugin "@tailwindcss/typography";
 
-/* Apply theme variables as Tailwind utilities */
-@layer utilities {
-  .bg-primary {
-    background-color: rgb(var(--color-primary));
-  }
-  .bg-accent {
-    background-color: rgb(var(--color-accent));
-  }
-  .text-primary {
-    color: rgb(var(--color-primary));
-  }
-  .text-accent {
-    color: rgb(var(--color-accent));
-  }
-}
-
 .typewriter {
   max-width: fit-content;
   border-right: 4px solid;

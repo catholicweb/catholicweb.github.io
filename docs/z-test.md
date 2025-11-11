@@ -2,6 +2,7 @@
 title: z-test
 sections:
   - _block: gallery
+    title: Imagenes super chulas!
     list:
       - /media/20120418T0900-Carmelite-Sisters-of-the-Divine-Heart-of-Jesus-S-1196109-1.webp
       - /media/2024_02_02_sluby.webp

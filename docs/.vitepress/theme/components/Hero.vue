@@ -12,8 +12,8 @@
         {{ block.description }}
       </p>
 
-      <div class="flex flex-wrap justify-center gap-4">
-        <a v-for="(elem, idx) in block.elements" :key="idx" :href="elem.link" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 rounded-lg transition-colors">
+      <div class="flex flex-wrap justify-center gap-4 [text-shadow:none]">
+        <a v-for="(elem, idx) in block.elements" :key="idx" :href="elem.link" class="bg-accent text-white font-medium px-5 py-2 rounded-lg transition-colors">
           {{ elem.title }}
         </a>
       </div>

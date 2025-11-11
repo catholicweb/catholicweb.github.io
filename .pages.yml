@@ -139,24 +139,29 @@ content:
           - name: gallery
             label: Galeria de imagenes
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: list, type: image, label: Seleccion de imagenes, options: { multiple: true } }
           - name: text
             label: Texto
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: html, label: Texto largo, type: rich-text }
           - name: gospel
             label: Evangelio del día
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: gospel, label: Mostrar evangelio, type: boolean, default: true }
               - { name: readings, label: Mostrar primera/segunda y salmo, type: boolean, default: false }
               - { name: audio, label: Añadir audio, type: boolean, default: false }
           - name: events
             label: Eventos
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: filter, label: Filtro. Incluir solo eventos que contengan, type: string }
           - name: pope
             label: Mensaje papal
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: summary, label: Mostrar modo resumen, type: boolean, default: true }
           - name: hero
             label: Hero (cabezera)
@@ -164,6 +169,7 @@ content:
           - name: links
             label: Enlaces internos
             fields:
+              - { name: title, type: string, label: Titulo }
               - name: links
                 label: Enlaces internos
                 type: reference

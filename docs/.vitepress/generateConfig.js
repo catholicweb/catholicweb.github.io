@@ -19,12 +19,22 @@ function autocomplete(fm, config) {
   for (var i = 0; i < fm.sections.length; i++) {
     if (typeof fm.sections[i].html === "string") {
       fm.sections[i].html = md.render(fm.sections[i].html);
-      fm.sections[i]._block = "gallery";
       fm.sections[i].type = "text";
-    }
-    if (fm.sections[i]._block == "links") {
+      fm.sections[i]._block = "gallery";
+    } else if (fm.sections[i]._block == "links") {
       fm.sections[i] = addLinks(fm.sections[i]);
+      fm.sections[i]._block = "gallery";
+    } else if (fm.sections[i].list) {
+      fm.sections[i].elements = fm.sections[i].list.map((i) => {
+        return {
+          title: "",
+          description: "",
+          image: i,
+        };
+      });
+      fm.sections[i].type = "gallery";
     }
+    console.log(fm.sections[i]);
   }
 }
 

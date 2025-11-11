@@ -24,9 +24,9 @@ import components from "./components";
 const { page } = useData();
 
 // Get the component matching the block type
-function getBlockComponent(type) {
+function getBlockComponent(block = "gallery") {
   // Convert "hero-options" → "Hero"
-  const name = type.split("-")[0].replace(/(^\w)/g, (s) => s.toUpperCase());
+  const name = block.split("-")[0].replace(/(^\w)/g, (s) => s.toUpperCase());
   return components[name] || components["Gallery"];
 }
 </script>
