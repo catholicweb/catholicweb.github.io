@@ -38,7 +38,7 @@ components:
     options:
       creatable: true
       values: ["0.25", "0.5", "0.75", "1", "1.25", "1.50", "2", "4"]
-  effects:
+  effect:
     label: Efectos CSS
     type: select
     options:
@@ -114,9 +114,9 @@ content:
             type: object
             list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
             fields:
-              - { name: selector, label: "Selector", type: string }
-              - { name: cssClass, label: "cssClass", type: string }
-              - { name: scroll, label: "scroll", type: boolean }
+              - { name: selector, label: "Elemento", component: selector }
+              - { name: cssClass, label: "Efecto a aplicar", component: effect }
+              - { name: scroll, label: "Aplicar al hacer scroll", type: boolean, default: false }
 
   - name: pages
     label: Paginas
