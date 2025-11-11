@@ -13,7 +13,7 @@ function readFrontmatter(filePath) {
   return matter(content).data || {};
 }
 
-function autocomplete(fm, config) {
+async function autocomplete(fm, config) {
   if (!fm.sections) return;
   addMeta(fm, config);
   for (var i = 0; i < fm.sections.length; i++) {
@@ -33,6 +33,15 @@ function autocomplete(fm, config) {
         };
       });
       fm.sections[i].type = "gallery";
+    } else if (fm.sections[i]._block == "gospel") {
+      const today = new Date();
+      const dateStr = today.toISOString().split("T")[0];
+      try {
+        const data = await fetch(`https://gxvchjojub.execute-api.eu-west-1.amazonaws.com/production/getmissafreecontent?lang=es&day=${dateStr}`);
+        fm.sections[i].gospel = await data.json();
+      } catch (e) {
+        console.log(e);
+      }
     }
     console.log(fm.sections[i]);
   }
@@ -251,9 +260,9 @@ export async function generate() {
       nav: await generateNav(config),
       languages: config.languages,
     },
-    transformPageData(pageData) {
+    async transformPageData(pageData) {
       const fm = pageData.frontmatter;
-      if (fm) autocomplete(fm, config);
+      if (fm) await autocomplete(fm, config);
       return pageData;
     },
   };

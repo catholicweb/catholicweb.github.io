@@ -150,7 +150,6 @@ content:
             label: Evangelio del día
             fields:
               - { name: title, type: string, label: Titulo }
-              - { name: gospel, label: Mostrar evangelio, type: boolean, default: true }
               - { name: readings, label: Mostrar primera/segunda y salmo, type: boolean, default: false }
               - { name: audio, label: Añadir audio, type: boolean, default: false }
           - name: events
