@@ -158,6 +158,21 @@ content:
             fields:
               - { name: title, type: string, label: Titulo }
               - { name: filter, label: Filtro. Incluir solo eventos que contengan, type: string }
+          - name: video
+            label: Youtube
+            fields:
+              - { name: title, type: string, label: Titulo }
+              - { name: channel, label: URL del canal de youtube, eg https://www.youtube.com/@47herri, type: string, list: { collapsible: { collapsed: true } } }
+              - { name: filter, label: Filtro. Incluir solo videos que contengan, type: string }
+          - name: map
+            label: Mapa
+            fields:
+              - { name: title, type: string, label: Titulo }
+              - { name: geo, type: string, label: Ubicaciones, list: true }
+          - name: form
+            label: Formulario (sencillo)
+            fields:
+              - { name: field, type: string, label: Pregunta, list: true }
           - name: pope
             label: Mensaje papal
             fields:
