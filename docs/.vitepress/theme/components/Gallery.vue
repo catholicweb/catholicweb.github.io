@@ -1,8 +1,8 @@
 <template>
   <div v-if="block.title" class="text-center">
-    <h2 class="mt-6 text-4xl font-bold">{{ block.title }}</h2>
+    <h2 class="mt-8 text-4xl font-bold">{{ block.title }}</h2>
   </div>
-  <div class="pb-8 pt-12 container mx-auto px-4">
+  <div class="pb-8 pt-8 container mx-auto px-4">
     <!-- 1. Card Full - Image with Overlay (YouTube style) -->
     <div v-if="block.type === 'card-full'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div v-for="(item, i) in block.elements" :key="i" @click="handleClick(item)" class="relative h-64 rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-all">
@@ -257,13 +257,6 @@ const handleClick = (item) => {
 </script>
 
 <style scoped>
-.facade.youtube {
-  background-image: url("data:image/svg+xml,%3Csvg width='159' height='110' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z' fill='%23f00'/%3E%3Cpath d='m105 55-40.8-23.4v46.8z' fill='%23fff'/%3E%3C/svg%3E%0A");
-  background-size: 22%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* Line clamping utility */
 .line-clamp-1 {
   display: -webkit-box;

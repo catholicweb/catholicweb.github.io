@@ -39,12 +39,40 @@ async function autocomplete(fm, config) {
       try {
         const data = await fetch(`https://gxvchjojub.execute-api.eu-west-1.amazonaws.com/production/getmissafreecontent?lang=es&day=${dateStr}`);
         fm.sections[i].gospel = await data.json();
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
+    } else if (fm.sections[i]._block == "video") {
+      fm.sections[i].elements = await Promise.all(fm.sections[i].urls.map(async (u) => await getYouTubeInfo(u)));
     }
     console.log(fm.sections[i]);
   }
+}
+
+async function getYouTubeInfo(urlOrId) {
+  // limpiar y obtener el ID
+  const id = extractVideoId(urlOrId);
+  if (!id) throw new Error("No se pudo extraer el ID del vídeo");
+
+  // usar oEmbed (no requiere API key)
+  const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`;
+  const res = await fetch(oembedUrl);
+  if (!res.ok) throw new Error(`Error ${res.status}`);
+  const data = await res.json();
+
+  return {
+    id,
+    title: data.title,
+    author: data.author_name,
+    src: `https://www.youtube.com/embed/${id}`,
+    image: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+  };
+}
+
+// método auxiliar para extraer el ID del vídeo
+function extractVideoId(urlOrId) {
+  if (!urlOrId) return null;
+  if (/^[\w-]{11}$/.test(urlOrId)) return urlOrId; // ya es un id
+  const match = urlOrId.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/);
+  return match ? match[1] : null;
 }
 
 function addMeta(fm, config) {

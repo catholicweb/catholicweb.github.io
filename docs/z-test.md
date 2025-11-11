@@ -13,6 +13,16 @@ sections:
     gospel: true
     readings: false
     audio: false
+  - _block: video
+    title: super videos!
+    urls:
+      - https://www.youtube.com/watch?v=ZtXakyjfYfw
+      - https://www.youtube.com/watch?v=3TdPxF5dZuk
+  - _block: map
+    center: "42.80194149934182, -1.645660573514554"
+    zoom: 13
+    markers:
+      - { geo: "42.80194149934182, -1.645660573514554", title: "Lugar 1" }
   - _block: events
     filter: prueba
   - _block: pope
