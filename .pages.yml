@@ -2,6 +2,11 @@ components:
   text:
     label: Text Content
     type: rich-text
+  language:
+    label: Idioma
+    type: select
+    options:
+      values: ["Español", "Catalán", "Gallego", "Euskera", "Inglés", "Francés", "Alemán", "Italiano", "Portugués", "Rumano", "Árabe", "Chino", "Búlgaro", "Polaco"]
   font:
     label: Tipo letra
     type: select
@@ -58,7 +63,6 @@ components:
     fields:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }
-      - { name: type, label: tipo de bloque, component: blocktype }
       - name: elements
         label: Elementos
         type: object
@@ -67,47 +71,12 @@ components:
           - { name: title, label: Título, type: string }
           - { name: description, label: Subtitulo, type: string }
           - { name: image, label: Imagen, type: image }
+          - { name: type, label: tipo de bloque, component: blocktype }
 media:
   input: docs/public/media
   output: /media
   categories: ["image", "document"]
 content:
-  - name: pages
-    label: Paginas
-    type: collection
-    path: docs
-    view:
-      fields: [image, title]
-      primary: title
-    filename: "{primary}.md"
-    exclude: [.vitepress, public]
-    fields:
-      - { name: title, label: Título, type: string }
-      - { name: description, label: Subtitulo, type: string }
-      - { name: image, label: Imagen, type: image }
-      - name: sections
-        label: Page Sections
-        type: block
-        list: { collapsible: { collapsed: false, summary: "{fields.title}" } }
-        blocks:
-          - name: gallery
-            label: Galeria de imagenes
-            component: gallery
-          - name: text
-            label: Bloque de texto
-            fields:
-              - { name: html, label: Texto largo, type: rich-text }
-          - name: hero
-            label: Hero (cabezera)
-            component: hero
-          - name: links
-            label: Enlaces internos
-            fields:
-              - name: links
-                label: Enlaces internos
-                type: reference
-                options: { collection: pages, multiple: true, label: "{title}" }
-
   - name: config
     type: file
     label: Configuración
@@ -125,6 +94,9 @@ content:
             label: Enlaces
             type: reference
             options: { collection: pages, multiple: true, label: "{title}" }
+      - name: languages
+        label: Idiomas de la web
+        component: languages
       - name: theme
         label: Tema visual
         type: object
@@ -144,3 +116,54 @@ content:
               - { name: selector, label: "Selector", type: string }
               - { name: cssClass, label: "cssClass", type: string }
               - { name: scroll, label: "scroll", type: boolean }
+
+  - name: pages
+    label: Paginas
+    type: collection
+    path: docs
+    view:
+      fields: [image, title]
+      primary: title
+    filename: "{primary}.md"
+    exclude: [.vitepress, public]
+    fields:
+      - { name: title, label: Título, type: string }
+      - { name: description, label: Subtitulo, type: string }
+      - { name: image, label: Imagen, type: image }
+      - name: sections
+        label: Secciones de la página
+        type: block
+        list: { collapsible: { collapsed: false, summary: "{fields.title}" } }
+        blocks:
+          - name: gallery
+            label: Galeria de imagenes
+            fields:
+              - { name: list, type: image, label: Seleccion de imagenes, options: { multiple: true } }
+          - name: text
+            label: Texto
+            fields:
+              - { name: html, label: Texto largo, type: rich-text }
+          - name: gospel
+            label: Evangelio del día
+            fields:
+              - { name: gospel, label: Mostrar evangelio, type: boolean, default: true }
+              - { name: readings, label: Mostrar primera/segunda y salmo, type: boolean, default: false }
+              - { name: audio, label: Añadir audio, type: boolean, default: false }
+          - name: events
+            label: Eventos
+            fields:
+              - { name: filter, label: Filtro. Incluir solo eventos que contengan, type: string }
+          - name: pope
+            label: Mensaje papal
+            fields:
+              - { name: summary, label: Mostrar modo resumen, type: boolean, default: true }
+          - name: hero
+            label: Hero (cabezera)
+            component: hero
+          - name: links
+            label: Enlaces internos
+            fields:
+              - name: links
+                label: Enlaces internos
+                type: reference
+                options: { collection: pages, multiple: true, label: "{title}" }
