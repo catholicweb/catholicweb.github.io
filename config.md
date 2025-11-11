@@ -37,6 +37,9 @@ theme:
   bodyFont: Quicksand
   headingFont: Story Script
   accentColor: "#2e7d32"
+  borderRadius: "1"
+  borderWidth: "1.25"
+  shadowDepth: "1.50"
   styles:
     - selector: blockquote
       cssClass: "opacity: 0;"
