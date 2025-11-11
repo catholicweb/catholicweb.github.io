@@ -6,6 +6,7 @@ components:
     label: Idioma
     type: select
     options:
+      multiple: true
       values: ["Español", "Catalán", "Gallego", "Euskera", "Inglés", "Francés", "Alemán", "Italiano", "Portugués", "Rumano", "Árabe", "Chino", "Búlgaro", "Polaco"]
   font:
     label: Tipo letra
@@ -25,7 +26,7 @@ components:
     options:
       creatable: false
       values: ["card-full", "gallery", "resource-list", "video-grid", "hero-banner", "portfolio", "product-cards", "article-list", "team-cards", "compact-list", "text", "timeline", "calendar-cards", "carousel", "accordion"]
-  colors:
+  color:
     label: Colors
     type: select
     options:
