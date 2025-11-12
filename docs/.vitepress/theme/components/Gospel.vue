@@ -5,9 +5,9 @@
 		</h1>
 
 		<template v-for="(reading, key) in displayedReadings" :key="key">
-			<h2 class="text-lg font-semibold mb-1">{{ reading.title }}</h2>
-			<p class="text-sm text-gray-500 mb-3 italic">{{ reading.cita }} — {{ reading.resum }}</p>
-			<div class="prose max-w-none" v-html="reading.text"></div>
+			<h2 class="text-lg text-center font-semibold mb-1 mt-6">{{ reading.title }} - {{ reading.cita }}</h2>
+			<p class="text-sm mb-2 italic" style="color: #b30838">{{ reading.resum }}</p>
+			<div class="prose max-w-none mb-2" v-html="clean(reading.text)"></div>
 		</template>
 	</div>
 </template>
@@ -23,7 +23,7 @@ const props = defineProps({
 });
 
 // los datos ya vienen desde fuera (pre-fechados)
-const readings = ref(props.block.gospel || props.block);
+let readings = ref(props.block.gospel || props.block);
 
 // función auxiliar para recargar lecturas de otro día si se desea
 async function getReading(diff = 0) {
@@ -40,8 +40,13 @@ async function getReading(diff = 0) {
 	}
 }
 
+function clean(str = "") {
+	return str.replace(/<strong>Lectura de.+?<\/strong>/g, "").replace(/<(span|p)><\/\1>/g, "");
+}
+
 const displayedReadings = computed(() => {
 	if (!readings.value) return [];
+
 	if (props.block.readings) {
 		return [readings.value["lectura#0"], readings.value["salm"], readings.value["lectura#1"], readings.value["evangeli"]].filter(Boolean);
 	} else {

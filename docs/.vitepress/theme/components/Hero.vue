@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex items-center justify-center min-h-[50vh] text-center text-white font-extrabold [text-shadow:_0_0_8px_rgba(0,0,0,1)]" :style="heroBgStyle(block.image)">
+  <section class="relative flex items-center justify-center min-h-[50vh] mb-2 text-center text-white font-extrabold [text-shadow:_0_0_8px_rgba(0,0,0,1)]" :style="heroBgStyle(block.image)">
     <!-- Overlay -->
     <div class="absolute inset-0 [background:radial-gradient(closest-side,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0)_100%)]"></div>
 
