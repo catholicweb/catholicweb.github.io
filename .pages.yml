@@ -38,6 +38,19 @@ components:
     options:
       creatable: true
       values: ["0.25", "0.5", "0.75", "1", "1.25", "1.50", "2", "4"]
+  places:
+    label: Lugares
+    type: select
+    options:
+      multiple: true
+      creatable: true
+      values: ["a", "b"]
+  rrule:
+    label: Fechas
+    type: select
+    options:
+      multiple: true
+      values: ["Nunca", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábados", "Domingos", "Festivos"]
   effect:
     label: Efectos CSS
     type: select
@@ -117,6 +130,21 @@ content:
               - { name: selector, label: "Elemento", component: selector }
               - { name: cssClass, label: "Efecto a aplicar", component: effect }
               - { name: scroll, label: "Aplicar al hacer scroll", type: boolean, default: false }
+  - name: events
+    type: file
+    label: Eventos
+    path: events.md
+    fields:
+      - name: oneoff
+        label: Eventos especiales
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: Titulo del evento, type: string }
+          - { name: description, label: Descripción, type: text }
+          - { name: places, label: Idiomas de la web, component: places }
+          - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
+          - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
 
   - name: pages
     label: Paginas

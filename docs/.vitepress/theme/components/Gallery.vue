@@ -129,7 +129,7 @@
     <div v-if="block.type === 'team-cards'" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
       <div v-for="(item, i) in block.elements" :key="i" @click="handleClick(item)" class="text-center group cursor-pointer">
         <div class="relative mb-4 inline-block">
-          <img :src="item.image" :alt="item.title" class="w-40 h-40 rounded-full object-cover border-4 border-accent shadow-lg group-hover:scale-105 transition-transform" />
+          <img :src="item.image" loading="lazy" :alt="item.title" class="w-40 h-40 rounded-full object-cover border-4 border-accent shadow-lg group-hover:scale-105 transition-transform" />
         </div>
         <h3 class="text-xl font-bold text-gray-900 mb-1">{{ item.title }}</h3>
         <p class="text-sm text-gray-600 mb-4">{{ item.description }}</p>
