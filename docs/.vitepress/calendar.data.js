@@ -16,6 +16,8 @@ export default {
 
       vevents.forEach((eventComp, index) => {
         const event = new ICAL.Event(eventComp);
+        const attach = event.component.getFirstProperty("attach");
+        const image = attach?.getParameter("FMTTYPE") || null;
 
         if (event.isRecurring()) {
           // Get the recurrence rule
@@ -30,10 +32,11 @@ export default {
 
           recurrentEvents.push({
             summary: event.summary || "",
-            start: event.startDate.toJSDate(),
+            ...JSON.parse(JSON.stringify(event.startDate)),
             end: event.endDate.toJSDate(),
+            image: image,
             location: event.location || "",
-            recurrence: rrule,
+            ...JSON.parse(JSON.stringify(rrule)),
             exceptions: exdates,
           });
         } else {
@@ -44,6 +47,7 @@ export default {
           oneOffEvents.push({
             summary: event.summary || "",
             start: event.startDate.toJSDate(),
+            image: image,
             end: event.endDate.toJSDate(),
             location: event.location || "",
           });
