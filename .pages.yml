@@ -186,7 +186,7 @@ content:
               - { name: title, type: string, label: Titulo }
               - { name: readings, label: Mostrar primera/segunda y salmo, type: boolean, default: false }
               - { name: audio, label: Añadir audio, type: boolean, default: false }
-          - name: events
+          - name: calendar
             label: Eventos
             fields:
               - { name: title, type: string, label: Titulo }

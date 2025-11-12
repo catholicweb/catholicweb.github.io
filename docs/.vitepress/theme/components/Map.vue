@@ -4,7 +4,7 @@
   </div>
   <div class="pb-8 pt-8 container mx-auto px-4">
     <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-      <div ref="mapContainer" class="w-full h-full"></div>
+      <div ref="mapContainer" class="w-full h-full z-0"></div>
     </div>
   </div>
 </template>

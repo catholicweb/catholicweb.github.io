@@ -43,7 +43,6 @@ async function autocomplete(fm, config) {
     } else if (fm.sections[i]._block == "video") {
       fm.sections[i].elements = await Promise.all(fm.sections[i].urls.map(async (u) => await getYouTubeInfo(u)));
     }
-    console.log(fm.sections[i]);
   }
 }
 

@@ -23,7 +23,7 @@ sections:
     zoom: 13
     markers:
       - { geo: "42.80194149934182, -1.645660573514554", title: "Lugar 1" }
-  - _block: events
+  - _block: calendar
     filter: prueba
   - _block: pope
     summary: true
