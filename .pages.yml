@@ -135,17 +135,22 @@ content:
     label: Eventos
     path: events.md
     fields:
-      - name: oneoff
-        label: Eventos especiales
+      - name: funerals
+        label: Funerales
         type: object
         list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
-          - { name: title, label: Titulo del evento, type: string }
-          - { name: description, label: Descripción, type: text }
-          - { name: places, label: Ubicación, component: places }
           - { name: image, label: Image, type: image }
-          - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
-          - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
+          - { name: description, label: Descripción, type: text }
+          - name: funerals
+            label: Funerales
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Difunto, type: string }
+              - { name: places, label: Ubicación, component: places }
+              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
+      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
 
   - name: pages
     label: Paginas
