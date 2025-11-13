@@ -2,8 +2,8 @@
   <div v-if="block.title" class="text-center">
     <h2 class="mt-8 text-4xl font-bold">{{ block.title }}</h2>
   </div>
-  <div class="pb-8 pt-8 container mx-auto px-4">
-    <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+  <div class="map py-8 md:container mx-auto md:px-4">
+    <div class="w-full h-96 overflow-hidden md:shadow-md">
       <div ref="mapContainer" class="w-full h-full z-0"></div>
     </div>
   </div>

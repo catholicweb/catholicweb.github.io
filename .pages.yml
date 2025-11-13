@@ -213,6 +213,7 @@ content:
           - name: form
             label: Formulario (sencillo)
             fields:
+              - { name: title, type: string, label: Titulo }
               - { name: field, type: string, label: Pregunta, list: true }
           - name: pope
             label: Mensaje papal

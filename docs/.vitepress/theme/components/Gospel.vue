@@ -1,5 +1,5 @@
 <template>
-	<div class="max-w-3xl mx-auto p-6">
+	<div class="gospel max-w-3xl mx-auto p-6">
 		<h1 class="text-2xl font-bold text-center mb-6">
 			{{ readings?.day_title || "Lecturas del día" }}
 		</h1>
@@ -41,7 +41,9 @@ async function getReading(diff = 0) {
 }
 
 function clean(str = "") {
-	return str.replace(/<strong>Lectura de.+?<\/strong>/g, "").replace(/<(span|p)><\/\1>/g, "");
+	str = str.replace(/<strong>Lectura de.+?<\/strong>/g, "").replace(/<(span|p)><\/\1>/g, "");
+
+	return str.replaceAll('<span style="color: #b30838;">R.</span>', '<span style="color: #b30838; font-style: italic; font-weight: normal">&#8479;</span>');
 }
 
 const displayedReadings = computed(() => {

@@ -2,11 +2,18 @@
 import { ref, onMounted } from "vue";
 import { data } from "./../../calendar.data.js";
 
-function groupEvents(events, fields = ["freq", "day", "", "hour", "location"]) {
+const props = defineProps({
+  block: {
+    type: Object,
+    required: true,
+  },
+});
+
+function groupEvents(events, fields) {
   if (fields.length === 0) return events;
   const field = fields[0];
   const grouped = events.reduce((acc, event) => {
-    const key_array = [event[field]];
+    const key_array = [event[field] || ""];
     for (var i = 0; i < key_array.length; i++) {
       let key = key_array[i] || "";
       if (!acc[key]) acc[key] = [];
@@ -19,15 +26,16 @@ function groupEvents(events, fields = ["freq", "day", "", "hour", "location"]) {
     grouped[key] = groupEvents(grouped[key], fields.slice(1));
   });
   return grouped;
-  // Ordenamos las claves y creamos un nuevo objeto
-  const sortedGrouped = {};
-  Object.keys(grouped)
-    .sort()
-    .forEach((key) => {
-      sortedGrouped[key] = grouped[key];
-    });
+}
 
-  return sortedGrouped;
+function groupData(data) {
+  const filtered = data.filter((obj) =>
+    JSON.stringify(obj)
+      .toLowerCase()
+      .includes((props.block.filter || "").toLowerCase()),
+  );
+  console.log(data, filtered, props.block.filter);
+  return groupEvents(filtered, ["byday", "startDate", "", "startTime", "summary", "location"]);
 }
 
 function slugify(str) {
@@ -38,18 +46,7 @@ function tr(str) {
   return str;
 }
 
-function time(str) {
-  return str;
-  return str?.split("T")[1];
-}
-function date(str) {
-  return str;
-  return str?.split("T")[0];
-}
 function formatDate(d) {
-  return d;
-}
-function groupedEvents(d) {
   return d;
 }
 function getSubKeys(table) {
@@ -62,17 +59,17 @@ function getSubKeys(table) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto p-6">
-    <h2 class="text-4xl text-center">Calendario</h2>
+  <h2 class="text-4xl text-center font-bold py-6">{{ block.title }}</h2>
+  <div class="container mx-auto px-4 pb-8 flex flex-wrap gap-4">
     <!-- Primer grupo -->
-    <div v-for="(table, tableKey) in groupEvents(data.recurrentEvents)" style="margin-bottom: 20px" class="col-md-6 col-lg-4" :class="tableKey">
-      <h3 :id="slugify(tableKey)" class="text-xl font-semibold text-gray-800 mb-3 border-b border-gray-200 pb-1">
+    <div v-for="(table, tableKey) in groupData(data.events)" class="md:w-1/2 lg:w-1/3 mb-2" :class="tableKey">
+      <h3 :id="slugify(tableKey)" class="text-xl font-semibold text-gray-800 mb-3 border-b-3 border-accent pb-1">
         {{ formatDate(tableKey).toLowerCase() }}
       </h3>
 
-      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm bg-white">
-        <table class="min-w-full divide-y divide-gray-200 text-sm text-gray-700">
-          <thead v-if="getSubKeys(table)[0] != ' '" class="bg-gray-100 text-gray-600 uppercase text-xs">
+      <div class="overflow-x-auto bg-white">
+        <table class="min-w-full text-sm text-gray-700">
+          <thead v-if="getSubKeys(table)[0] != ' '" class="bg-gray-50 text-gray-600 uppercase text-xs tracking-wide">
             <tr>
               <th class="px-4 py-2 text-left w-36"></th>
               <th v-for="subKey in getSubKeys(table)" class="px-4 py-2 text-left font-medium">
@@ -80,24 +77,16 @@ function getSubKeys(table) {
               </th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-100">
-            <!-- Segundo grupo -->
-            <tr v-for="(row, rowKey) in table" class="hover:bg-gray-50 transition-colors">
-              <td class="px-4 py-3 font-medium text-gray-800 whitespace-nowrap">
+          <tbody>
+            <tr v-for="(row, rowKey, rowIndex) in table" class="odd:bg-white even:bg-gray-50">
+              <td class="px-4 py-3 font-medium text-gray-800">
                 {{ formatDate(rowKey) }}
               </td>
               <td v-for="subKey in getSubKeys(table)" class="px-4 py-3 align-top">
-                <!-- Tercer grupo -->
-                <p v-for="(line, lineKey) in row[subKey]" style="margin-right: 10px; display: flex" class="flex items-center gap-2 mb-1">
+                <p v-for="(line, lineKey) in row[subKey]" class="flex items-center gap-2 mb-1" style="margin-right: 10px; display: flex">
                   {{ tr(lineKey) }}
                   <span v-if="typeof line === 'object' && !Array.isArray(line)" class="flex flex-wrap gap-1 text-gray-500">
-                    <i v-for="(item, index) in Object.keys(line)" :key="index" :class="{ 'line-through text-red-400': item.includes('Salbu') }"> ({{ tr(item) }}) </i>
-                  </span>
-                  <span v-if="Array.isArray(line) && line[0]?.notes" class="relative">
-                    <span class="info-tag ml-1 text-blue-500 cursor-pointer hover:text-blue-700" @click="showTooltip($el)"> ⓘ </span>
-                    <span class="tooltip absolute left-0 mt-1 bg-white border border-gray-200 rounded shadow text-xs text-gray-600 p-2 hidden" @click="$el.classList.remove('show')">
-                      {{ tr(line[0].notes) }}
-                    </span>
+                    <i v-for="(item, index) in Object.keys(line)" :key="index" :class="{ 'line-through text-red-400': item.includes('exceptions') }"> ({{ tr(item) }}) </i>
                   </span>
                 </p>
               </td>
@@ -106,44 +95,6 @@ function getSubKeys(table) {
         </table>
       </div>
     </div>
-
-    <!-- Recurrent Events Table - ->
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Recurrent Events</h2>
-      <table class="min-w-full border border-gray-200 text-left">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="px-4 py-2 border">Time</th>
-            <th class="px-4 py-2 border">Location</th>
-            <th class="px-4 py-2 border">Event</th>
-            <th class="px-4 py-2 border">Recurrence</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="e in data.recurrentEvents" :key="e.start" class="border-t">
-            <td class="px-4 py-2 border">{{ e.hour }} {{ e.day }}</td>
-            <td class="px-4 py-2 border">{{ e.location }}</td>
-            <td class="px-4 py-2 border">{{ e.summary }} {{ e.image }}</td>
-            <td class="px-4 py-2 border">
-              {{ e.recurrence }} <span v-for="d in e.exceptions" :key="d" class="text-red-600">{{ new Date(d).toLocaleDateString() }}</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- One-Off Events Schedule -- >
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Schedule</h2>
-      <div class="space-y-4">
-        <div v-for="e in data.oneOffEvents" :key="e.start" class="p-4 border rounded-md shadow-sm">
-          <strong>{{ e.summary }}</strong
-          ><br />
-          {{ date(e.start) }} - {{ time(e.start) }}<br />
-          {{ e.location }} {{ e.image }}
-        </div>
-      </div>
-    </div>-->
   </div>
 </template>
 

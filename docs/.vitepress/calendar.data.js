@@ -11,13 +11,15 @@ export default {
       const jcalData = ICAL.parse(text);
       const comp = new ICAL.Component(jcalData);
       const vevents = comp.getAllSubcomponents("vevent");
-      const recurrentEvents = [];
+      const events = [];
       const oneOffEvents = [];
 
       vevents.forEach((eventComp, index) => {
         const event = new ICAL.Event(eventComp);
         const attach = event.component.getFirstProperty("attach");
         const image = attach?.getParameter("FMTTYPE") || null;
+
+        console.log("heeeelo", event.startDate.toJSDate());
 
         if (event.isRecurring()) {
           // Get the recurrence rule
@@ -30,9 +32,10 @@ export default {
             return val.toJSDate();
           });
 
-          recurrentEvents.push({
+          events.push({
             summary: event.summary || "",
-            ...JSON.parse(JSON.stringify(event.startDate)),
+            startTime: event.startDate.toJSDate().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" }),
+            startDate: event.startDate.toJSDate().toLocaleDateString("es-ES"),
             end: event.endDate.toJSDate(),
             image: image,
             location: event.location || "",
@@ -44,10 +47,12 @@ export default {
           const isPast = event.endDate ? event.endDate.compare(now) < 0 : false;
 
           if (isPast) return;
-          oneOffEvents.push({
+          events.push({
             summary: event.summary || "",
-            start: event.startDate.toJSDate(),
+            startTime: event.startDate.toJSDate().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" }),
+            startDate: event.startDate.toJSDate().toLocaleDateString("es-ES"),
             image: image,
+            byday: ["oneoff"],
             end: event.endDate.toJSDate(),
             location: event.location || "",
           });
@@ -55,15 +60,12 @@ export default {
       });
 
       // Sort by start date
-      recurrentEvents.sort((a, b) => a.start - b.start);
-      oneOffEvents.sort((a, b) => a.start - b.start);
+      events.sort((a, b) => a.startDate + b.startTime - (b.startDate + b.startTime));
 
-      console.log(`Final: ${recurrentEvents.length} recurring, ${oneOffEvents.length} one-off events`);
-
-      return { recurrentEvents, oneOffEvents };
+      return { events };
     } catch (error) {
       console.error("Error loading calendar data:", error);
-      return { recurrentEvents: [], oneOffEvents: [] };
+      return { events: [] };
     }
   },
 };
