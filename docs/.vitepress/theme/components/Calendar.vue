@@ -62,10 +62,8 @@ function getSubKeys(table) {
 </script>
 
 <template>
-  {{ data.recurrentEvents }}
-  <br />----<br />
-  {{ groupEvents(data.recurrentEvents) }}
   <div class="max-w-3xl mx-auto p-6">
+    <h2 class="text-4xl text-center">Calendario</h2>
     <!-- Primer grupo -->
     <div v-for="(table, tableKey) in groupEvents(data.recurrentEvents)" style="margin-bottom: 20px" class="col-md-6 col-lg-4" :class="tableKey">
       <h3 :id="slugify(tableKey)" class="text-xl font-semibold text-gray-800 mb-3 border-b border-gray-200 pb-1">
@@ -109,7 +107,7 @@ function getSubKeys(table) {
       </div>
     </div>
 
-    <!-- Recurrent Events Table -->
+    <!-- Recurrent Events Table - ->
     <div>
       <h2 class="text-xl font-semibold mb-2">Recurrent Events</h2>
       <table class="min-w-full border border-gray-200 text-left">
@@ -134,7 +132,7 @@ function getSubKeys(table) {
       </table>
     </div>
 
-    <!-- One-Off Events Schedule -->
+    <!-- One-Off Events Schedule -- >
     <div>
       <h2 class="text-xl font-semibold mb-2">Schedule</h2>
       <div class="space-y-4">
@@ -145,7 +143,7 @@ function getSubKeys(table) {
           {{ e.location }} {{ e.image }}
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
