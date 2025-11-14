@@ -112,17 +112,19 @@
     </div>
 
     <!-- 8. Article/Blog List -->
-    <div v-if="block.type === 'article-list'" class="max-w-4xl mx-auto space-y-8">
-      <article v-for="(item, i) in block.elements" :key="i" @click="handleClick(item)" class="flex flex-col md:flex-row gap-6 pb-8 border-b border-gray-200 last:border-0 hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-        <img :src="item.image" :alt="item.title" class="w-full md:w-64 h-48 object-cover rounded-lg shadow-md flex-shrink-0" />
-        <div class="flex-1">
-          <h2 class="text-2xl font-bold text-gray-900 mb-3 hover:text-accent transition-colors">
-            {{ item.title }}
-          </h2>
-          <p class="text-gray-600 mb-4 leading-relaxed">{{ item.description }}</p>
-          <button v-if="item.callToAction" class="text-accent hover:opacity-80 font-semibold">{{ item.callToAction }} →</button>
-        </div>
-      </article>
+    <div v-if="block.type === 'article-list'" class="container mx-auto flex flex-wrap justify-center gap-6 mb-4 overflow-hidden">
+      <a v-for="(item, i) in block.elements" :key="i" :href="item.link" class="w-full xs:w-1/2 md:w-1/4 flex flex-col gap-3 border-2 border-gray-200 hover:border-accent hover:bg-gray-50 p-3 rounded-md transition cursor-pointer group">
+        <img :src="item.image" :alt="item.title" class="w-full h-40 object-cover rounded-md" />
+
+        <h2 class="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors flex items-center gap-1">
+          {{ item.title }}
+          <span class="opacity-0 group-hover:opacity-100 transition">→</span>
+        </h2>
+
+        <p v-if="item.description" class="text-gray-600 text-sm leading-snug line-clamp-3">
+          {{ item.description }}
+        </p>
+      </a>
     </div>
 
     <!-- 9. Team Members/People Cards -->

@@ -24,6 +24,7 @@ async function autocomplete(fm, config) {
     } else if (fm.sections[i]._block == "links") {
       fm.sections[i] = addLinks(fm.sections[i]);
       fm.sections[i]._block = "gallery";
+      fm.sections[i].type = "article-list";
     } else if (fm.sections[i].list) {
       fm.sections[i].elements = fm.sections[i].list.map((i) => {
         return {
@@ -227,6 +228,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+.prose-serious * {
+  opacity: 1 !important;          /* fully visible */
+  color: black !important;
+  transform: scale(1) rotate(0) translate(0)  !important; /* no scaling or translation */
 }
 
 @keyframes scrolled {
