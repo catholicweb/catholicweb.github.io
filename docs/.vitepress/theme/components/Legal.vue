@@ -22,7 +22,7 @@ const fechaActualizacion = legal.fechaActualizacion || "14 Noviembre 2025";
 </script>
 
 <template>
-  <div class="container mx-auto p-4 legal prose prose-serious">
+  <div class="max-w-2xl mx-auto p-4 legal prose prose-serious">
     <Content />
   </div>
 </template>

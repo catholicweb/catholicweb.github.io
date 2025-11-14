@@ -155,7 +155,7 @@
 
     <!-- 11. HTML text -->
     <div v-if="block.type === 'text'">
-      <div v-if="block.html" class="prose p-4 max-w-2xl mx-auto" v-html="block.html"></div>
+      <div v-if="block.html" class="prose p-2 max-w-2xl mx-auto" v-html="block.html"></div>
     </div>
 
     <!-- 12. Vertical Timeline -->
