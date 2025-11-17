@@ -76,32 +76,6 @@ const prevCard = () => {
   }
 };
 
-const handleMouseDown = (e) => {
-  isDragging.value = true;
-  startX.value = e.clientX;
-  currentX.value = e.clientX;
-};
-
-const handleMouseMove = (e) => {
-  if (!isDragging.value) return;
-  currentX.value = e.clientX;
-};
-
-const handleMouseUp = () => {
-  if (!isDragging.value) return;
-
-  const diff = startX.value - currentX.value;
-  const threshold = 50;
-
-  if (diff > threshold) {
-    nextCard();
-  } else if (diff < -threshold) {
-    prevCard();
-  }
-
-  isDragging.value = false;
-};
-
 const handleTouchStart = (e) => {
   isDragging.value = true;
   startX.value = e.touches[0].clientX;
@@ -141,7 +115,7 @@ const goToCard = (index) => {
     <!-- 3D Carousel Container -->
     <div class="relative w-full mt-2 max-w-6xl h-[500px] flex items-center justify-center">
       <!-- Cards -->
-      <div class="relative w-full" @mousedown="handleMouseDown" @mousemove="handleMouseMove" @mouseup="handleMouseUp" @mouseleave="handleMouseUp" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+      <div class="relative w-full" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
         <div v-for="(card, index) in cards" :key="card.id" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 transition-all duration-700 ease-out cursor-pointer" :style="getCardStyle(index)" @click="goToCard(index)">
           <div class="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
             <!-- Image Section -->
