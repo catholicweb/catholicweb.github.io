@@ -1,0 +1,57 @@
+const CACHE_NAME = "v1";
+const ASSETS = ["/", "/icon-512.png"];
+
+// ✅ Install and pre-cache known assets
+self.addEventListener("install", (e) => {
+  e.waitUntil(caches.open(CACHE_NAME).then((c) => c.addAll(ASSETS)));
+  self.skipWaiting();
+});
+
+// ✅ Activate immediately on update
+self.addEventListener("activate", (e) => {
+  e.waitUntil(self.clients.claim());
+});
+
+// ✅ Fetch handler
+self.addEventListener("fetch", (e) => {
+  const url = new URL(e.request.url);
+  if (e.request.method !== "GET") return;
+
+  // Detect "HTML-like" routes: root, clean URLs, or .html
+  const isHTML = url.origin === location.origin && (url.pathname === "/" || !url.pathname.includes(".") || url.pathname.endsWith(".html"));
+
+  if (isHTML) {
+    e.respondWith(staleWhileRevalidateAndReload(e.request));
+  } else {
+    e.respondWith(cacheFirst(e.request));
+  }
+});
+
+// 🧩 Cache First for static assets
+async function cacheFirst(req) {
+  const cached = await caches.match(req);
+  return cached || fetch(req);
+}
+
+// 🧩 Stale-While-Revalidate with auto-reload
+async function staleWhileRevalidateAndReload(req) {
+  const cache = await caches.open(CACHE_NAME);
+  const cached = await cache.match(req);
+  const networkFetch = fetch(req)
+    .then(async (res) => {
+      if (res.ok) {
+        const newText = await res.clone().text();
+        const oldText = cached ? await cached.clone().text() : null;
+        if (oldText && newText !== oldText) {
+          // New version detected → reload all open tabs
+          const clientsList = await self.clients.matchAll({ type: "window" });
+          for (const client of clientsList) client.navigate(client.url);
+        }
+        cache.put(req, res.clone());
+      }
+      return res;
+    })
+    .catch(() => cached);
+
+  return cached || networkFetch;
+}

@@ -3,6 +3,7 @@ import fg from "fast-glob";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
+import sharp from "sharp";
 
 const md = new MarkdownIt({ html: true, linkify: true });
 
@@ -11,6 +12,36 @@ function readFrontmatter(filePath) {
   if (!fs.existsSync(filePath)) return {};
   const content = fs.readFileSync(filePath, "utf8");
   return matter(content).data || {};
+}
+
+async function createManifest(config) {
+  let manifest = {
+    name: config.title,
+    short_name: config.description,
+    start_url: "/",
+    display: "standalone",
+    background_color: config.theme.accentColor,
+    theme_color: "#333",
+    icons: [
+      { src: "/media/icon-192.png", sizes: "192x192", type: "image/png" },
+      { src: "/media/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+  };
+  const baseDir = path.resolve("");
+  fs.writeFileSync(baseDir + "/docs/public/manifest.json", JSON.stringify(manifest), "utf8");
+
+  // Generate icons
+  let fullPath = path.resolve(baseDir, "docs/public/media", config.icon);
+  for (const size of [64, 128, 192, 256, 384, 512]) {
+    try {
+      await sharp(fullPath)
+        .resize(size, size)
+        .png()
+        .toFile(baseDir + `/docs/public/media/icon-${size}.png`);
+    } catch (err) {
+      console.error(`⚠️ Error generando icono ${size}:`, err.message);
+    }
+  }
 }
 
 async function autocomplete(fm, config) {
@@ -278,6 +309,8 @@ export async function generate() {
     if (!css.includes("font-display")) css = css.replace(/}/g, "font-display:swap;}");
     return css;
   }
+
+  await createManifest(config);
 
   return {
     head: [

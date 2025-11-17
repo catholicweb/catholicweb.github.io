@@ -1,6 +1,7 @@
 ---
 title: Llamados
 description: Vocaciones Navarra
+icon: "unnamed (3).webp"
 nav:
   - title: Disciernimiento
     links:

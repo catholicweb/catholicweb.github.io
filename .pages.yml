@@ -98,6 +98,7 @@ content:
     fields:
       - { name: title, label: Titulo sitio, type: string }
       - { name: description, label: Description del sitio, type: text }
+      - { name: image, label: Image, type: Icono del sitio }
       - name: nav
         label: Menu de navegación
         type: object
