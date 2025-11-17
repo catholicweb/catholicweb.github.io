@@ -24,11 +24,18 @@ let markersLayer = null;
 onMounted(async () => {
   if (!mapContainer.value) return;
 
+  var supportsTouch = "ontouchstart" in window || navigator.msMaxTouchPoints;
+
   // Carga dinámica de Leaflet solo cuando el componente se monta
+
   const L = await import("leaflet");
   await import("leaflet/dist/leaflet.css"); // carga el CSS dinámicamente
 
-  map = L.map(mapContainer.value).setView(props.block.geo?.split(",").map((s) => Number(s.trim())) || [0, 0], props.block.zoom || 13);
+  //await import("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+  //await import("https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css");
+  //await import("https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js");
+
+  const map = L.map(mapContainer.value, { fullscreenControl: true, zoomControl: !supportsTouch }).setView(props.block.geo?.split(",").map((s) => Number(s.trim())) || [0, 0], props.block.zoom || 13);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
     attribution: "Voyager",
@@ -62,8 +69,8 @@ onMounted(async () => {
                         </a>`;
     const marker = L.marker(g, config).addTo(markersLayer).bindPopup(html);
     if (m.geo != props.block.geo) {
-      marker._icon.style.opacity = "0.3";
-      marker._icon.style.filter = "grayscale(1)";
+      marker._icon.style.opacity = "0.4";
+      //marker._icon.style.filter = "grayscale(1)";
       //marker._icon.style.transform += ' scale(0.5)'
     }
   });
@@ -75,5 +82,37 @@ onMounted(async () => {
 .leaflet-container {
   width: 100%;
   height: 100%;
+}
+
+.bounce {
+  animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+  max-width: 250px !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  font-size: 25px;
+  font-weight: bold;
+  top: 3px;
+  right: 3px;
+  color: #009c46;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.leaflet-pane > svg path.leaflet-interactive {
+  stroke: none;
+  fill: red;
 }
 </style>
