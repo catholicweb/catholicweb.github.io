@@ -50,7 +50,24 @@ components:
     type: select
     options:
       multiple: true
-      values: ["Nunca", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábados", "Domingos", "Festivos"]
+      values: [
+        { value: 'Mo', label: 'Lunes' },
+        { value: 'Tu', label: 'Martes' },
+        { value: 'We', label: 'Miércoles' },
+        { value: 'Th', label: 'Jueves' },
+        { value: 'Fr', label: 'Viernes' },
+        { value: 'Sa', label: 'Sábado' },
+        { value: 'Su', label: 'Domingo' },
+        { value: 'Mo,Tu,We,Th,Fr', label: 'Lunes a viernes' },
+        { value: 'yearly', label: 'Anualmente' },
+        { value: 'monthly', label: 'Mensualmente' },
+        { value: 'biweekly', label: 'Bisemanalmente' },
+        { value: 'week1', label: '1ª semana del mes' },
+        { value: 'week2', label: '2ª semana del mes' },
+        { value: 'week3', label: '3ª semana del mes' },
+        { value: 'week4', label: '4ª semana del mes' },
+        { value: 'week5', label: '5ª semana del mes' }
+      ]
   effect:
     label: Efectos CSS
     type: select
@@ -184,23 +201,16 @@ content:
     path: docs/events.md
     fields:
       - { name: urls, type: string, list: true, label: URL calendarios (terminadas en .ics) }
-      - name: funerals
-        label: Funerales
+      - name: events
+        label: Lista eventos
         type: object
         list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
         fields:
           - { name: image, label: Image, type: image }
-          - { name: description, label: Descripción, type: text }
-          - name: funerals
-            label: Funerales
-            type: object
-            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-            fields:
-              - { name: title, label: Difunto, type: string }
-              - { name: places, label: Ubicación, component: places }
-              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
-      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
-
+          - { name: title, label: Titulo, type: string }
+          - { name: places, label: Ubicación, component: places }
+          - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
+          - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
   - name: config
     type: file
     label: Configuración
