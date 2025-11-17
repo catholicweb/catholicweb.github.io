@@ -1,5 +1,5 @@
 const CACHE_NAME = "v1";
-const ASSETS = ["/", "/icon-512.png"];
+const ASSETS = ["/", "/media/icon-512.png"];
 
 // ✅ Install and pre-cache known assets
 self.addEventListener("install", (e) => {
@@ -27,31 +27,48 @@ self.addEventListener("fetch", (e) => {
   }
 });
 
-// 🧩 Cache First for static assets
+// 🧩 Cache First for static assets (auto-cache)
 async function cacheFirst(req) {
   const cached = await caches.match(req);
-  return cached || fetch(req);
+  if (cached) return cached;
+
+  const response = await fetch(req);
+  const cache = await caches.open(CACHE_NAME);
+  cache.put(req, response.clone());
+  return response;
 }
 
-// 🧩 Stale-While-Revalidate with auto-reload
+async function staleWhileRevalidate(request) {
+  const cache = await caches.open(CACHE_STATIC);
+  const cached = await cache.match(request);
+
+  const fetchPromise = fetch(request).then((response) => {
+    cache.put(request, response.clone());
+    return response;
+  });
+
+  return cached || fetchPromise;
+}
+
+// 🧩 Stale-While-Revalidate with auto-reload + auto-cache
 async function staleWhileRevalidateAndReload(req) {
   const cache = await caches.open(CACHE_NAME);
   const cached = await cache.match(req);
-  const networkFetch = fetch(req)
-    .then(async (res) => {
-      if (res.ok) {
-        const newText = await res.clone().text();
-        const oldText = cached ? await cached.clone().text() : null;
-        if (oldText && newText !== oldText) {
-          // New version detected → reload all open tabs
-          const clientsList = await self.clients.matchAll({ type: "window" });
-          for (const client of clientsList) client.navigate(client.url);
-        }
-        cache.put(req, res.clone());
-      }
-      return res;
-    })
-    .catch(() => cached);
 
+  const networkFetch = fetch(req).then(async (res) => {
+    if (res.ok) {
+      // 🔥 compare HTML to detect new version
+      const newText = await res.clone().text();
+      const oldText = cached ? await cached.clone().text() : null;
+
+      if (oldText && newText !== oldText) {
+        // New version detected → reload all open tabs
+        const clientsList = await self.clients.matchAll({ type: "window" });
+        for (const client of clientsList) client.navigate(client.url);
+      }
+      cache.put(req, res.clone());
+    }
+    return res;
+  });
   return cached || networkFetch;
 }
