@@ -93,7 +93,7 @@ media:
 content:
   - name: events
     type: file
-    label: Configuración
+    label: Eventos
     path: docs/events.md
     fields:
       - { name: urls, type: string, list: true, label: URL calendarios (terminadas en .ics) }
@@ -122,6 +122,13 @@ content:
       - { name: title, label: Titulo sitio, type: string }
       - { name: description, label: Description del sitio, type: text }
       - { name: image, label: Image, type: Icono del sitio }
+      - name: bank
+        label: Bizum y cuentas bancarias
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: "Nombre (ej: BIZUM/BBVA/...)", type: string }
+          - { name: account, label: Numero de cuenta/bizum, type: string }
       - name: nav
         label: Menu de navegación
         type: object
@@ -162,7 +169,7 @@ content:
       fields: [image, title]
       primary: title
     filename: "{primary}.md"
-    exclude: [.vitepress, public, aviso-legal.md, config.md, events.md]
+    exclude: [.vitepress, public, aviso-legal.md, config.md, events.md, theme-builder.md]
     fields:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }

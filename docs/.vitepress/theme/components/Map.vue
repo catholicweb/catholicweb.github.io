@@ -11,6 +11,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from "vue";
+import { data } from "./../../blocks.data.js";
 
 const props = defineProps({
   block: { type: Object, required: true },
@@ -41,19 +42,17 @@ onMounted(async () => {
     iconSize: [20, 32],
   });
 
-  let markers = [
-    {
-      geo: props.block.geo,
-      name: props.block.name,
-      image: props.block.image,
-      url: "#",
-    },
-  ];
+  let blueIcon = L.icon({
+    iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+    iconSize: [20, 32],
+  });
 
-  markers.forEach((m) => {
+  console.log(data.maps);
+
+  data.maps.forEach((m) => {
     const g = m.geo.split(",").map((s) => Number(s.trim()));
     let config = { icon: redIcon };
-    const html = `<a href="${m.url}">
+    const html = `<a href="${m.link}">
                     <h3 style="text-transform: capitalize; color: black;text-align: center;">
                                             ${m.name}
                                         </h3>
@@ -61,7 +60,12 @@ onMounted(async () => {
                                         <img width="100%" style="width:100%; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" src="${m.image} " alt="">
                                 </div>
                         </a>`;
-    L.marker(g, config).addTo(markersLayer).bindPopup(html);
+    const marker = L.marker(g, config).addTo(markersLayer).bindPopup(html);
+    if (m.geo != props.block.geo) {
+      marker._icon.style.opacity = "0.3";
+      marker._icon.style.filter = "grayscale(1)";
+      //marker._icon.style.transform += ' scale(0.5)'
+    }
   });
 });
 </script>

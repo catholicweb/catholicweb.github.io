@@ -19,8 +19,8 @@ sections:
     name: Tejado parroquial!
     description: Necestimaos un nuevo tejado en la parroquia.....
     image: /media/abrio-libro-sagrada-biblia-sobre-fondo-oscuro_488220-43539.webp
-    goal: 5000
-    raised: 2500
+    goal: 40000
+    raised: 3500
   - _block: accordion
     title: "FAQ"
     elements:
@@ -41,6 +41,7 @@ sections:
   - _block: calendar
     title: No te pierdas nuestros eventos!
     filter: ""
+
   - _block: pope
     summary: true
   - _block: hero
@@ -56,4 +57,16 @@ sections:
     links:
       - docs/seminario.md
       - docs/5-pasos.md
+  - _block: map
+    title: Conocenos (la otra parroquia)!
+    name: la Otra parroquia
+    geo: "42.81311292998373, -1.6285092401874668"
+    image: /media/abrio-libro-sagrada-biblia-sobre-fondo-oscuro_488220-43539.webp
+  - _block: fundraising
+    title: fundraising II
+    name: Recogida alimentos
+    description: Ayudanos a acabar con el hambre
+    image: /media/2024_02_02_sluby.webp
+    goal: 5000
+    raised: 2500
 ---

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import { data } from "./../../blocks.data.js";
 
 const props = defineProps({
   block: {
@@ -7,13 +8,6 @@ const props = defineProps({
     required: true,
   },
 });
-
-const raised = ref(45750);
-const goal = 75000;
-const backers = 324;
-const daysLeft = 12;
-
-const progress = computed(() => (raised.value / goal) * 100);
 
 const handleDonate = () => {
   // Simulate a donation
@@ -25,46 +19,8 @@ const isDragging = ref(false);
 const startX = ref(0);
 const currentX = ref(0);
 
-let cards = [
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-  {
-    title: "Youth Ministry",
-    description: "Empowering the next generation with faith, fun, and fellowship",
-  },
-];
-
-const currentIndex = ref(Math.floor(cards.length / 2));
+let cards = data.fundraisings;
+const currentIndex = ref(cards.findIndex((item) => item.name === props.block.name) || 0);
 
 const getCardStyle = (index) => {
   const offset = index - currentIndex.value;
@@ -191,28 +147,28 @@ const goToCard = (index) => {
             <!-- Image Section -->
             <div class="relative aspect-16/9 overflow-hidden">
               <div class="absolute inset-0 flex items-center justify-center">
-                <img :src="block.image" :alt="block.title" class="w-full h-full object-cover" />
+                <img :src="card.image" :alt="card.title" class="w-full h-full object-cover" />
               </div>
             </div>
 
             <!-- Content Section -->
             <div class="p-6">
-              <h2 class="text-2xl font-bold text-slate-900 mb-2">{{ block.name }}</h2>
-              <p class="text-slate-600 mb-6">{{ block.description }}</p>
+              <h2 class="text-2xl font-bold text-slate-900 mb-2">{{ card.name }}</h2>
+              <p class="text-slate-600 mb-6">{{ card.description }}</p>
 
               <!-- Progress Stats -->
               <div class="mb-4">
                 <div class="flex justify-between items-baseline mb-2">
-                  <span class="text-3xl font-bold text-slate-900">{{ raised.toLocaleString() }}€</span>
-                  <span class="text-slate-500 text-sm"> de {{ goal.toLocaleString() }}€</span>
+                  <span class="text-3xl font-bold text-slate-900">{{ card.raised }}€</span>
+                  <span class="text-slate-500 text-sm"> de {{ card.goal }}€</span>
                 </div>
 
                 <!-- Progress Bar -->
                 <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
-                  <div class="h-full bg-gradient-to-r from-gray-200 to-accent rounded-full transition-all duration-500 ease-out" :style="{ width: `${Math.min(progress, 100)}%` }"></div>
+                  <div class="h-full bg-gradient-to-r from-gray-200 to-accent rounded-full transition-all duration-500 ease-out" :style="{ width: `${Math.min(card.progress, 100)}%` }"></div>
                 </div>
 
-                <div class="text-sm text-slate-600 mt-2">{{ progress.toFixed(1) }}% finaciado</div>
+                <div class="text-sm text-slate-600 mt-2">{{ card.progress }}% finaciado</div>
               </div>
               <!-- Action Buttons -->
               <div class="flex gap-3">
