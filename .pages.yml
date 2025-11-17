@@ -91,10 +91,33 @@ media:
   output: /media
   categories: ["image", "document"]
 content:
+  - name: events
+    type: file
+    label: Configuración
+    path: docs/events.md
+    fields:
+      - { name: urls, type: string, list: true, label: URL calendarios (terminadas en .ics) }
+      - name: funerals
+        label: Funerales
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: image, label: Image, type: image }
+          - { name: description, label: Descripción, type: text }
+          - name: funerals
+            label: Funerales
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Difunto, type: string }
+              - { name: places, label: Ubicación, component: places }
+              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
+      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
+
   - name: config
     type: file
     label: Configuración
-    path: config.md
+    path: docs/config.md
     fields:
       - { name: title, label: Titulo sitio, type: string }
       - { name: description, label: Description del sitio, type: text }
@@ -131,28 +154,6 @@ content:
               - { name: selector, label: "Elemento", component: selector }
               - { name: cssClass, label: "Efecto a aplicar", component: effect }
               - { name: scroll, label: "Aplicar al hacer scroll", type: boolean, default: false }
-  - name: events
-    type: file
-    label: Eventos
-    path: events.md
-    fields:
-      - name: funerals
-        label: Funerales
-        type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-        fields:
-          - { name: image, label: Image, type: image }
-          - { name: description, label: Descripción, type: text }
-          - name: funerals
-            label: Funerales
-            type: object
-            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-            fields:
-              - { name: title, label: Difunto, type: string }
-              - { name: places, label: Ubicación, component: places }
-              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
-      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
-
   - name: pages
     label: Paginas
     type: collection
@@ -161,7 +162,7 @@ content:
       fields: [image, title]
       primary: title
     filename: "{primary}.md"
-    exclude: [.vitepress, public, aviso-legal.md]
+    exclude: [.vitepress, public, aviso-legal.md, config.md, events.md]
     fields:
       - { name: title, label: Título, type: string }
       - { name: description, label: Subtitulo, type: string }
