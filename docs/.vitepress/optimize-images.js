@@ -13,6 +13,11 @@ async function processImage(imgPath) {
   const base = imgPath.slice(0, -ext.length);
   const newImg = `${base}.webp`;
 
+  if (/icon-\d+\.png$/.test(filename)) {
+    console.log(`⚪ Skipped ${filename} (icon file)`);
+    return;
+  }
+
   try {
     const image = sharp(imgPath);
     const metadata = await image.metadata();
