@@ -27,7 +27,7 @@ onMounted(async () => {
   const L = await import("leaflet");
   await import("leaflet/dist/leaflet.css"); // carga el CSS dinámicamente
 
-  map = L.map(mapContainer.value).setView(props.block.center?.split(",").map((s) => Number(s.trim())) || [0, 0], props.block.zoom || 13);
+  map = L.map(mapContainer.value).setView(props.block.geo?.split(",").map((s) => Number(s.trim())) || [0, 0], props.block.zoom || 13);
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
     attribution: "Voyager",
@@ -36,11 +36,32 @@ onMounted(async () => {
 
   markersLayer = L.layerGroup().addTo(map);
 
-  props.block.markers?.forEach((m) => {
+  var redIcon = L.icon({
+    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+    iconSize: [20, 32],
+  });
+
+  let markers = [
+    {
+      geo: props.block.geo,
+      name: props.block.name,
+      image: props.block.image,
+      url: "#",
+    },
+  ];
+
+  markers.forEach((m) => {
     const g = m.geo.split(",").map((s) => Number(s.trim()));
-    L.marker(g)
-      .addTo(markersLayer)
-      .bindPopup(m.title || "");
+    let config = { icon: redIcon };
+    const html = `<a href="${m.url}">
+                    <h3 style="text-transform: capitalize; color: black;text-align: center;">
+                                            ${m.name}
+                                        </h3>
+                                <div style="margin: 0;background: white;">
+                                        <img width="100%" style="width:100%; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" src="${m.image} " alt="">
+                                </div>
+                        </a>`;
+    L.marker(g, config).addTo(markersLayer).bindPopup(html);
   });
 });
 </script>

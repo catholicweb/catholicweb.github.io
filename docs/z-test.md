@@ -28,10 +28,9 @@ sections:
       - https://www.youtube.com/watch?v=3TdPxF5dZuk
   - _block: map
     title: Conocenos!
-    center: "42.80194149934182, -1.645660573514554"
-    zoom: 13
-    markers:
-      - { geo: "42.80194149934182, -1.645660573514554", title: "Lugar 1" }
+    name: Parroquia de ...
+    geo: "42.80194149934182, -1.645660573514554"
+    image: /media/20120418T0900-Carmelite-Sisters-of-the-Divine-Heart-of-Jesus-S-1196109-1.webp
   - _block: calendar
     title: No te pierdas nuestros eventos!
     filter: ""

@@ -200,16 +200,12 @@ content:
           - name: map
             label: Mapa
             fields:
-              - { name: title, type: string, label: Titulo }
-              - { name: center, type: string, label: "Centro del mapa (ej: 42.801941, -1.645660)" }
-              - name: markers
-                type: object
-                label: Ubicaciones
-                list: true
-                fields:
-                  - { name: geo, type: string, label: "Coordenadas (ej: 42.801941, -1.645660)" }
-                  - { name: title, type: string, label: Nombre }
-
+              - { name: title, type: string, label: Título sección }
+              - { name: geo, type: string, label: "Coordenadas (ej: 42.801941, -1.645660)" }
+              - { name: name, type: string, label: Nombre (opcional) }
+              - { name: phone, type: string, label: Telefono (opcional) }
+              - { name: email, type: string, label: Email (opcional) }
+              - { name: image, type: image, label: Imagen (opcional) }
           - name: form
             label: Formulario (sencillo)
             fields:
