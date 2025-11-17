@@ -319,6 +319,7 @@ export async function generate() {
       ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" }],
       // Link to the Google Font stylesheet
       ["style", {}, await getFontCSS(FONT_URL)],
+      ["link", { rel: "manifest", href: "/manifest.json" }],
     ],
     title: config.title,
     cleanUrls: true,
