@@ -91,76 +91,6 @@ media:
   output: /media
   categories: ["image", "document"]
 content:
-  - name: events
-    type: file
-    label: Eventos
-    path: docs/events.md
-    fields:
-      - { name: urls, type: string, list: true, label: URL calendarios (terminadas en .ics) }
-      - name: funerals
-        label: Funerales
-        type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-        fields:
-          - { name: image, label: Image, type: image }
-          - { name: description, label: Descripción, type: text }
-          - name: funerals
-            label: Funerales
-            type: object
-            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-            fields:
-              - { name: title, label: Difunto, type: string }
-              - { name: places, label: Ubicación, component: places }
-              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
-      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
-
-  - name: config
-    type: file
-    label: Configuración
-    path: docs/config.md
-    fields:
-      - { name: title, label: Titulo sitio, type: string }
-      - { name: description, label: Description del sitio, type: text }
-      - { name: image, label: Image, type: Icono del sitio }
-      - name: bank
-        label: Bizum y cuentas bancarias
-        type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-        fields:
-          - { name: title, label: "Nombre (ej: BIZUM/BBVA/...)", type: string }
-          - { name: account, label: Numero de cuenta/bizum, type: string }
-      - name: nav
-        label: Menu de navegación
-        type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
-        fields:
-          - { name: title, label: Titulo sección, type: string }
-          - name: links
-            label: Enlaces
-            type: reference
-            options: { collection: pages, multiple: true, label: "{title}" }
-      - name: languages
-        label: Idiomas de la web
-        component: languages
-      - name: theme
-        label: Tema visual
-        type: object
-        fields:
-          - { name: bodyFont, label: Tipo de letra del cuerpo (cualquiera de https://fonts.google.com/), component: font }
-          - { name: headingFont, label: Tipo de letra de los titulos (cualquiera de https://fonts.google.com/), component: font }
-          - { name: accentColor, label: Color elementos acentuados, component: color }
-          - { name: accentPrimary, label: Color elementos secundario, component: color }
-          - { name: borderRadius, label: Redondeado de borders, component: multiplier }
-          - { name: borderWidth, label: Grosor de los borders, component: multiplier }
-          - { name: shadowDepth, label: Profundidaz de las sombras, component: multiplier }
-          - name: styles
-            label: Estilos y efectos individuales
-            type: object
-            list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
-            fields:
-              - { name: selector, label: "Elemento", component: selector }
-              - { name: cssClass, label: "Efecto a aplicar", component: effect }
-              - { name: scroll, label: "Aplicar al hacer scroll", type: boolean, default: false }
   - name: pages
     label: Paginas
     type: collection
@@ -247,3 +177,74 @@ content:
                 label: Enlaces internos
                 type: reference
                 options: { collection: pages, multiple: true, label: "{title}" }
+
+  - name: events
+    type: file
+    label: Eventos
+    path: docs/events.md
+    fields:
+      - { name: urls, type: string, list: true, label: URL calendarios (terminadas en .ics) }
+      - name: funerals
+        label: Funerales
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: image, label: Image, type: image }
+          - { name: description, label: Descripción, type: text }
+          - name: funerals
+            label: Funerales
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+            fields:
+              - { name: title, label: Difunto, type: string }
+              - { name: places, label: Ubicación, component: places }
+              - { name: date, type: date, label: Fecha y hora de inicio, options: { time: true, format: dd/MM/yyyy HH:mm, step: 300 } }
+      - { name: rrule, label: Se repite todos los, component: rrule, default: "Nunca" }
+
+  - name: config
+    type: file
+    label: Configuración
+    path: docs/config.md
+    fields:
+      - { name: title, label: Titulo sitio, type: string }
+      - { name: description, label: Description del sitio, type: text }
+      - { name: image, label: Image, type: Icono del sitio }
+      - name: bank
+        label: Bizum y cuentas bancarias
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: "Nombre (ej: BIZUM/BBVA/...)", type: string }
+          - { name: account, label: Numero de cuenta/bizum, type: string }
+      - name: nav
+        label: Menu de navegación
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: Titulo sección, type: string }
+          - name: links
+            label: Enlaces
+            type: reference
+            options: { collection: pages, multiple: true, label: "{title}" }
+      - name: languages
+        label: Idiomas de la web
+        component: languages
+      - name: theme
+        label: Tema visual
+        type: object
+        fields:
+          - { name: bodyFont, label: Tipo de letra del cuerpo (cualquiera de https://fonts.google.com/), component: font }
+          - { name: headingFont, label: Tipo de letra de los titulos (cualquiera de https://fonts.google.com/), component: font }
+          - { name: accentColor, label: Color elementos acentuados, component: color }
+          - { name: accentPrimary, label: Color elementos secundario, component: color }
+          - { name: borderRadius, label: Redondeado de borders, component: multiplier }
+          - { name: borderWidth, label: Grosor de los borders, component: multiplier }
+          - { name: shadowDepth, label: Profundidaz de las sombras, component: multiplier }
+          - name: styles
+            label: Estilos y efectos individuales
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{fields.selector}" } }
+            fields:
+              - { name: selector, label: "Elemento", component: selector }
+              - { name: cssClass, label: "Efecto a aplicar", component: effect }
+              - { name: scroll, label: "Aplicar al hacer scroll", type: boolean, default: false }
