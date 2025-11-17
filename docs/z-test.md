@@ -12,8 +12,15 @@ sections:
     html: Esto es un texo largo _pero cursiva_
   - _block: gospel
     gospel: true
-    readings: true
+    readings: false
     audio: false
+  - _block: fundraising
+    title: fundraising
+    name: Tejado parroquial!
+    description: Necestimaos un nuevo tejado en la parroquia.....
+    image: /media/abrio-libro-sagrada-biblia-sobre-fondo-oscuro_488220-43539.webp
+    goal: 5000
+    raised: 2500
   - _block: accordion
     title: "FAQ"
     elements:

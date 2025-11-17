@@ -203,16 +203,27 @@ content:
               - { name: title, type: string, label: Título sección }
               - { name: geo, type: string, label: "Coordenadas (ej: 42.801941, -1.645660)" }
               - { name: name, type: string, label: Nombre (opcional) }
+              - { name: address, type: string, label: Dirección postal (opcional) }
               - { name: phone, type: string, label: Telefono (opcional) }
               - { name: email, type: string, label: Email (opcional) }
               - { name: image, type: image, label: Imagen (opcional) }
           - name: form
-            label: Formulario (sencillo)
+            label: Formulario (coming soon)
             fields:
               - { name: title, type: string, label: Titulo }
               - { name: field, type: string, label: Pregunta, list: true }
+          - name: fundraising
+            label: Campaña financiación (coming soon)
+            fields:
+              - { name: title, type: string, label: Titulo sección }
+              - { name: name, type: string, label: "Nombre causa (ej: Nuevo tejado)" }
+              - { name: description, type: string, label: Descripcion }
+              - { name: raised, type: number, label: Recaudado hasta la fecha }
+              - { name: goal, type: number, label: Total a recaudar }
+              - { name: image, type: image, label: Imagen }
           - name: pope
-            label: Mensaje papal
+          - name: pope
+            label: Mensaje papal (coming soon)
             fields:
               - { name: title, type: string, label: Titulo }
               - { name: summary, label: Mostrar modo resumen, type: boolean, default: true }
