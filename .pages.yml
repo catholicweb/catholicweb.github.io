@@ -221,6 +221,7 @@ content:
       - { name: description, label: Description del sitio, type: text }
       - { name: image, label: Imagen del sitio, type: image }
       - { name: icon, label: Icono del sitio, type: image }
+      - { name: youtube, label: Youtube, type: text }
       - name: bank
         label: Bizum y cuentas bancarias
         type: object

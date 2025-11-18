@@ -335,6 +335,7 @@ export async function generate() {
     themeConfig: {
       nav: await generateNav(config),
       languages: config.languages,
+      config: config,
     },
     async transformPageData(pageData) {
       const fm = pageData.frontmatter;

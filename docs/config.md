@@ -8,6 +8,7 @@ bank:
     account: https://www.donoamiiglesia.es/san/Home#!/donar/decbeaa3-ed3e-e611-80e8-005056b101e1
   - title: Bizum
     account: asdfae
+youtube: https://www.youtube.com/@47herri
 nav:
   - title: Disciernimiento
     links:
