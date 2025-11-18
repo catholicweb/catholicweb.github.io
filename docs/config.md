@@ -1,7 +1,11 @@
 ---
 title: Llamados
 description: Vocaciones Navarra
-icon: "unnamed (3).webp"
+bank:
+  - title: Dono a mi Iglesia
+    account: https://www.donoamiiglesia.es/san/Home#!/donar/decbeaa3-ed3e-e611-80e8-005056b101e1
+  - title: Bizum
+    account: asdfae
 nav:
   - title: Disciernimiento
     links:
