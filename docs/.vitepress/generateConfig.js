@@ -23,25 +23,29 @@ async function createManifest(config) {
     background_color: config.theme.accentColor,
     theme_color: "#333",
     icons: [
-      { src: "/media/icon-192.png", sizes: "192x192", type: "image/png" },
-      { src: "/media/icon-512.png", sizes: "512x512", type: "image/png" },
+      { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
   };
   const baseDir = path.resolve("");
   fs.writeFileSync(baseDir + "/docs/public/manifest.json", JSON.stringify(manifest), "utf8");
 
   // Generate icons
-  let fullPath = path.resolve(baseDir, "docs/public/media", config.icon);
-  for (const size of [64, 128, 192, 256, 384, 512]) {
+  let fullPath = path.resolve(baseDir, "docs/public" + config.icon);
+  for (const size of [192, 512]) {
     try {
       await sharp(fullPath)
         .resize(size, size)
         .png()
-        .toFile(baseDir + `/docs/public/media/icon-${size}.png`);
+        .toFile(baseDir + `/docs/public/icon-${size}.png`);
     } catch (err) {
       console.error(`⚠️ Error generando icono ${size}:`, err.message);
     }
   }
+  // generate the favicon
+  await sharp(fullPath)
+    .resize(32, 32) // Resize to 32x32 pixels for the favicon size
+    .toFile(baseDir + `/docs/public/favicon.ico`);
 }
 
 async function autocomplete(fm, config) {
@@ -300,6 +304,8 @@ export async function generate() {
     { code: "eus", label: "Euskara", path: "eus/" },
   ];
 
+  config.goatcounter = "https://vocacion.goatcounter.com/count";
+
   await printCSS(config);
   const FONT_URL = googleFont(config.theme);
 
@@ -320,6 +326,8 @@ export async function generate() {
       // Link to the Google Font stylesheet
       ["style", {}, await getFontCSS(FONT_URL)],
       ["link", { rel: "manifest", href: "/manifest.json" }],
+      ["link", { rel: "icon", href: "/favicon.ico", type: "image/x-icon" }],
+      ["script", { "data-goatcounter": config.goatcounter, async: true, src: "//gc.zgo.at/count.js" }],
     ],
     title: config.title,
     cleanUrls: true,

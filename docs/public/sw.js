@@ -1,5 +1,5 @@
 const CACHE_NAME = "v1";
-const ASSETS = ["/", "/media/icon-512.png"];
+const ASSETS = ["/", "/icon-512.png"];
 
 // ✅ Install and pre-cache known assets
 self.addEventListener("install", (e) => {

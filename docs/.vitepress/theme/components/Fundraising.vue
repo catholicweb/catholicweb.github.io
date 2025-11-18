@@ -105,13 +105,13 @@ const goToCard = (index) => {
     <!-- 3D Carousel Container -->
     <div class="relative w-full mt-2 max-w-6xl h-[500px] flex items-center justify-center">
       <!-- Cards -->
-      <div class="relative w-full" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
+      <div class="relative w-full" @touchstart.passive="handleTouchStart" @touchend.passive="handleTouchEnd">
         <div v-for="(card, index) in cards" :key="card.id" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 transition-all duration-700 ease-out cursor-pointer" :style="getCardStyle(index)" @click="goToCard(index)">
           <div class="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
             <!-- Image Section -->
             <div class="relative aspect-16/9 overflow-hidden">
               <div class="absolute inset-0 flex items-center justify-center">
-                <img :src="card.image" :alt="card.title" class="w-full h-full object-cover" />
+                <img :src="card.image" loading="lazy" :alt="card.title" class="w-full h-full object-cover" />
               </div>
             </div>
 

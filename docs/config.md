@@ -2,7 +2,7 @@
 title: Llamados
 description: Vocaciones Navarra
 image: /media/YESYES.webp
-icon: /media/unnamed (3)-1.webp
+icon: /media/unnamed-removebg-preview.webp
 bank:
   - title: Dono a mi Iglesia
     account: https://www.donoamiiglesia.es/san/Home#!/donar/decbeaa3-ed3e-e611-80e8-005056b101e1
