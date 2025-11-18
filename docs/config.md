@@ -1,6 +1,6 @@
 ---
 title: Llamados
-description: Vocaciones Navarra
+description: Dios te sueña a lo grande. ¿Y tú? ¿Cómo te sueñas? Atrévete a descubrir el sentido de tu vida.
 image: /media/YESYES.webp
 icon: /media/unnamed-removebg-preview.webp
 bank:
@@ -9,6 +9,9 @@ bank:
   - title: Bizum
     account: asdfae
 youtube: https://www.youtube.com/@47herri
+collaborators:
+  - name: "pepe"
+    phonenumber: "98998"
 nav:
   - title: Disciernimiento
     links:
