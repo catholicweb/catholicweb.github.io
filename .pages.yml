@@ -219,7 +219,8 @@ content:
     fields:
       - { name: title, label: Titulo sitio, type: string }
       - { name: description, label: Description del sitio, type: text }
-      - { name: image, label: Image, type: Icono del sitio }
+      - { name: image, label: Imagen del sitio, type: image }
+      - { name: icon, label: Icono del sitio, type: image }
       - name: bank
         label: Bizum y cuentas bancarias
         type: object
