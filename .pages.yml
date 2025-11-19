@@ -179,7 +179,6 @@ content:
               - { name: goal, type: number, label: Total a recaudar }
               - { name: image, type: image, label: Imagen }
           - name: pope
-          - name: pope
             label: Mensaje papal (coming soon)
             fields:
               - { name: title, type: string, label: Titulo }
