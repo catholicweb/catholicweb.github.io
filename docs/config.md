@@ -1,17 +1,15 @@
 ---
 title: Llamados
-description: Dios te sueña a lo grande. ¿Y tú? ¿Cómo te sueñas? Atrévete a descubrir el sentido de tu vida.
+description: Dios te sueña a lo grande. ¿Y tú? ¿Cómo te sueñas? Atrévete a
+  descubrir el sentido de tu vida.
 image: /media/YESYES.webp
 icon: /media/unnamed-removebg-preview.webp
+youtube: https://www.youtube.com/@seminariopamplona
 bank:
   - title: Dono a mi Iglesia
-    account: https://www.donoamiiglesia.es/san/Home#!/donar/decbeaa3-ed3e-e611-80e8-005056b101e1
+    account: https://www.donoamiiglesia.es/san/Home#!/donar/4960f4c9-3f65-eb11-8139-0050569a44c2
   - title: Bizum
-    account: asdfae
-youtube: https://www.youtube.com/@47herri
-collaborators:
-  - name: "pepe"
-    phonenumber: "98998"
+    account: "04698"
 nav:
   - title: Disciernimiento
     links:
