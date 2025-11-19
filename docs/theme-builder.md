@@ -31,6 +31,7 @@ sections:
   - _block: video
     title: super videos!
     urls:
+      - https://www.youtube.com/watch?v=3TdPxF5dZuk
       - https://www.youtube.com/watch?v=ZtXakyjfYfw
       - https://www.youtube.com/watch?v=3TdPxF5dZuk
   - _block: map
