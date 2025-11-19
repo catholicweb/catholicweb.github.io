@@ -29,4 +29,12 @@ sections:
       Seminario  
 
       **Teléfono:** 660 36 39 53
+  - _block: fundraising
+    title: Grupo Abre los ojos
+    name: Jovenes que se preguntan para quienes son
+    description: "Claves del discernimiento y formación vocacional "
+  - _block: fundraising
+    title: "Grupo Duc in altum "
+    name: Chicos jovenes que disciernen su vocación sacerdotal
+    description: "Discernimiento sacerdotal "
 ---
