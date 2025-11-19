@@ -3,19 +3,21 @@
     <h2 class="mt-8 text-4xl font-bold">{{ block.title }}</h2>
   </div>
 
-  <div class="video pb-8 pt-8 container mx-auto px-4 container mx-auto flex flex-wrap items-center justify-center text-center gap-6 mb-4 overflow-hidden">
-    <div v-for="(item, i) in block.elements" :key="i" class="relative w-full xs:w-1/2 md:w-1/3 lg:w-1/4 rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-all aspect-[16/9]">
-      <div v-if="playingVideo === item.src" class="w-full h-full bg-black">
-        <iframe :src="`https://www.youtube.com/embed/${item.id}?autoplay=1&rel=0`" class="w-full h-full" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-
-      <div v-else @click="handleClick(item)" class="w-full h-full relative facade-image bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(${item.image})` }">
-        <!-- Overlay degradado y título -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent flex items-end p-6">
-          <h3 class="text-xl font-bold text-white mb-1">{{ item.title }}</h3>
+  <div class="video" :class="block.grid">
+    <div v-for="(item, i) in block.elements" :key="i">
+      <div class="relative rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-all aspect-[16/9]">
+        <div v-if="playingVideo === item.src" class="w-full h-full bg-black">
+          <iframe :src="`https://www.youtube.com/embed/${item.id}?autoplay=1&rel=0`" class="w-full h-full" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <!-- YouTube logo overlay -->
-        <div class="absolute inset-0 flex items-center justify-center facade youtube-logo"></div>
+
+        <div v-else @click="handleClick(item)" class="w-full h-full relative facade-image bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(${item.image})` }">
+          <!-- Overlay degradado y título -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent flex items-end p-6">
+            <h3 class="text-xl font-bold text-white mb-1">{{ item.title }}</h3>
+          </div>
+          <!-- YouTube logo overlay -->
+          <div class="absolute inset-0 flex items-center justify-center facade youtube-logo"></div>
+        </div>
       </div>
     </div>
   </div>

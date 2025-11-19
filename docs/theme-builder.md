@@ -58,6 +58,9 @@ sections:
     links:
       - docs/seminario.md
       - docs/5-pasos.md
+      - docs/seminario.md
+      - docs/5-pasos.md
+      - docs/seminario.md
   - _block: map
     title: Conocenos (la otra parroquia)!
     name: la Otra parroquia

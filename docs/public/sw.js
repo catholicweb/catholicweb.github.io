@@ -9,68 +9,54 @@ self.addEventListener("install", (e) => {
 
 // ✅ Activate immediately on update
 self.addEventListener("activate", (e) => {
-  e.waitUntil(self.clients.claim());
+  e.waitUntil(
+    self.clients.claim().then(() => {
+      // Notify all clients that a new version is available
+      return self.clients.matchAll({ type: "window" }).then((clients) => {
+        clients.forEach((client) => {
+          client.postMessage({ type: "SW_UPDATED" });
+        });
+      });
+    }),
+  );
 });
 
 // ✅ Fetch handler
 self.addEventListener("fetch", (e) => {
-  const url = new URL(e.request.url);
   if (e.request.method !== "GET") return;
-
-  // Detect "HTML-like" routes: root, clean URLs, or .html
-  const isHTML = url.origin === location.origin && (url.pathname === "/" || !url.pathname.includes(".") || url.pathname.endsWith(".html"));
-
-  if (isHTML) {
-    e.respondWith(staleWhileRevalidateAndReload(e.request));
-  } else {
-    e.respondWith(cacheFirst(e.request));
-  }
+  e.respondWith(staleWhileRevalidate(e.request));
 });
 
-// 🧩 Cache First for static assets (auto-cache)
-async function cacheFirst(req) {
-  const cached = await caches.match(req);
-  if (cached) return cached;
-
-  const response = await fetch(req);
-  const cache = await caches.open(CACHE_NAME);
-  cache.put(req, response.clone());
-  return response;
-}
-
 async function staleWhileRevalidate(request) {
-  const cache = await caches.open(CACHE_STATIC);
+  const cache = await caches.open(CACHE_NAME);
   const cached = await cache.match(request);
 
-  const fetchPromise = fetch(request).then((response) => {
-    cache.put(request, response.clone());
-    return response;
-  });
+  const fetchPromise = fetch(request)
+    .then((fresh) => {
+      if (fresh.ok) {
+        cache.put(request, fresh.clone());
+        notifyUpdate(request, cached, fresh);
+      }
+      return fresh;
+    })
+    .catch(() => cached);
 
   return cached || fetchPromise;
 }
 
-// 🧩 Stale-While-Revalidate with auto-reload + auto-cache
-async function staleWhileRevalidateAndReload(req) {
-  const cache = await caches.open(CACHE_NAME);
-  const cached = await cache.match(req);
+async function notifyUpdate(request, cached, fresh) {
+  const url = new URL(request.url);
+  const isHTML = url.origin === location.origin && (url.pathname === "/" || !url.pathname.includes(".") || url.pathname.endsWith(".html"));
 
-  const networkFetch = fetch(req).then(async (res) => {
-    if (res.ok) {
-      // 🔥 compare HTML to detect new version
-      const newText = await res.clone().text();
-      const oldText = cached ? await cached.clone().text() : null;
+  if (fresh.ok && isHTML && cached) {
+    const newText = await fresh.clone().text();
+    const oldText = await cached.clone().text();
 
-      if (oldText && newText !== oldText) {
-        // New version detected → reload all open tabs
-        const clientsList = await self.clients.matchAll({ type: "window" });
-        for (const client of clientsList) client.navigate(client.url);
-      }
-      cache.put(req, res.clone());
+    if (newText !== oldText) {
+      const clients = await self.clients.matchAll({ type: "window" });
+      for (const client of clientsList) client.navigate(client.url);
     }
-    return res;
-  });
-  return cached || networkFetch;
+  }
 }
 
 /* NOTIFICATIONS */

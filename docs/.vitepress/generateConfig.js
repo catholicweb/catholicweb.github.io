@@ -52,6 +52,7 @@ async function autocomplete(fm, config) {
   if (!fm.sections) return;
   addMeta(fm, config);
   for (var i = 0; i < fm.sections.length; i++) {
+    fm.sections[i].grid = grid(fm.sections[i]);
     if (typeof fm.sections[i].html === "string") {
       fm.sections[i].html = md.render(fm.sections[i].html);
       fm.sections[i].type = "text";
@@ -80,6 +81,11 @@ async function autocomplete(fm, config) {
       fm.sections[i].elements = await Promise.all(fm.sections[i].urls.map(async (u) => await getYouTubeInfo(u)));
     }
   }
+}
+
+function grid(section) {
+  return "container mx-auto flex flex-wrap items-center justify-center text-center py-4 *:w-full *:sm:w-1/2 *:md:w-1/3 *:p-2 px-2";
+  //container mx-auto flex flex-nowrap items-center gap-6 overflow-x-auto py-4
 }
 
 async function getYouTubeInfo(urlOrId) {

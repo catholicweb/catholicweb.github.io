@@ -113,7 +113,7 @@
 
     <!-- 8. Article/Blog List -->
     <div v-if="block.type === 'article-list'" class="container mx-auto flex flex-wrap justify-center gap-6 mb-4 overflow-hidden">
-      <a v-for="(item, i) in block.elements" :key="i" :href="item.link" class="w-full xs:w-1/2 md:w-1/4 flex flex-col gap-3 border-2 border-gray-200 hover:border-accent hover:bg-gray-50 p-3 rounded-md transition cursor-pointer group">
+      <a v-for="(item, i) in block.elements" :key="i" :href="item.link" class="w-full sm:w-1/2 md:w-1/4 flex flex-col gap-3 border-2 border-gray-200 hover:border-accent hover:bg-gray-50 p-3 rounded-md transition cursor-pointer group">
         <img :src="item.image" :alt="item.title" class="w-full h-40 object-cover rounded-md" />
 
         <h2 class="text-lg font-semibold text-gray-900 group-hover:text-accent transition-colors flex items-center gap-1">
@@ -128,8 +128,8 @@
     </div>
 
     <!-- 9. Team Members/People Cards -->
-    <div v-if="block.type === 'team-cards'" class="container mx-auto flex flex-wrap items-center justify-center text-center gap-6 mb-4 overflow-hidden">
-      <a v-for="(item, i) in block.elements" :key="i" :href="item.link" class="w-full xs:w-1/2 md:w-1/4">
+    <div v-if="block.type === 'team-cards'" :class="block.grid">
+      <a v-for="(item, i) in block.elements" :key="i" :href="item.link">
         <div class="relative mb-4 inline-block">
           <img :src="item.image" loading="lazy" :alt="item.title" class="w-40 h-40 rounded-full object-cover border-4 border-accent shadow-lg group-hover:scale-105 transition-transform" />
         </div>
