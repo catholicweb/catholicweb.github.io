@@ -19,6 +19,7 @@ nav:
       - docs/noviazgo-y-seminario.md
       - docs/faq.md
       - docs/miedo.md
+      - docs/contacto.md
   - title: "Sacerdocio "
     links:
       - docs/porque-ser-sacerdote.md
