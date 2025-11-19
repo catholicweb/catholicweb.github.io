@@ -1,5 +1,5 @@
 ---
-title: "Los 7 pasos del discernimiento "
+title: "Los 6 pasos del discernimiento "
 image: /media/FuturoJovenesYMisionCompartida1.webp
 sections:
   - _block: text
