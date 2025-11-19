@@ -128,8 +128,8 @@
     </div>
 
     <!-- 9. Team Members/People Cards -->
-    <div v-if="block.type === 'team-cards'" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-      <div v-for="(item, i) in block.elements" :key="i" @click="handleClick(item)" class="text-center group cursor-pointer">
+    <div v-if="block.type === 'team-cards'" class="container mx-auto flex flex-wrap items-center justify-center text-center gap-6 mb-4 overflow-hidden">
+      <a v-for="(item, i) in block.elements" :key="i" :href="item.link" class="w-full xs:w-1/2 md:w-1/4">
         <div class="relative mb-4 inline-block">
           <img :src="item.image" loading="lazy" :alt="item.title" class="w-40 h-40 rounded-full object-cover border-4 border-accent shadow-lg group-hover:scale-105 transition-transform" />
         </div>
@@ -138,7 +138,7 @@
         <button v-if="item.callToAction" class="text-accent hover:opacity-80 font-medium text-sm">
           {{ item.callToAction }}
         </button>
-      </div>
+      </a>
     </div>
 
     <!-- 10. Compact List (News/Feed style) -->

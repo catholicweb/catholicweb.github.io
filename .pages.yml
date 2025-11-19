@@ -220,7 +220,26 @@ content:
       - { name: description, label: Description del sitio, type: text }
       - { name: image, label: Imagen del sitio, type: image }
       - { name: icon, label: Icono del sitio, type: image }
-      - { name: youtube, label: Youtube, type: string }
+
+      - name: social
+        label: Redes sociales
+        type: object
+        fields:
+          - { name: youtube, label: Youtube, type: string }
+          - { name: instagram, label: instagram, type: string }
+          - { name: twitter, label: twitter, type: string }
+          - { name: tiktok, label: tiktok, type: string }
+          - { name: twitch, label: twitch, type: string }
+          - { name: facebook, label: twitch, type: facebook }
+      - name: collaborators
+        label: Colaboradores
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        fields:
+          - { name: title, label: Nombre, type: string }
+          - { name: phonenumber, label: Numero de telefono (opcional), type: string }
+          - { name: email, label: Correo electrónico (opcional), type: string }
+          - { name: image, label: Image, type: image }
       - name: bank
         label: Bizum y cuentas bancarias
         type: object
