@@ -222,15 +222,15 @@ content:
       - { name: icon, label: Icono del sitio, type: image }
 
       - name: social
-        label: Redes sociales
+        label: Pie de página (footer)
         type: object
         fields:
           - { name: youtube, label: Youtube, type: string }
-          - { name: instagram, label: instagram, type: string }
-          - { name: twitter, label: twitter, type: string }
-          - { name: tiktok, label: tiktok, type: string }
-          - { name: twitch, label: twitch, type: string }
-          - { name: facebook, label: twitch, type: facebook }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: twitter, label: X/Twitter, type: string }
+          - { name: tiktok, label: Tiktok, type: string }
+          - { name: twitch, label: Twitch, type: string }
+          - { name: facebook, label: Facebook, type: string }
       - name: collaborators
         label: Colaboradores
         type: object
