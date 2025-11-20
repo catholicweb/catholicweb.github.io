@@ -130,28 +130,28 @@ content:
           - name: gallery
             label: Galeria de imagenes
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: list, type: image, label: Seleccion de imagenes, options: { multiple: true } }
           - name: text
             label: Texto
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: html, label: Texto largo, type: rich-text }
           - name: gospel
             label: Evangelio del día
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: readings, label: Mostrar primera/segunda y salmo, type: boolean, default: false }
               - { name: audio, label: Añadir audio, type: boolean, default: false }
           - name: calendar
             label: Eventos
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: filter, label: Filtro. Incluir solo eventos que contengan, type: string }
           - name: video
             label: Youtube
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: urls, label: enlace a Youtube, type: string, list: { collapsible: { collapsed: true } } }
               - { name: filter, label: Filtro. Incluir solo videos que contengan, type: string }
           - name: map
@@ -167,10 +167,10 @@ content:
           - name: form
             label: Formulario (coming soon)
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - { name: field, type: string, label: Pregunta, list: true }
           - name: fundraising
-            label: Campaña financiación (coming soon)
+            label: Campaña financiación
             fields:
               - { name: title, type: string, label: Titulo sección }
               - { name: name, type: string, label: "Nombre causa (ej: Nuevo tejado)" }
@@ -189,7 +189,7 @@ content:
           - name: links
             label: Enlaces internos
             fields:
-              - { name: title, type: string, label: Titulo }
+              - { name: title, type: string, label: Titulo sección }
               - name: links
                 label: Enlaces internos
                 type: reference
