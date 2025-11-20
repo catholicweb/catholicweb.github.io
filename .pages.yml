@@ -204,7 +204,7 @@ content:
       - name: events
         label: Lista eventos
         type: object
-        list: { collapsible: { collapsed: true, summary: "{fields.title}" } }
+        list: { collapsible: { collapsed: true, summary: "{fields.title} - {fields.location} ({fields.date}") } }
         fields:
           - { name: image, label: Image, type: image }
           - { name: title, label: Titulo, type: string }
